@@ -7,19 +7,6 @@ background: '/img/posts/07.jpg'
 ---
 
 
----
-
-layout:  post
-
-title:  "Ansible이란"
-
-date:  2025-06-21 22:00:00 +0900
-
-categories:  [Ansible이란]
-
-background:  '/img/posts/07.jpg'
-
----
 
   
 
