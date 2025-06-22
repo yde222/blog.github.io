@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    MySQL 설치 실습 - Clean Blog
+    
+  </title>
+
+  <meta name="description" content="MySQL 설치 및 접속 테스트 실습 가이드">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/startbootstrap-clean-blog-jekyll/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/MySQL_%EC%84%A4%EC%B9%98_%EC%8B%A4%EC%8A%B5.html">
+  <link rel="alternate" type="application/rss+xml" title="Clean Blog" href="/startbootstrap-clean-blog-jekyll/feed.xml">
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/startbootstrap-clean-blog-jekyll/">Clean Blog</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/categories">Category</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/startbootstrap-clean-blog-jekyll/img/posts/11.jpg')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>MySQL 설치 실습</h1>
+            
+            <span class="meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on June 21, 2025 &middot; <span class="reading-time" title="Estimated read time">
+  
+   3 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <h2 id="mysql-설치-및-접속-테스트-실습-가이드">MySQL 설치 및 접속 테스트 실습 가이드</h2>
+
+<h3 id="목표">목표</h3>
+
+<ul>
+  <li>이전에 실행한 실습 서버를 초기화하고 Vagrant로 재구성</li>
+  <li>Ansible Role을 통해 MySQL 자동 설치</li>
+  <li>Node.js 또는 Spring Boot 애플리케이션으로 DB 접속 테스트 수행</li>
+</ul>
+
+<hr />
+
+<h3 id="1단계-기존-환경-초기화-호스트-os에서-실행">1단계: 기존 환경 초기화 (호스트 OS에서 실행)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /vagrant/ansible-lab
+vagrant destroy -f
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="2단계-vagrant-환경-다시-구성-호스트-os에서-실행">2단계: Vagrant 환경 다시 구성 (호스트 OS에서 실행)</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Vagrantfile</code> 예시:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vagrant.configure("2") do |config|
+  config.vm.define "ansible-master" do |master|
+    master.vm.box = "ubuntu/jammy64"
+    master.vm.hostname = "ansible-master"
+    master.vm.network "private_network", ip: "192.168.56.10"
+  end
+
+  config.vm.define "db" do |db|
+    db.vm.box = "ubuntu/jammy64"
+    db.vm.hostname = "node2"
+    db.vm.network "private_network", ip: "192.168.56.12"
+  end
+end
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant up
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="3단계-ansible-master에서-ssh-접속-및-설정-vm-내부에서-실행">3단계: ansible-master에서 SSH 접속 및 설정 (VM 내부에서 실행)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vagrant ssh ansible-master
+sudo apt update &amp;&amp; sudo apt install -y ansible
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
+ssh-copy-id vagrant@192.168.56.12
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">/etc/ansible/hosts</code> 파일을 직접 수정하는 것으로 진행합니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mkdir -p /etc/ansible
+sudo mkdir -p /etc/ansible
+
+sudo vi /etc/ansible/hosts
+</code></pre></div></div>
+
+<p>아래 내용을 추가하세요:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[db]
+node2 ansible_host=192.168.56.12 ansible_user=vagrant ansible_ssh_private_key_file=/home/vagrant/.ssh/node2_key
+</code></pre></div></div>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">cp</span> <span class="o">/</span><span class="nx">vagrant</span><span class="o">/</span><span class="p">.</span><span class="nx">vagrant</span><span class="o">/</span><span class="nx">machines</span><span class="o">/</span><span class="nx">db</span><span class="o">/</span><span class="nx">virtualbox</span><span class="o">/</span><span class="nx">private_key</span> <span class="o">~</span><span class="sr">/.ssh/</span><span class="nx">node2_key</span>
+<span class="nx">chmod</span> <span class="mi">600</span> <span class="o">~</span><span class="sr">/.ssh/</span><span class="nx">node2_key</span>
+</code></pre></div></div>
+
+<h3 id="디렉토리-구조-요약">디렉토리 구조 요약</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-lab/
+├── Vagrantfile
+├── playbooks/
+│   ├── mysql-role.yml
+│   └── roles/
+│       └── mysql/
+│           ├── tasks/
+│           │   └── main.yml
+│           ├── vars/
+│           │   └── main.yml
+│           ├── handlers/
+│           │   └── main.yml
+│           └── defaults/
+│               └── main.yml (선택)
+</code></pre></div></div>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">cd</span> <span class="o">/</span><span class="nx">vagrant</span><span class="o">/</span><span class="nx">playbooks</span>
+<span class="nx">ansible</span><span class="o">-</span><span class="nx">galaxy</span> <span class="nx">init</span> <span class="nx">roles</span><span class="o">/</span><span class="nx">mysql</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">roles/mysql/vars/main.yml</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql_root_password: mysql1
+mysql_db_name: appdb
+mysql_user: appuser
+mysql_user_password: mysql1
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">roles/mysql/handlers/main.yml</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- name: Restart mysql
+  service:
+    name: mysql
+    state: restarted
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">roles/mysql/tasks/main.yml</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- name: Install MySQL
+  apt:
+    name: mysql-server
+    state: present
+    update_cache: yes
+
+- name: Allow MySQL to listen on all interfaces
+  lineinfile:
+    path: /etc/mysql/mysql.conf.d/mysqld.cnf
+    regexp: '^bind-address'
+    line: 'bind-address = 0.0.0.0'
+  notify: Restart mysql
+
+- name: Ensure MySQL is running
+  service:
+    name: mysql
+    state: started
+    enabled: yes
+
+- name: Set root password and initialize DB
+  shell: |
+    mysql -u root &lt;&lt;EOF
+    ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';
+    CREATE DATABASE IF NOT EXISTS ;
+    CREATE USER IF NOT EXISTS ''@'%' IDENTIFIED BY '';
+    GRANT ALL PRIVILEGES ON .* TO ''@'%';
+    FLUSH PRIVILEGES;
+    EOF
+  args:
+    executable: /bin/bash
+  ignore_errors: yes
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">mysql-role.yml</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- name: Configure MySQL server using role
+  hosts: db
+  become: yes
+  roles:
+    - mysql
+</code></pre></div></div>
+
+<p>실행:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /vagrant/playbooks
+ansible-playbook mysql-role.yml
+</code></pre></div></div>
+
+<hr />
+
+<hr />
+
+<h3 id="5단계--spring-boot를-통한-접속-확인">5단계:  Spring Boot를 통한 접속 확인</h3>
+
+<h3 id="spring-boot-예시">Spring Boot 예시:</h3>
+
+<p><code class="language-plaintext highlighter-rouge">application.yml</code></p>
+
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/startbootstrap-clean-blog-jekyll/2020/01/31/man-must-explore.html" data-toggle="tooltip" data-placement="top" title="Man must explore, and this is exploration at its greatest">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/Vagrant%EB%A5%BC_%EC%9D%B4%EC%9A%A9%ED%95%9C_%ED%99%98%EA%B2%BD%EA%B5%AC%EC%B6%95.html" data-toggle="tooltip" data-placement="top" title="Vagrant를 이용한 환경구축">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:your-email@example.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/SBootstrap">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/StartBootstrap">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/StartBootstrap">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Start Bootstrap 2025</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/startbootstrap-clean-blog-jekyll/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/startbootstrap-clean-blog-jekyll/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-XXXXXXXXX-X');
+</script>
+
+
+
+</body>
+
+</html>

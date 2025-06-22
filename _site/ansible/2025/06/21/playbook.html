@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    플레이북 - Clean Blog
+    
+  </title>
+
+  <meta name="description" content="1. 플레이북으로 Nginx 설치 자동화">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/startbootstrap-clean-blog-jekyll/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/playbook.html">
+  <link rel="alternate" type="application/rss+xml" title="Clean Blog" href="/startbootstrap-clean-blog-jekyll/feed.xml">
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/startbootstrap-clean-blog-jekyll/">Clean Blog</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/categories">Category</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/startbootstrap-clean-blog-jekyll/img/posts/10.jpg')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>플레이북</h1>
+            
+            <span class="meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on June 21, 2025 &middot; <span class="reading-time" title="Estimated read time">
+  
+   8 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <h2 id="1-플레이북으로-nginx-설치-자동화">1. 플레이북으로 Nginx 설치 자동화</h2>
+
+<h3 id="플레이북이란">플레이북이란?</h3>
+
+<ul>
+  <li>*플레이북(playbook)<strong>은 Ansible에서 복잡한 작업을 반복 가능하고 읽기 쉬운 **YAML 파일 형태로 정의</strong>한 자동화 스크립트입니다. Ad-hoc 명령은 단발성 작업에 적합하지만, <strong>여러 작업을 순차적으로 실행하거나 버전 관리하고자 할 때는 플레이북이 필요</strong>합니다.</li>
+</ul>
+
+<h3 id="목적">목적</h3>
+
+<ul>
+  <li>반복 가능한 작업 자동화 (예: 여러 서버에 Nginx 설치)</li>
+  <li>역할과 태스크를 분리하여 명확하게 구성</li>
+</ul>
+
+<h3 id="디렉토리-구성-예시">디렉토리 구성 예시</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-lab/
+├── playbooks/
+│   └── install-nginx.yml
+</code></pre></div></div>
+
+<h3 id="install-nginxyml">install-nginx.yml</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- name: Install and Start Nginx on all target servers
+  hosts: targets
+  become: yes
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: Ensure nginx is running
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+</code></pre></div></div>
+
+<h3 id="-실행-명령어">▶ 실행 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd .. 
+cd .. 
+cd vagrant/
+
+ansible-playbook playbooks/install-nginx.yml
+</code></pre></div></div>
+
+<h3 id="결과-확인">결과 확인</h3>
+
+<ol>
+  <li>
+    <p><strong>nginx가 설치되었는지 확인</strong>:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ansible targets <span class="nt">-m</span> <span class="nb">command</span> <span class="nt">-a</span> <span class="s2">"nginx -v"</span>
+    
+</code></pre></div>    </div>
+
+    <p>→ 각 노드에 nginx 버전 출력되면 설치 완료.</p>
+  </li>
+  <li>
+    <p><strong>nginx가 실행 중인지 확인</strong>:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ansible targets <span class="nt">-m</span> service <span class="nt">-a</span> <span class="s2">"name=nginx state=started"</span>
+    
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>웹 서버 응답 확인</strong>:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ansible targets <span class="nt">-m</span> <span class="nb">command</span> <span class="nt">-a</span> <span class="s2">"curl -I http://localhost"</span>
+    
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><strong>예상 결과:</strong> HTTP 200 OK 또는 403 Forbidden 등 웹 서버 응답 헤더 출력</p>
+
+<hr />
+
+<h2 id="2-변수와-핸들러를-활용한-플레이북-개선">2. 변수와 핸들러를 활용한 플레이북 개선</h2>
+
+<h3 id="목표">목표</h3>
+
+<ul>
+  <li>Nginx 설치 및 설정 변경 시 자동으로 서비스 재시작</li>
+  <li>반복되는 값을 변수로 분리하여 가독성과 유지 보수성 향상</li>
+</ul>
+
+<h3 id="디렉토리-구조-예시">디렉토리 구조 예시</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-lab/
+├── playbooks/
+│   ├── install-nginx.yml
+│   ├── vars.yml
+</code></pre></div></div>
+
+<h3 id="varsyml">vars.yml</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nginx_package: nginx
+nginx_service: nginx
+</code></pre></div></div>
+
+<h3 id="install-nginxyml-1">install-nginx.yml</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- name: Install and manage nginx with handler
+  hosts: targets
+  become: yes
+  vars_files:
+    - /vagrant/playbooks/vars.yml
+  tasks:
+    - name: Install nginx
+      apt:
+        name: ""
+        state: present
+        update_cache: yes
+      notify: Restart nginx
+
+    - name: Ensure nginx is enabled and running
+      service:
+        name: ""
+        state: started
+        enabled: yes
+
+  handlers:
+    - name: Restart nginx
+      service:
+        name: ""
+        state: restarted
+</code></pre></div></div>
+
+<h3 id="-실행-명령어-1">▶ 실행 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook /vagrant/playbooks/install-nginx.yml
+</code></pre></div></div>
+
+<h3 id="확인">확인</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible targets -m command -a "systemctl status nginx"
+</code></pre></div></div>
+
+<blockquote>
+  <p>설정 파일이 변경되거나 nginx가 설치된 경우, handler가 작동하여 자동으로 서비스를 재시작합니다.</p>
+
+</blockquote>
+
+<hr />
+
+<hr />
+
+<h2 id="3-템플릿을-활용한-nginx-설정-배포-jinja2">3. 템플릿을 활용한 Nginx 설정 배포 (Jinja2)</h2>
+
+<h3 id="jinja2란">Jinja2란?</h3>
+
+<p>Jinja2는 Python 기반의 가장 널리 사용되는 <strong>템플릿 엔진</strong> 중 하나로, 텍스트 기반 파일에 변수, 조건문, 반복문 등을 삽입하여 <strong>동적으로 파일을 생성</strong>할 수 있도록 도와줍니다.</p>
+
+<p>Ansible은 내부적으로 Jinja2를 템플릿 엔진으로 채택하고 있으며, 다음과 같은 이유로 널리 사용됩니다:</p>
+
+<ul>
+  <li><strong>가독성이 높은 문법</strong>: `` 형식으로 직관적인 구문 제공</li>
+  <li><strong>조건문, 반복문, 필터 지원</strong>: 템플릿 내에서 if, for, length 등 다양한 표현 사용 가능</li>
+  <li><strong>YAML, HTML, conf 파일 등 다양한 형식 지원</strong></li>
+  <li><strong>Python 기반으로 Ansible과 자연스럽게 연동됨</strong></li>
+</ul>
+
+<h3 id="다른-템플릿-엔진과-비교">다른 템플릿 엔진과 비교</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>템플릿 엔진</th>
+      <th>특징</th>
+      <th>비고</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Jinja2</strong></td>
+      <td>Python 기반, Ansible 기본 탑재</td>
+      <td>⭐ 기본 선택</td>
+    </tr>
+    <tr>
+      <td>Mustache</td>
+      <td>언어 중립적, 로직 없는 템플릿 지향</td>
+      <td>복잡한 표현 제한</td>
+    </tr>
+    <tr>
+      <td>ERB (Embedded Ruby)</td>
+      <td>Ruby 기반</td>
+      <td>Chef 등에서 사용됨</td>
+    </tr>
+    <tr>
+      <td>EJS (Embedded JS)</td>
+      <td>JavaScript 기반</td>
+      <td>Node.js에서 사용</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Ansible에서는 Jinja2가 기본 내장되어 있고, 대부분의 문서, 예제, 커뮤니티가 Jinja2를 중심으로 구성되어 있으므로 별도 설치 없이 바로 사용 가능하며, 실무에서도 가장 널리 사용됩니다.</p>
+
+</blockquote>
+
+<h3 id="목표-1">목표</h3>
+
+<ul>
+  <li>Nginx의 설정 파일을 템플릿 파일로 구성하여 서버마다 유연하게 배포할 수 있도록 구성</li>
+  <li>Ansible 템플릿 엔진(Jinja2)을 사용하여 변수 기반 설정 파일 생성</li>
+</ul>
+
+<h3 id="디렉토리-구조-예시-1">디렉토리 구조 예시</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-lab/
+├── playbooks/
+│   ├── nginx-role.yml
+│   └── roles/
+│       └── nginx/
+│           ├── tasks/
+│           │   └── main.yml
+│           ├── templates/
+│           │   └── nginx.conf.j2
+│           ├── vars/
+│           │   └── main.yml
+ansible-lab/
+├── playbooks/
+│   ├── install-nginx.yml
+│   ├── vars.yml
+│   ├── templates/
+│   │   └── nginx.conf.j2
+</code></pre></div></div>
+
+<h3 id="templatesnginxconfj2">templates/nginx.conf.j2</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+
+events {
+  worker_connections 768;
+}
+
+http {
+  sendfile on;
+  tcp_nopush on;
+  types_hash_max_size 2048;
+
+  include /etc/nginx/mime.types;
+  default_type application/octet-stream;
+
+  server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    server_name ;
+
+    location / {
+      return 200 "Hello from \n";
+    }
+  }
+}
+</code></pre></div></div>
+
+<h3 id="install-nginxyml-템플릿-적용-추가">install-nginx.yml (템플릿 적용 추가)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- name: Install nginx and apply custom config
+  hosts: targets
+  become: yes
+  vars_files:
+    - /vagrant/playbooks/vars.yml
+  tasks:
+    - name: Install nginx
+      apt:
+        name: ""
+        state: present
+        update_cache: yes
+      notify: Restart nginx
+
+    - name: Deploy nginx config file from template
+      template:
+        src: /vagrant/playbooks/templates/nginx.conf.j2
+        dest: /etc/nginx/nginx.conf
+      notify: Restart nginx
+
+    - name: Ensure nginx is enabled and running
+      service:
+        name: ""
+        state: started
+        enabled: yes
+
+  handlers:
+    - name: Restart nginx
+      service:
+        name: ""
+        state: restarted
+</code></pre></div></div>
+
+<h3 id="-실행-명령어-2">▶ 실행 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /vagrant/playbooks
+
+ansible-playbook /vagrant/playbooks/install-nginx.yml
+</code></pre></div></div>
+
+<h3 id="확인-방법">확인 방법</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible targets -m command -a "curl http://localhost"
+</code></pre></div></div>
+
+<p>→ 출력 결과 예시: <code class="language-plaintext highlighter-rouge">Hello from node1</code>, <code class="language-plaintext highlighter-rouge">Hello from node2</code></p>
+
+<blockquote>
+  <p>템플릿의 inventory_hostname 변수는 Ansible이 자동으로 제공하는 호스트 이름입니다.</p>
+
+</blockquote>
+
+<hr />
+
+<hr />
+
+<h2 id="4-role-구조로-nginx-구성-자동화">4. Role 구조로 Nginx 구성 자동화</h2>
+
+<h3 id="role이란">Role이란?</h3>
+
+<p>Ansible에서 <strong>Role</strong>은 플레이북을 역할 기반으로 분리하고 재사용할 수 있도록 구성한 <strong>디렉토리 구조</strong>입니다.</p>
+
+<ul>
+  <li>작업을 <code class="language-plaintext highlighter-rouge">tasks</code>, 변수는 <code class="language-plaintext highlighter-rouge">vars</code>, 템플릿은 <code class="language-plaintext highlighter-rouge">templates</code> 폴더 등으로 구분</li>
+  <li>유지보수와 협업에 유리하며, 여러 프로젝트에서 재사용 가능</li>
+  <li><code class="language-plaintext highlighter-rouge">ansible-galaxy init</code> 명령으로 쉽게 생성 가능</li>
+</ul>
+
+<h3 id="디렉토리-구조-예시-2">디렉토리 구조 예시</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-lab/
+├── roles/
+│   └── nginx/
+│       ├── tasks/
+│       │   └── main.yml
+│       ├── templates/
+│       │   └── nginx.conf.j2
+│       ├── vars/
+│       │   └── main.yml
+</code></pre></div></div>
+
+<h3 id="-role-생성-명령어">▶ Role 생성 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /vagrant/playbooks
+ansible-galaxy init roles/nginx
+</code></pre></div></div>
+
+<h2 id="ansible-galaxy-명령어"><code class="language-plaintext highlighter-rouge">ansible-galaxy</code> 명령어</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>기능</th>
+      <th>명령 예시</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Role 생성</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">ansible-galaxy init roles/nginx</code></td>
+      <td>로컬에서 사용할 역할 구조 생성</td>
+    </tr>
+    <tr>
+      <td><strong>Role 설치</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">ansible-galaxy install geerlingguy.nginx</code></td>
+      <td>Ansible Galaxy에서 Role 다운로드</td>
+    </tr>
+    <tr>
+      <td><strong>Role 목록 확인</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">ansible-galaxy list</code></td>
+      <td>설치된 Role 확인</td>
+    </tr>
+    <tr>
+      <td><strong>Role 제거</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">ansible-galaxy remove &lt;role_name&gt;</code></td>
+      <td>Role 삭제</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="rolesnginxvarsmainyml">roles/nginx/vars/main.yml</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nginx_package: nginx
+nginx_service: nginx
+</code></pre></div></div>
+
+<h3 id="rolesnginxtemplatesnginxconfj2">roles/nginx/templates/nginx.conf.j2</h3>
+
+<p>(앞서 사용한 Jinja2 템플릿 그대로 사용)</p>
+
+<h3 id="rolesnginxtasksmainyml">roles/nginx/tasks/main.yml</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- name: Install nginx
+  apt:
+    name: ""
+    state: present
+    update_cache: yes
+  notify: Restart nginx
+
+- name: Deploy nginx config file from template
+  template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+  notify: Restart nginx
+
+- name: Ensure nginx is enabled and running
+  service:
+    name: ""
+    state: started
+    enabled: yes
+</code></pre></div></div>
+
+<h3 id="rolesnginxhandlersmainyml">roles/nginx/handlers/main.yml</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- name: Restart nginx
+  service:
+    name: ""
+    state: restarted
+</code></pre></div></div>
+
+<h3 id="playbooksnginx-roleyml">playbooks/nginx-role.yml</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- name: Configure nginx using role
+  hosts: targets
+  become: yes
+  roles:
+    - nginx
+</code></pre></div></div>
+
+<h3 id="-실행-명령어-3">▶ 실행 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook /vagrant/playbooks/nginx-role.yml
+</code></pre></div></div>
+
+<h3 id="결과-확인-1">결과 확인</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible targets -m command -a "curl http://localhost"
+</code></pre></div></div>
+
+<p>→ 출력 결과: <code class="language-plaintext highlighter-rouge">Hello from node1</code>, <code class="language-plaintext highlighter-rouge">Hello from node2</code></p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/startbootstrap-clean-blog-jekyll/devops/2025/06/21/devops.html" data-toggle="tooltip" data-placement="top" title="DevOps">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:your-email@example.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/SBootstrap">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/StartBootstrap">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/StartBootstrap">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Start Bootstrap 2025</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/startbootstrap-clean-blog-jekyll/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/startbootstrap-clean-blog-jekyll/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-XXXXXXXXX-X');
+</script>
+
+
+
+</body>
+
+</html>
