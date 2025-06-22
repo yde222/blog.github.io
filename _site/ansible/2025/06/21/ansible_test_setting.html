@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    테스트환경설정 - Clean Blog
+    
+  </title>
+
+  <meta name="description" content="역할 이름 예시 IP 제어 노드 ansible-master 192.168.0.101 대상 노드 node1, node2 192.168.0.102, 192.168.0.103">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/startbootstrap-clean-blog-jekyll/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/ansible_test_setting.html">
+  <link rel="alternate" type="application/rss+xml" title="Clean Blog" href="/startbootstrap-clean-blog-jekyll/feed.xml">
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/startbootstrap-clean-blog-jekyll/">Clean Blog</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/categories">Category</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/startbootstrap-clean-blog-jekyll/img/posts/08.jpg')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>테스트환경설정</h1>
+            
+            <span class="meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on June 21, 2025 &middot; <span class="reading-time" title="Estimated read time">
+  
+   3 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <table>
+  <thead>
+    <tr>
+      <th>역할</th>
+      <th>이름</th>
+      <th>예시 IP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>제어 노드</td>
+      <td><code class="language-plaintext highlighter-rouge">ansible-master</code></td>
+      <td>192.168.0.101</td>
+    </tr>
+    <tr>
+      <td>대상 노드</td>
+      <td><code class="language-plaintext highlighter-rouge">node1</code>, <code class="language-plaintext highlighter-rouge">node2</code></td>
+      <td>192.168.0.102, 192.168.0.103</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>네트워크 어댑터</strong>: VirtualBox → 브리지 어댑터</li>
+</ul>
+
+<hr />
+
+<h2 id="1단계-ubuntu-설치-후-기본-설정">1단계: Ubuntu 설치 후 기본 설정</h2>
+
+<p>각 VM에서 아래 명령을 수행</p>
+
+<h3 id="11-사용자-이름-확인">1.1 사용자 이름 확인</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">whoami</span>
+
+
+</code></pre></div></div>
+
+<p>→ 이후 Ansible의 <code class="language-plaintext highlighter-rouge">ansible_user</code>로 사용됨</p>
+
+<h3 id="12-네트워크-확인을-위한-net-tools-설치">1.2 네트워크 확인을 위한 net-tools 설치</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
+<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> net-tools
+ifconfig
+
+
+</code></pre></div></div>
+
+<p>→ IP 확인 (브리지 모드에서 자동 할당됨)</p>
+
+<hr />
+
+<h2 id="2단계-ssh-서버-설정-node1-node2">2단계: SSH 서버 설정 (node1, node2)</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> openssh-server
+<span class="nb">sudo </span>dpkg-reconfigure openssh-server   <span class="c"># 호스트 키 재생성</span>
+<span class="nb">sudo </span>systemctl <span class="nb">enable </span>ssh
+<span class="nb">sudo </span>systemctl start ssh
+
+
+</code></pre></div></div>
+
+<p>SSH 포트 확인:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>ss <span class="nt">-tnlp</span> | <span class="nb">grep</span> :22
+
+
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="3단계-ansible-제어-노드에서-ssh-키-생성-및-배포">3단계: Ansible 제어 노드에서 SSH 키 생성 및 배포</h2>
+
+<h3 id="31-키-생성">3.1 키 생성</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen   <span class="c"># 계속 Enter</span>
+
+</code></pre></div></div>
+
+<h3 id="32-키-배포">3.2 키 배포</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-copy-id 사용자명@192.168.0.102  <span class="c"># node1</span>
+ssh-copy-id 사용자명@192.168.0.103  <span class="c"># node2</span>
+
+
+</code></pre></div></div>
+
+<p>→ 비밀번호 입력 후 키 복사 성공</p>
+
+<hr />
+
+<h2 id="4단계-ansible-설치-및-설정-ansible-master">4단계: Ansible 설치 및 설정 (ansible-master)</h2>
+
+<h3 id="41-ansible-설치">4.1 Ansible 설치</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
+<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> ansible
+ansible <span class="nt">--version</span>
+
+</code></pre></div></div>
+
+<h3 id="42-인벤토리-디렉토리-수동-생성">4.2 인벤토리 디렉토리 수동 생성</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo mkdir</span> <span class="nt">-p</span> /etc/ansible
+<span class="nb">sudo touch</span> /etc/ansible/hosts
+<span class="nb">sudo chmod </span>644 /etc/ansible/hosts
+
+
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="5단계-인벤토리hosts-파일-작성">5단계: 인벤토리(hosts) 파일 작성</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>vi /etc/ansible/hosts
+
+
+</code></pre></div></div>
+
+<p>내용 예시:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[targets]
+node1 ansible_host=192.168.0.102 ansible_user=ubuntu
+node2 ansible_host=192.168.0.103 ansible_user=ubuntu
+
+
+</code></pre></div></div>
+
+<blockquote>
+  <p>※ ubuntu는 대상 서버의 사용자명 (실제 로그인 가능해야 함)</p>
+</blockquote>
+
+<hr />
+
+<h2 id="6단계-연결-테스트">6단계: 연결 테스트</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible targets <span class="nt">-m</span> ping
+
+</code></pre></div></div>
+
+<p>또는 명시적 경로 지정:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible targets <span class="nt">-i</span> /etc/ansible/hosts <span class="nt">-m</span> ping
+
+</code></pre></div></div>
+
+<p>예상 출력:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node1 | SUCCESS =&gt; {"ping": "pong"}
+node2 | SUCCESS =&gt; {"ping": "pong"}
+
+
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="문제-해결-체크리스트">문제 해결 체크리스트</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>문제</th>
+      <th>해결 방법</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">no inventory was parsed</code></td>
+      <td><code class="language-plaintext highlighter-rouge">/etc/ansible/hosts</code> 존재 여부 확인 또는 <code class="language-plaintext highlighter-rouge">-i</code> 옵션 사용</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">E212: Can't open file for writing</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sudo</code> 없이 파일 열었음 → <code class="language-plaintext highlighter-rouge">sudo vi /etc/ansible/hosts</code> 사용</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">sshd: no hostkeys available</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sudo dpkg-reconfigure openssh-server</code> 실행하여 호스트 키 생성</td>
+    </tr>
+    <tr>
+      <td>SSH 접속 안됨</td>
+      <td>대상 노드에 <code class="language-plaintext highlighter-rouge">openssh-server</code> 설치 및 <code class="language-plaintext highlighter-rouge">sshd</code> 실행 확인</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="명령어-요약">명령어 요약</h2>
+
+<hr />
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 사용자명 확인</span>
+<span class="nb">whoami</span>
+
+<span class="c"># 네트워크 확인</span>
+ifconfig
+
+<span class="c"># SSH 시작</span>
+<span class="nb">sudo </span>systemctl start ssh
+
+<span class="c"># SSH 포트 확인</span>
+<span class="nb">sudo </span>ss <span class="nt">-tnlp</span> | <span class="nb">grep</span> :22
+
+<span class="c"># Ansible 설치</span>
+<span class="nb">sudo </span>apt <span class="nb">install </span>ansible
+
+<span class="c"># 키 복사</span>
+ssh-copy-id 사용자명@192.168.0.102
+
+<span class="c"># 연결 테스트</span>
+ansible targets <span class="nt">-i</span> /etc/ansible/hosts <span class="nt">-m</span> ping
+
+
+</code></pre></div></div>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/ansible_is.html" data-toggle="tooltip" data-placement="top" title="Ansible이란">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/startbootstrap-clean-blog-jekyll/devops/2025/06/21/devops.html" data-toggle="tooltip" data-placement="top" title="DevOps">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:your-email@example.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/SBootstrap">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/StartBootstrap">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/StartBootstrap">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Start Bootstrap 2025</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/startbootstrap-clean-blog-jekyll/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/startbootstrap-clean-blog-jekyll/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-XXXXXXXXX-X');
+</script>
+
+
+
+</body>
+
+</html>
