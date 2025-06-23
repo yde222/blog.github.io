@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Config Server, Actuator, 내결함성 - Clean Blog
+    
+  </title>
+
+  <meta name="description" content="좋은 MSA 구조의 Application을 개발하려면? 좋은 MSA 구조의 Application을 개발하려면? 💡 좋은 MSA 구조의 애플리케이션 개발은 REST API 설계, 게이트웨이 설정, 구성 외부화, 모니터링, 내결함성 패턴, 로깅 및 분산 추적, CI/CD 등 다양한 영...">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/startbootstrap-clean-blog-jekyll/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/startbootstrap-clean-blog-jekyll/msa/2025/06/21/Config_Server_Actuator_%EB%82%B4%EA%B2%B0%ED%95%A8%EC%84%B1.html">
+  <link rel="alternate" type="application/rss+xml" title="Clean Blog" href="/startbootstrap-clean-blog-jekyll/feed.xml">
+
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/startbootstrap-clean-blog-jekyll/">Clean Blog</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/categories">Category</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/startbootstrap-clean-blog-jekyll/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/startbootstrap-clean-blog-jekyll/img/posts/12.jpg')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Config Server, Actuator, 내결함성</h1>
+            
+            <span class="meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on June 21, 2025 &middot; <span class="reading-time" title="Estimated read time">
+  
+   16 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <ul>
+  <li>
+    <p>좋은 MSA 구조의 Application을 개발하려면?</p>
+
+    <h1 id="좋은-msa-구조의-application을-개발하려면">좋은 MSA 구조의 Application을 개발하려면?</h1>
+
+    <aside> 💡
+    
+좋은 MSA 구조의 애플리케이션 개발은 REST API 설계, 게이트웨이 설정, 구성 외부화, 모니터링, 내결함성 패턴, 로깅 및 분산 추적, CI/CD 등 다양한 영역의 모범 사례와 도구를 종합적으로 활용하는 것이 핵심이다. 각 항목은 독립적이면서도 상호 보완적인 역할을 수행하며, 전체 시스템의 유연성과 확장성을 보장한다. 이를 통해 안정적이고 확장 가능한 서비스 환경을 구축할 수 있다.
+    
+</aside>
+
+    <h2 id="1-rest-api-설계">1. REST API 설계</h2>
+
+    <ul>
+      <li>
+        <p><strong>표준화된 통신 방식</strong></p>
+
+        <p>REST API는 마이크로서비스 간 통신의 표준화된 인터페이스를 제공한다. API 명세를 문서화하기 위해 Swagger 등의 도구를 활용하면, 협업 및 유지보수가 용이해진다.</p>
+      </li>
+      <li>
+        <p><strong>자원 중심 설계</strong></p>
+
+        <p>URI 설계와 HTTP 메서드(GET, POST, PUT, DELETE 등)를 적절하게 활용하여 자원 중심의 설계를 구현한다. 클라이언트와 서버 간의 명확한 역할 분리가 이루어져야 한다.</p>
+      </li>
+      <li>
+        <p><strong>버전 관리</strong></p>
+
+        <p>API의 변경에 따른 호환성을 유지하기 위해 버전 관리 전략을 수립한다. 예를 들어, URI에 버전 정보를 포함하는 방식(versioning)을 도입할 수 있다.</p>
+      </li>
+    </ul>
+
+    <h2 id="2-gateway-설정">2. Gateway 설정</h2>
+
+    <ul>
+      <li>
+        <p><strong>보안 및 추상화</strong></p>
+
+        <p>외부에 내부 인스턴스를 직접 노출하지 않고, API 게이트웨이를 통해 요청을 라우팅한다. 이를 통해 보안성을 강화하고, 내부 서비스 구조를 추상화한다.</p>
+      </li>
+      <li>
+        <p><strong>로드 밸런싱 및 인증</strong></p>
+
+        <p>API 게이트웨이는 로드 밸런싱, 인증/인가, 요청 라우팅 등의 기능을 제공한다. Spring Cloud Gateway, Netflix Zuul 등 다양한 도구를 활용할 수 있다.</p>
+      </li>
+      <li>
+        <p><strong>스케일 아웃</strong></p>
+
+        <p>게이트웨이를 통한 분산 처리와 요청 관리로 내부 서비스의 스케일 아웃을 효과적으로 지원할 수 있다.</p>
+      </li>
+    </ul>
+
+    <h2 id="3-구성-외부화">3. 구성 외부화</h2>
+
+    <ul>
+      <li>
+        <p><strong>Spring Cloud Config Server</strong></p>
+
+        <p>Spring 기반 애플리케이션의 환경별 구성 정보를 중앙에서 관리하기 위한 대표적인 도구이다. 구성 외부화를 통해 애플리케이션 재배포 없이도 설정을 변경할 수 있다.</p>
+      </li>
+      <li>
+        <p><strong>추가 대안 기술</strong></p>
+
+        <ul>
+          <li><strong>Consul:</strong> 서비스 디스커버리와 분산 키-값 저장소 기능을 함께 제공하여, 구성 관리와 헬스 체크를 동시에 지원한다.</li>
+          <li><strong>Kubernetes ConfigMaps 및 Secrets:</strong> 컨테이너 환경에서 애플리케이션 설정을 네이티브 방식으로 관리할 수 있으며, 환경 변수와 설정 파일 등을 외부화할 때 유용하다.</li>
+          <li><strong>클라우드 기반 구성 관리 서비스</strong>
+            <ul>
+              <li>AWS Systems Manager Parameter Store, AWS AppConfig와 같은 서비스는 클라우드 환경에서 안전하게 구성 데이터를 저장하고 동적으로 반영할 수 있도록 지원한다.</li>
+              <li>HashiCorp Vault는 주로 비밀 관리에 초점을 두지만, 동적 구성 관리 기능도 제공하여 보안에 민감한 환경에서 활용된다.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2 id="4-모니터링">4. 모니터링</h2>
+
+    <ul>
+      <li>
+        <p><strong>데이터 수집</strong></p>
+
+        <p>Spring Actuator를 활용하여 애플리케이션의 상태(health check, 메트릭 등)를 실시간으로 노출한다. Prometheus는 시간에 따른 메트릭 데이터를 수집하며, 서버의 CPU 사용률, 메모리, 네트워크 트래픽 등 다양한 지표를 모니터링한다.</p>
+      </li>
+      <li>
+        <p><strong>데이터 통합 및 시각화</strong></p>
+
+        <p>Prometheus로 수집한 데이터를 Grafana를 통해 대시보드, 차트, 그래프 형태로 시각화하여 한눈에 시스템 상태를 파악할 수 있게 한다. 이는 장애 발생 시 빠른 대응과 성능 분석에 중요한 역할을 한다.</p>
+      </li>
+      <li>
+        <p><strong>경고 시스템</strong></p>
+
+        <p>수집된 데이터를 기반으로 임계치 초과나 오류 발생 시 자동 알림을 제공하는 경고 시스템을 도입하여, 빠른 문제 인식과 해결을 지원한다.</p>
+      </li>
+    </ul>
+
+    <h2 id="5-내결함성-resilience-패턴">5. 내결함성 (Resilience) 패턴</h2>
+
+    <ul>
+      <li>
+        <p><strong>Circuit Breaker</strong></p>
+
+        <p>Netflix Hystrix 또는 최신 대안인 Resilience4j를 활용하여, 서비스 간 호출에서 장애가 발생할 경우 자동으로 회로를 차단하여 장애 전파를 방지한다. 이로써 한 서비스의 장애가 전체 시스템에 영향을 미치는 것을 예방할 수 있다.</p>
+      </li>
+      <li>
+        <p><strong>Fallback Mechanism</strong></p>
+
+        <p>서비스 장애 시 대체 로직을 수행하여 기본 응답이나 캐시된 데이터를 제공함으로써, 시스템의 연속성을 보장한다. 이를 통해 일부 서비스 장애가 발생하더라도 전체 사용자 경험에 미치는 영향을 최소화할 수 있다.</p>
+      </li>
+    </ul>
+
+    <h2 id="6-로깅-및-분산-추적">6. 로깅 및 분산 추적</h2>
+
+    <ul>
+      <li>
+        <p><strong>중앙 집중식 로그 관리</strong></p>
+
+        <p>로그를 중앙에서 집계하고 분석하는 시스템을 구축하여, 각 서비스에서 발생하는 로그를 통합적으로 관리한다. 이는 장애 원인 파악과 성능 모니터링에 필수적이다.</p>
+      </li>
+      <li>
+        <p><strong>컨텍스트 전파</strong></p>
+
+        <p>각 서비스에 trace-id, span-id 등을 포함하여 분산 시스템 전반의 호출 관계와 성능, 오류 상황을 추적한다. 이를 통해 전체 트랜잭션의 진행상황을 정확하게 분석할 수 있다.</p>
+      </li>
+      <li>
+        <p><strong>Zipkin</strong></p>
+
+        <ul>
+          <li>Spring Cloud 환경에서 분산 시스템 내 호출 관계와 성능을 추적하며, 문제 발생 시 원인 분석을 지원한다.</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>추가 대안 기술</strong></p>
+
+        <ul>
+          <li><strong>Jaeger:</strong> 오픈소스 분산 추적 시스템으로, 트랜잭션의 흐름, 서비스 간 의존성, 지연 시간 등을 시각화하여 분석할 수 있다.</li>
+          <li><strong>OpenTelemetry:</strong> 다양한 언어와 프레임워크에서 트레이싱 데이터를 표준화하여 수집하고, Jaeger, Zipkin, Elastic APM 등 여러 백엔드 시스템과 연동 가능하다.</li>
+          <li><strong>클라우드 기반 서비스</strong>
+            <ul>
+              <li>
+                <p><strong>AWS CloudWatch 및 AWS X-Ray</strong></p>
+
+                <p>AWS 환경에서 CloudWatch Logs와 Metrics를 사용해 로그를 중앙에서 관리하고, X-Ray를 통해 분산 추적 기능을 제공하여 서비스 간 호출 관계와 지연, 오류를 분석할 수 있다.</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2 id="7-cicd-지속적-통합-및-지속적-배포--devops-에서-학습-예정">7. CI/CD (지속적 통합 및 지속적 배포) → DevOps 에서 학습 예정</h2>
+
+    <ul>
+      <li>
+        <p><strong>자동화 파이프라인</strong></p>
+
+        <p>Jenkins, GitLab CI, CircleCI, GitHub Actions 등 다양한 도구를 활용하여 코드 빌드, 테스트, 배포 과정을 자동화한다. 이는 코드 품질을 높이고 배포 주기를 단축하는 데 기여한다.</p>
+      </li>
+      <li>
+        <p><strong>테스트와 검증</strong></p>
+
+        <p>지속적 통합(CI) 과정에서 단위 테스트, 통합 테스트, E2E 테스트 등을 수행하여 애플리케이션의 안정성을 확보한다. 지속적 배포(CD)를 통해 변경 사항을 빠르게 프로덕션에 반영한다.</p>
+      </li>
+      <li>
+        <p><strong>롤백 및 모니터링</strong></p>
+
+        <p>배포 과정에서 문제가 발생할 경우 롤백 전략을 마련하고, 배포 후 모니터링을 통해 안정성을 지속적으로 검증한다.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="4-config-server-actuator-내결함성">4. Config Server, Actuator, 내결함성</h1>
+
+<h2 id="4-1-spring-cloud-config-server">4-1. Spring Cloud Config Server</h2>
+
+<h3 id="4-1-1-msa-환경에서의-구성-관리">4-1-1. MSA 환경에서의 구성 관리</h3>
+
+<ul>
+  <li>배포 되는 실제 코드와 구성 정보를 완전히 분리한다.</li>
+  <li>여러 환경에서도 절대 변경 되지 않는 불변(immutable) 애플리케이션 이미지를 빌드한다.</li>
+  <li>서버가 시작할 때 마이크로서비스가 읽어 오는 환경 변수 또는 중앙 저장소를 통해 모든 애플리케이션 구성 정보를 주입한다.</li>
+</ul>
+
+<h3 id="4-1-2-spring-cloud-config-server">4-1-2. Spring Cloud Config Server</h3>
+
+<p>![<a href="https://pankajtechblogs.dev/spring-cloud-config-server-auto-reload-config-properties-zero-touch-63c4423beb59">https://pankajtechblogs.dev/spring-cloud-config-server-auto-reload-config-properties-zero-touch-63c4423beb59</a></p>
+
+<p>다양한 구성 관리 솔루션 중 스프링 부트와 밀접하게 통합 되어 있어 사용하기 쉬우며 깃 소스 제어 플랫폼 또는 하시코프 볼트와 바로 통합할 수 있다.](<a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/2ed584e0-2b03-4eac-8d4b-4490d601f1ba/17da7a70-6392-47cf-8043-d74e7e11be82/1_5fNSuIhy02ix4mKEdWLTrA.webp">https://prod-files-secure.s3.us-west-2.amazonaws.com/2ed584e0-2b03-4eac-8d4b-4490d601f1ba/17da7a70-6392-47cf-8043-d74e7e11be82/1_5fNSuIhy02ix4mKEdWLTrA.webp</a>)</p>
+
+<p><a href="https://pankajtechblogs.dev/spring-cloud-config-server-auto-reload-config-properties-zero-touch-63c4423beb59">https://pankajtechblogs.dev/spring-cloud-config-server-auto-reload-config-properties-zero-touch-63c4423beb59</a></p>
+
+<p>다양한 구성 관리 솔루션 중 스프링 부트와 밀접하게 통합 되어 있어 사용하기 쉬우며 깃 소스 제어 플랫폼 또는 하시코프 볼트와 바로 통합할 수 있다.</p>
+
+<h3 id="주요-기능">주요 기능</h3>
+
+<aside> 💡
+
+-   중앙 집중식 구성 관리: 여러 환경과 애플리케이션에 대한 구성을 한 곳에서 관리할 수 있다.
+-   동적 구성 업데이트: 런타임 중에 구성을 변경하고 클라이언트에 즉시 반영할 수 있다.
+-   버전 관리: Git 등의 버전 관리 시스템과 통합하여 구성 변경 이력을 추적할 수 있다.
+-   보안: 중요한 구성 정보를 암호화하여 저장하고 전송할 수 있다. </aside>
+
+<h3 id="4-1-4-설정-방법">4-1-4. 설정 방법</h3>
+
+<h3 id="spring-cloud-config-server측-설정">Spring Cloud Config Server측 설정</h3>
+
+<p>Spring Colud Config Server dependency를 추가한다.</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">implementation</span> <span class="s1">'org.springframework.cloud:spring-cloud-config-server'</span>
+
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">@EnableConfigServer</code>는 Spring Cloud Config Server를 활성화하는 애노테이션이다. 이 애노테이션을 사용하면 Spring Boot 애플리케이션이 구성 서버로 동작하게 된다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@SpringBootApplication</span>
+<span class="nd">@EnableConfigServer</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConfigServerApplication</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="nc">ConfigServerApplication</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">application.yml</code> 파일에 spring.cloud.config.server.git.uri 설정에 읽어올 설정파일의 경로를 지정한다.</p>
+
+<ul>
+  <li>Local Repository인 경우 Local Repository의 경로가 기입 되면 된다.</li>
+  <li>Github Remote Repository인 경우 Github Repository의 주소가 기입 되면 된다.
+    <ul>
+      <li>public한 경우 주소만 기입해도 된다.</li>
+      <li>private한 경우 username, password가 같이 기입 되어야 한다.</li>
+      <li>username, password 노출을 피하고 싶을 경우 SSH key 생성 후 github에 공개키, config server에 개인키를 추가하여 설정하는 것도 가능하다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
+  <span class="na">application</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">config-server</span>
+  <span class="na">cloud</span><span class="pi">:</span>
+    <span class="na">config</span><span class="pi">:</span>
+      <span class="na">server</span><span class="pi">:</span>
+        <span class="na">git</span><span class="pi">:</span>
+          <span class="na">uri</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">설정파일이 담긴 깃 레포지토리 경로</span><span class="pi">]</span>
+
+</code></pre></div></div>
+
+<h3 id="service-instance측-설정">Service Instance측 설정</h3>
+
+<p>bootstrap.yml 사용을 위한 dependency를 추가한다.</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">implementation</span> <span class="s1">'org.springframework.cloud:spring-cloud-starter-config'</span>
+<span class="n">implementation</span> <span class="s1">'org.springframework.cloud:spring-cloud-starter-bootstrap'</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li><a href="http://bootstrap.properties">bootstrap.properties</a> or bootstrap.yml은 스프링 클라우드의 특정 파일 타입으로 <a href="http://application.properties">application.properties</a> or application.yml 파일을 사용하는 컴포넌트보다 ApplicationContext로 먼저 로드 된다.</li>
+  <li>스프링 애플리케이션 이름, <strong>스프링 클라우드 구성 서버 위치</strong>, 암호화/복호화 정보 등을 지정한다.</li>
+  <li>bootstrap.yml 을 작성한다.</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
+  <span class="na">cloud</span><span class="pi">:</span>
+    <span class="na">config</span><span class="pi">:</span>
+      <span class="na">uri</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">스프링 클라우드 컨피그 서버 주소</span><span class="pi">]</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">읽어올 파일</span><span class="pi">]</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>application.yml 에서 설정파일이 분리 된 내용을 제거하고 bootstrap.yml 파일을 읽어올 수 있도록 import 한다.</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
+  <span class="na">config</span><span class="pi">:</span>
+    <span class="na">import</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">classpath:/bootstrap.yml</span>
+
+</code></pre></div></div>
+
+<h2 id="4-2-spring-actuator">4-2. Spring Actuator</h2>
+
+<h3 id="4-2-1-spring-actuator란">4-2-1. Spring Actuator란?</h3>
+
+<aside> 💡
+
+Spring Actuator는 Spring Boot 애플리케이션의 운영 환경에서 모니터링 및 관리를 위한 기능을 제공하는 라이브러리이다.
+
+</aside>
+
+<ul>
+  <li>애플리케이션 상태, 메트릭, 환경 설정 등의 정보를 실시간으로 확인할 수 있다.</li>
+  <li>HTTP 엔드포인트나 JMX를 통해 애플리케이션의 내부 상태를 모니터링하고 관리할 수 있다.</li>
+  <li>애플리케이션의 건강 상태 체크, 로그 레벨 변경, 스레드 덤프 확인 등 다양한 운영 기능을 제공한다.</li>
+  <li>필요에 따라 사용자 정의 엔드포인트를 추가하여 기능을 확장할 수 있다.</li>
+</ul>
+
+<h3 id="4-2-2-설정-방법">4-2-2. 설정 방법</h3>
+
+<p>actuator 사용을 위한 dependency를 추가한다.</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">implementation</span> <span class="s1">'org.springframework.boot:spring-boot-starter-actuator'</span>
+
+</code></pre></div></div>
+
+<p>액추에이터의 모든 엔드포인트의 경로에는 /actuator가 앞에 붙는다.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">### 기본 경로 수정</span>
+<span class="na">management</span><span class="pi">:</span>
+  <span class="na">endpoints</span><span class="pi">:</span>
+    <span class="na">web</span><span class="pi">:</span>
+      <span class="na">base-path</span><span class="pi">:</span> <span class="s">/management</span>
+
+</code></pre></div></div>
+
+<p>대부분의 액추에이터 엔드포인트는 민감한 정보를 제공하므로 보안 처리가 되어야 한다. 스프링 시큐리티를 사용해서 액추에이터를 보안 처리할 수 있다. 그러나 액추에이터 자체로는 보안 처리가 되어 있지 않으므로 대부분의 엔드포인트가 기본적으로 비활성화되어 있다.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">### 엔드포인트의 노출 여부 제어</span>
+<span class="na">management</span><span class="pi">:</span>
+  <span class="na">endpoints</span><span class="pi">:</span>
+    <span class="na">web</span><span class="pi">:</span>
+      <span class="na">exposure</span><span class="pi">:</span>
+        <span class="na">include</span><span class="pi">:</span> <span class="s">health,info,beans,conditions</span> 
+        <span class="na">exclude</span><span class="pi">:</span> <span class="s">threaddump, heapdump</span>
+
+</code></pre></div></div>
+
+<h3 id="4-2-3-actuator-endpoint-종류">4-2-3. Actuator Endpoint 종류</h3>
+
+<p>엔드포인트의 종류는 굉장히 많으므로 모든 종류는 공식 문서를 통해서 확인하도록 한다. 또한 기능에 따라 dependency 추가 및 bean 등록이 필요 할 수 있으니 확인 후 활용한다.</p>
+
+<p><a href="https://docs.spring.io/spring-boot/reference/actuator/endpoints.html#actuator.endpoints">Endpoints :: Spring Boot</a></p>
+
+<p>몇 가지 대표적인 엔드포인트는 다음과 같다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>엔드포인트</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/health</code></td>
+      <td>애플리케이션의 헬스 체크</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/metrics</code></td>
+      <td>애플리케이션의 메트릭 정보</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/info</code></td>
+      <td>애플리케이션 메타데이터</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/env</code></td>
+      <td>환경 변수 및 설정</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/loggers</code></td>
+      <td>로그 레벨 관리</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/refresh</code></td>
+      <td>애플리케이션의 환경 설정 리프레시</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/threaddump</code></td>
+      <td>스레드 덤프 정보</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/beans</code></td>
+      <td>Spring Bean 정보</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/httpexchanges</code></td>
+      <td>HTTP 교환 정보</td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li>
+    <p><strong>GET /actuator/health</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UP"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>GET /actuator/metrics</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"jvm.memory.used"</span><span class="p">,</span><span class="w"> </span><span class="s2">"jvm.gc.pause"</span><span class="p">,</span><span class="w"> </span><span class="err">...</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+    
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>GET /actuator/info</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"app"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MyApp"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+    
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>GET /actuator/env</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"activeProfiles"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="nl">"propertySources"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+    
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>GET /actuator/loggers</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"levels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ROOT"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INFO"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"com.example"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEBUG"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+    
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>GET /actuator/threaddump</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"threads"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"main"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RUNNABLE"</span><span class="p">,</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+    
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>GET /actuator/beans</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"contexts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"application"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"beanDefinitionCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+    
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>GET /actuator/httpexchanges</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"exchanges"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-09-26T12:00:00Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/api/example"</span><span class="p">,</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+    
+</span></code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="4-3-내결함성-resilience-패턴">4-3. 내결함성 (Resilience) 패턴</h2>
+
+<aside> 💡
+
+내결함성 패턴은 한 서비스의 장애가 전체 시스템에 영향을 미치지 않도록 분리하고, 장애 상황에서도 서비스의 연속성을 보장하기 위해 핵심적으로 적용된다.
+
+</aside>
+
+<h3 id="4-3-1-circuit-breaker와-fallback-메커니즘">4-3-1. Circuit Breaker와 Fallback 메커니즘</h3>
+
+<ul>
+  <li><strong>핵심 개념</strong>
+    <ul>
+      <li><strong>Circuit Breaker:</strong> 시스템 내 특정 서비스 호출 시 장애가 발생하면 일정 기간 동안 호출을 차단하여 장애 전파를 막는 패턴이다. Netflix Hystrix, Resilience4j 등이 대표적인 구현체이다.</li>
+      <li><strong>Fallback Mechanism:</strong> 장애 발생 시 대체 로직이나 기본 응답, 캐시된 데이터를 제공하여 사용자에게 최소한의 서비스를 유지해 준다.</li>
+    </ul>
+  </li>
+  <li><strong>주요 이점</strong>
+    <ul>
+      <li>서비스 장애에 따른 전체 시스템 영향 최소화</li>
+      <li>빠른 장애 탐지 및 자동 복구</li>
+      <li>안정적인 사용자 경험 제공</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="4-3-2-gateway에서-서비스-장애-시-내결함성-처리">4-3-2. Gateway에서 서비스 장애 시 내결함성 처리</h3>
+
+<p>API Gateway (예: Spring Cloud Gateway)를 통해 외부 클라이언트로부터 들어오는 요청을 내부 서비스(예: 사용자 서비스)로 라우팅할 때, 사용자 서비스에 장애가 발생하면 미리 정의된 fallback URI로 요청을 전달하는 방식이다.</p>
+
+<ul>
+  <li><strong>구성 요소 및 동작 원리</strong>
+    <ul>
+      <li><strong>Gateway Route 설정</strong>
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">lb://SWCAMP-USER-SERVICE</code>를 대상으로 라우팅하며, 로드밸런싱을 수행</li>
+          <li>요청 경로를 재작성(RewritePath)하여 내부 API 주소와 맞추고, Circuit Breaker 필터를 적용</li>
+          <li>Circuit Breaker 이름(<code class="language-plaintext highlighter-rouge">userServiceCB</code>)가 설정되어 있고, 장애 발생 시 <code class="language-plaintext highlighter-rouge">fallbackUri: forward:/fallback/user</code>로 포워딩되어 대체 응답을 제공</li>
+        </ul>
+      </li>
+      <li><strong>Fallback Controller</strong>
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">/fallback/user</code> 엔드포인트를 구현한 컨트롤러가 정의되어 있으며, 사용자에게 장애 상황에 대한 메시지를 반환하여 서비스 불능 상태를 최소화</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="4-3-3-order-service에서-호출하는-user-service-장애시-내결함성-처리">4-3-3. Order Service에서 호출하는 User Service 장애시 내결함성 처리</h3>
+
+<p>Order Service 내에서 사용자 서비스(예: 사용자 등급 조회)를 호출할 때 Resilience4j의 Circuit Breaker를 적용하여, user service 호출에 장애가 발생하면 fallback 메서드가 실행되도록 처리한다.</p>
+
+<ul>
+  <li><strong>구성 요소 및 동작 원리</strong>
+    <ul>
+      <li><strong>@CircuitBreaker 애노테이션</strong>
+        <ul>
+          <li>OrderService 클래스의 <code class="language-plaintext highlighter-rouge">createOrder</code> 메서드에 적용되어 user service 호출 시 장애가 감지되면 지정된 fallback 메서드 <code class="language-plaintext highlighter-rouge">fallbackGetUserGrade</code>가 호출</li>
+          <li>fallback 메서드는 장애 상황에서도 주문 생성 로직을 진행하도록 처리하거나, 기본 할인 없이 주문을 완료하는 등의 대체 로직을 포함</li>
+        </ul>
+      </li>
+      <li><strong>실제 대체 동작</strong>
+        <ul>
+          <li>사용자 등급 정보를 가져오지 못할 경우, 장애 감지를 로그로 남기고 기본적인 주문 생성 프로세스를 실행하여 애플리케이션의 연속성을 유지</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/playbook.html" data-toggle="tooltip" data-placement="top" title="플레이북">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/startbootstrap-clean-blog-jekyll/msa/2025/06/21/MSA.html" data-toggle="tooltip" data-placement="top" title="MSA">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:your-email@example.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/SBootstrap">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/StartBootstrap">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/StartBootstrap">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Start Bootstrap 2025</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/startbootstrap-clean-blog-jekyll/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/startbootstrap-clean-blog-jekyll/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-XXXXXXXXX-X');
+</script>
+
+
+
+</body>
+
+</html>

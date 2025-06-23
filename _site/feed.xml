@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/" rel="alternate" type="text/html" /><updated>2025-06-22T23:51:10+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/feed.xml</id><title type="html">Clean Blog</title><subtitle>A Blog Theme by Start Bootstrap</subtitle><author><name>Start Bootstrap</name></author><entry><title type="html">DevOps</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/devops/2025/06/21/devops.html" rel="alternate" type="text/html" title="DevOps" /><published>2025-06-21T22:00:00+09:00</published><updated>2025-06-21T22:00:00+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/devops/2025/06/21/devops</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/devops/2025/06/21/devops.html"><![CDATA[<h1 id="1-devops">1. DevOps</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/" rel="alternate" type="text/html" /><updated>2025-06-23T12:48:21+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/feed.xml</id><title type="html">Clean Blog</title><subtitle>A Blog Theme by Start Bootstrap</subtitle><author><name>Start Bootstrap</name></author><entry><title type="html">DevOps</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/devops/2025/06/21/devops.html" rel="alternate" type="text/html" title="DevOps" /><published>2025-06-21T22:00:00+09:00</published><updated>2025-06-21T22:00:00+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/devops/2025/06/21/devops</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/devops/2025/06/21/devops.html"><![CDATA[<h1 id="1-devops">1. DevOps</h1>
 
 <h2 id="1-1-과거와-현재">1-1. 과거와 현재</h2>
 
@@ -125,500 +125,1445 @@ DevOps는 단순한 도구나 기술에 그치지 않고, **문화와 관행**�
   <li><strong>개발자</strong>와 <strong>운영팀</strong>은 더 이상 각자의 영역에만 갇히지 않고, 하나의 팀으로 협업하며, 보다 빠르고 안정적인 배포가 가능해진다.</li>
   <li><strong>자동화</strong>는 반복적인 작업을 제거하고, <strong>빠른 피드백</strong>을 통해 품질을 개선하며, <strong>지속적인 개선</strong>을 이루는 핵심 요소다.</li>
   <li>DevOps 환경에서 개발자는 더 빠르고, 효율적으로 소프트웨어를 개발하고, 그 결과물은 사용자에게 신속하게 전달될 수 있다.</li>
-</ul>]]></content><author><name>Start Bootstrap</name></author><category term="devops" /><summary type="html"><![CDATA[1. DevOps]]></summary></entry><entry><title type="html">테스트환경설정</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/ansible_test_setting.html" rel="alternate" type="text/html" title="테스트환경설정" /><published>2025-06-21T22:00:00+09:00</published><updated>2025-06-21T22:00:00+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/ansible_test_setting</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/ansible_test_setting.html"><![CDATA[<table>
-  <thead>
-    <tr>
-      <th>역할</th>
-      <th>이름</th>
-      <th>예시 IP</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>제어 노드</td>
-      <td><code class="language-plaintext highlighter-rouge">ansible-master</code></td>
-      <td>192.168.0.101</td>
-    </tr>
-    <tr>
-      <td>대상 노드</td>
-      <td><code class="language-plaintext highlighter-rouge">node1</code>, <code class="language-plaintext highlighter-rouge">node2</code></td>
-      <td>192.168.0.102, 192.168.0.103</td>
-    </tr>
-  </tbody>
-</table>
+</ul>]]></content><author><name>Start Bootstrap</name></author><category term="devops" /><summary type="html"><![CDATA[1. DevOps]]></summary></entry><entry><title type="html">플레이북</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/playbook.html" rel="alternate" type="text/html" title="플레이북" /><published>2025-06-21T22:00:00+09:00</published><updated>2025-06-21T22:00:00+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/playbook</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/playbook.html"><![CDATA[<h2 id="1-플레이북으로-nginx-설치-자동화">1. 플레이북으로 Nginx 설치 자동화</h2>
+
+<h3 id="플레이북이란">플레이북이란?</h3>
 
 <ul>
-  <li><strong>네트워크 어댑터</strong>: VirtualBox → 브리지 어댑터</li>
+  <li>*플레이북(playbook)<strong>은 Ansible에서 복잡한 작업을 반복 가능하고 읽기 쉬운 **YAML 파일 형태로 정의</strong>한 자동화 스크립트입니다. Ad-hoc 명령은 단발성 작업에 적합하지만, <strong>여러 작업을 순차적으로 실행하거나 버전 관리하고자 할 때는 플레이북이 필요</strong>합니다.</li>
 </ul>
 
-<hr />
+<h3 id="목적">목적</h3>
 
-<h2 id="1단계-ubuntu-설치-후-기본-설정">1단계: Ubuntu 설치 후 기본 설정</h2>
+<ul>
+  <li>반복 가능한 작업 자동화 (예: 여러 서버에 Nginx 설치)</li>
+  <li>역할과 태스크를 분리하여 명확하게 구성</li>
+</ul>
 
-<p>각 VM에서 아래 명령을 수행</p>
+<h3 id="디렉토리-구성-예시">디렉토리 구성 예시</h3>
 
-<h3 id="11-사용자-이름-확인">1.1 사용자 이름 확인</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">whoami</span>
-
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-lab/
+├── playbooks/
+│   └── install-nginx.yml
 </code></pre></div></div>
 
-<p>→ 이후 Ansible의 <code class="language-plaintext highlighter-rouge">ansible_user</code>로 사용됨</p>
+<h3 id="install-nginxyml">install-nginx.yml</h3>
 
-<h3 id="12-네트워크-확인을-위한-net-tools-설치">1.2 네트워크 확인을 위한 net-tools 설치</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- name: Install and Start Nginx on all target servers
+  hosts: targets
+  become: yes
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
-<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> net-tools
-ifconfig
-
-
+    - name: Ensure nginx is running
+      service:
+        name: nginx
+        state: started
+        enabled: yes
 </code></pre></div></div>
 
-<p>→ IP 확인 (브리지 모드에서 자동 할당됨)</p>
+<h3 id="-실행-명령어">▶ 실행 명령어</h3>
 
-<hr />
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd .. 
+cd .. 
+cd vagrant/
 
-<h2 id="2단계-ssh-서버-설정-node1-node2">2단계: SSH 서버 설정 (node1, node2)</h2>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> openssh-server
-<span class="nb">sudo </span>dpkg-reconfigure openssh-server   <span class="c"># 호스트 키 재생성</span>
-<span class="nb">sudo </span>systemctl <span class="nb">enable </span>ssh
-<span class="nb">sudo </span>systemctl start ssh
-
-
+ansible-playbook playbooks/install-nginx.yml
 </code></pre></div></div>
 
-<p>SSH 포트 확인:</p>
+<h3 id="결과-확인">결과 확인</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>ss <span class="nt">-tnlp</span> | <span class="nb">grep</span> :22
+<ol>
+  <li>
+    <p><strong>nginx가 설치되었는지 확인</strong>:</p>
 
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ansible targets <span class="nt">-m</span> <span class="nb">command</span> <span class="nt">-a</span> <span class="s2">"nginx -v"</span>
+    
+</code></pre></div>    </div>
 
-</code></pre></div></div>
+    <p>→ 각 노드에 nginx 버전 출력되면 설치 완료.</p>
+  </li>
+  <li>
+    <p><strong>nginx가 실행 중인지 확인</strong>:</p>
 
-<hr />
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ansible targets <span class="nt">-m</span> service <span class="nt">-a</span> <span class="s2">"name=nginx state=started"</span>
+    
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>웹 서버 응답 확인</strong>:</p>
 
-<h2 id="3단계-ansible-제어-노드에서-ssh-키-생성-및-배포">3단계: Ansible 제어 노드에서 SSH 키 생성 및 배포</h2>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ansible targets <span class="nt">-m</span> <span class="nb">command</span> <span class="nt">-a</span> <span class="s2">"curl -I http://localhost"</span>
+    
+</code></pre></div>    </div>
+  </li>
+</ol>
 
-<h3 id="31-키-생성">3.1 키 생성</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen   <span class="c"># 계속 Enter</span>
-
-</code></pre></div></div>
-
-<h3 id="32-키-배포">3.2 키 배포</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-copy-id 사용자명@192.168.0.102  <span class="c"># node1</span>
-ssh-copy-id 사용자명@192.168.0.103  <span class="c"># node2</span>
-
-
-</code></pre></div></div>
-
-<p>→ 비밀번호 입력 후 키 복사 성공</p>
-
-<hr />
-
-<h2 id="4단계-ansible-설치-및-설정-ansible-master">4단계: Ansible 설치 및 설정 (ansible-master)</h2>
-
-<h3 id="41-ansible-설치">4.1 Ansible 설치</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
-<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> ansible
-ansible <span class="nt">--version</span>
-
-</code></pre></div></div>
-
-<h3 id="42-인벤토리-디렉토리-수동-생성">4.2 인벤토리 디렉토리 수동 생성</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo mkdir</span> <span class="nt">-p</span> /etc/ansible
-<span class="nb">sudo touch</span> /etc/ansible/hosts
-<span class="nb">sudo chmod </span>644 /etc/ansible/hosts
-
-
-</code></pre></div></div>
+<p><strong>예상 결과:</strong> HTTP 200 OK 또는 403 Forbidden 등 웹 서버 응답 헤더 출력</p>
 
 <hr />
 
-<h2 id="5단계-인벤토리hosts-파일-작성">5단계: 인벤토리(hosts) 파일 작성</h2>
+<h2 id="2-변수와-핸들러를-활용한-플레이북-개선">2. 변수와 핸들러를 활용한 플레이북 개선</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>vi /etc/ansible/hosts
+<h3 id="목표">목표</h3>
 
+<ul>
+  <li>Nginx 설치 및 설정 변경 시 자동으로 서비스 재시작</li>
+  <li>반복되는 값을 변수로 분리하여 가독성과 유지 보수성 향상</li>
+</ul>
 
+<h3 id="디렉토리-구조-예시">디렉토리 구조 예시</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-lab/
+├── playbooks/
+│   ├── install-nginx.yml
+│   ├── vars.yml
 </code></pre></div></div>
 
-<p>내용 예시:</p>
+<h3 id="varsyml">vars.yml</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[targets]
-node1 ansible_host=192.168.0.102 ansible_user=ubuntu
-node2 ansible_host=192.168.0.103 ansible_user=ubuntu
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nginx_package: nginx
+nginx_service: nginx
+</code></pre></div></div>
 
+<h3 id="install-nginxyml-1">install-nginx.yml</h3>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- name: Install and manage nginx with handler
+  hosts: targets
+  become: yes
+  vars_files:
+    - /vagrant/playbooks/vars.yml
+  tasks:
+    - name: Install nginx
+      apt:
+        name: ""
+        state: present
+        update_cache: yes
+      notify: Restart nginx
+
+    - name: Ensure nginx is enabled and running
+      service:
+        name: ""
+        state: started
+        enabled: yes
+
+  handlers:
+    - name: Restart nginx
+      service:
+        name: ""
+        state: restarted
+</code></pre></div></div>
+
+<h3 id="-실행-명령어-1">▶ 실행 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook /vagrant/playbooks/install-nginx.yml
+</code></pre></div></div>
+
+<h3 id="확인">확인</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible targets -m command -a "systemctl status nginx"
 </code></pre></div></div>
 
 <blockquote>
-  <p>※ ubuntu는 대상 서버의 사용자명 (실제 로그인 가능해야 함)</p>
+  <p>설정 파일이 변경되거나 nginx가 설치된 경우, handler가 작동하여 자동으로 서비스를 재시작합니다.</p>
+
 </blockquote>
 
 <hr />
 
-<h2 id="6단계-연결-테스트">6단계: 연결 테스트</h2>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible targets <span class="nt">-m</span> ping
-
-</code></pre></div></div>
-
-<p>또는 명시적 경로 지정:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible targets <span class="nt">-i</span> /etc/ansible/hosts <span class="nt">-m</span> ping
-
-</code></pre></div></div>
-
-<p>예상 출력:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node1 | SUCCESS =&gt; {"ping": "pong"}
-node2 | SUCCESS =&gt; {"ping": "pong"}
-
-
-</code></pre></div></div>
-
 <hr />
 
-<h2 id="문제-해결-체크리스트">문제 해결 체크리스트</h2>
+<h2 id="3-템플릿을-활용한-nginx-설정-배포-jinja2">3. 템플릿을 활용한 Nginx 설정 배포 (Jinja2)</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>문제</th>
-      <th>해결 방법</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">no inventory was parsed</code></td>
-      <td><code class="language-plaintext highlighter-rouge">/etc/ansible/hosts</code> 존재 여부 확인 또는 <code class="language-plaintext highlighter-rouge">-i</code> 옵션 사용</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">E212: Can't open file for writing</code></td>
-      <td><code class="language-plaintext highlighter-rouge">sudo</code> 없이 파일 열었음 → <code class="language-plaintext highlighter-rouge">sudo vi /etc/ansible/hosts</code> 사용</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">sshd: no hostkeys available</code></td>
-      <td><code class="language-plaintext highlighter-rouge">sudo dpkg-reconfigure openssh-server</code> 실행하여 호스트 키 생성</td>
-    </tr>
-    <tr>
-      <td>SSH 접속 안됨</td>
-      <td>대상 노드에 <code class="language-plaintext highlighter-rouge">openssh-server</code> 설치 및 <code class="language-plaintext highlighter-rouge">sshd</code> 실행 확인</td>
-    </tr>
-  </tbody>
-</table>
+<h3 id="jinja2란">Jinja2란?</h3>
 
-<hr />
+<p>Jinja2는 Python 기반의 가장 널리 사용되는 <strong>템플릿 엔진</strong> 중 하나로, 텍스트 기반 파일에 변수, 조건문, 반복문 등을 삽입하여 <strong>동적으로 파일을 생성</strong>할 수 있도록 도와줍니다.</p>
 
-<h2 id="명령어-요약">명령어 요약</h2>
-
-<hr />
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 사용자명 확인</span>
-<span class="nb">whoami</span>
-
-<span class="c"># 네트워크 확인</span>
-ifconfig
-
-<span class="c"># SSH 시작</span>
-<span class="nb">sudo </span>systemctl start ssh
-
-<span class="c"># SSH 포트 확인</span>
-<span class="nb">sudo </span>ss <span class="nt">-tnlp</span> | <span class="nb">grep</span> :22
-
-<span class="c"># Ansible 설치</span>
-<span class="nb">sudo </span>apt <span class="nb">install </span>ansible
-
-<span class="c"># 키 복사</span>
-ssh-copy-id 사용자명@192.168.0.102
-
-<span class="c"># 연결 테스트</span>
-ansible targets <span class="nt">-i</span> /etc/ansible/hosts <span class="nt">-m</span> ping
-
-
-</code></pre></div></div>]]></content><author><name>Start Bootstrap</name></author><category term="ansible" /><summary type="html"><![CDATA[역할 이름 예시 IP 제어 노드 ansible-master 192.168.0.101 대상 노드 node1, node2 192.168.0.102, 192.168.0.103]]></summary></entry><entry><title type="html">Ansible이란</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/ansible_is.html" rel="alternate" type="text/html" title="Ansible이란" /><published>2025-06-21T22:00:00+09:00</published><updated>2025-06-21T22:00:00+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/ansible_is</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/ansible_is.html"><![CDATA[<h1 id="1-ansible이란">1. Ansible이란</h1>
-
-<h2 id="1-1-ansible-개념"><strong>1-1. Ansible 개념</strong></h2>
+<p>Ansible은 내부적으로 Jinja2를 템플릿 엔진으로 채택하고 있으며, 다음과 같은 이유로 널리 사용됩니다:</p>
 
 <ul>
-  <li>
-    <p>Ansible은 <strong>자동화 도구</strong>로 인프라 환경 설정, 앱 배포, 서버 관리 등을 코드로 작성하고 자동 실행합니다.</p>
-  </li>
-  <li>
-    <p>시스템 구성, 소프트웨어 배포, 지속적 배포(CD), 다운타임없는 업데이트와 같은 고급 IT작업을 자동화하고 조정(오케스트레이션)할 수 있도록 설계되었다.</p>
-  </li>
-  <li>
-    <p><strong>자동화 범위</strong>:</p>
-  </li>
-  <li>
-    <p>서버 설정 자동화 (ex. 사용자, 패키지, 방화벽 설정)</p>
-  </li>
-  <li>
-    <p>애플리케이션 배포 (ex. Git pull → 빌드 → 서비스 재시작)</p>
-  </li>
-  <li>
-    <p>보안 정책 적용 (ex. SSH 포트 제한, 암호 정책 설정)</p>
-  </li>
-  <li>
-    <p>클라우드 리소스 생성 (ex. AWS EC2 인스턴스 생성)</p>
-  </li>
+  <li><strong>가독성이 높은 문법</strong>: `` 형식으로 직관적인 구문 제공</li>
+  <li><strong>조건문, 반복문, 필터 지원</strong>: 템플릿 내에서 if, for, length 등 다양한 표현 사용 가능</li>
+  <li><strong>YAML, HTML, conf 파일 등 다양한 형식 지원</strong></li>
+  <li><strong>Python 기반으로 Ansible과 자연스럽게 연동됨</strong></li>
 </ul>
 
-<hr />
-
-<h2 id="1-2-ansible의-주요-특징"><strong>1-2. Ansible의 주요 특징</strong></h2>
+<h3 id="다른-템플릿-엔진과-비교">다른 템플릿 엔진과 비교</h3>
 
 <table>
   <thead>
     <tr>
-      <th><strong>특징</strong></th>
-      <th><strong>설명</strong></th>
+      <th>템플릿 엔진</th>
+      <th>특징</th>
+      <th>비고</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>에이전트리스 (Agentless)</strong></td>
-      <td>대상 서버에 별도의 에이전트 설치 없이 <strong>SSH만으로 통신</strong>함. 유지 관리가 간편하고 보안 부담이 적음.</td>
+      <td><strong>Jinja2</strong></td>
+      <td>Python 기반, Ansible 기본 탑재</td>
+      <td>⭐ 기본 선택</td>
     </tr>
     <tr>
-      <td><strong>간단한 문법 (YAML 기반 Playbook)</strong></td>
-      <td>사람이 읽기 쉬운 YAML 형식으로 작업 정의. 패키지 설치, 설정 배포, 서비스 재시작 등을 <strong>순서대로 작성 가능</strong>.</td>
+      <td>Mustache</td>
+      <td>언어 중립적, 로직 없는 템플릿 지향</td>
+      <td>복잡한 표현 제한</td>
     </tr>
     <tr>
-      <td><strong>멱등성 (Idempotent)</strong></td>
-      <td>같은 작업을 여러 번 실행해도 <strong>결과가 항상 동일</strong>하게 유지됨. 예: 이미 설치된 nginx는 건너뜀.</td>
+      <td>ERB (Embedded Ruby)</td>
+      <td>Ruby 기반</td>
+      <td>Chef 등에서 사용됨</td>
     </tr>
     <tr>
-      <td><strong>모듈 기반 구조</strong></td>
-      <td>수천 개의 기능이 <strong>모듈 형태로 제공</strong>됨. 예: <code class="language-plaintext highlighter-rouge">yum</code>, <code class="language-plaintext highlighter-rouge">apt</code>, <code class="language-plaintext highlighter-rouge">copy</code>, <code class="language-plaintext highlighter-rouge">service</code> 등. 사용자 정의 모듈도 가능.</td>
-    </tr>
-    <tr>
-      <td><strong>확장성</strong></td>
-      <td><strong>인벤토리 파일</strong>을 통해 서버를 그룹 단위로 관리. AWS, Azure, GCP와 같은 <strong>클라우드 환경과도 연동</strong> 가능.</td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td> </td>
+      <td>EJS (Embedded JS)</td>
+      <td>JavaScript 기반</td>
+      <td>Node.js에서 사용</td>
     </tr>
   </tbody>
 </table>
 
+<blockquote>
+  <p>Ansible에서는 Jinja2가 기본 내장되어 있고, 대부분의 문서, 예제, 커뮤니티가 Jinja2를 중심으로 구성되어 있으므로 별도 설치 없이 바로 사용 가능하며, 실무에서도 가장 널리 사용됩니다.</p>
+
+</blockquote>
+
+<h3 id="목표-1">목표</h3>
+
+<ul>
+  <li>Nginx의 설정 파일을 템플릿 파일로 구성하여 서버마다 유연하게 배포할 수 있도록 구성</li>
+  <li>Ansible 템플릿 엔진(Jinja2)을 사용하여 변수 기반 설정 파일 생성</li>
+</ul>
+
+<h3 id="디렉토리-구조-예시-1">디렉토리 구조 예시</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-lab/
+├── playbooks/
+│   ├── nginx-role.yml
+│   └── roles/
+│       └── nginx/
+│           ├── tasks/
+│           │   └── main.yml
+│           ├── templates/
+│           │   └── nginx.conf.j2
+│           ├── vars/
+│           │   └── main.yml
+ansible-lab/
+├── playbooks/
+│   ├── install-nginx.yml
+│   ├── vars.yml
+│   ├── templates/
+│   │   └── nginx.conf.j2
+</code></pre></div></div>
+
+<h3 id="templatesnginxconfj2">templates/nginx.conf.j2</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+
+events {
+  worker_connections 768;
+}
+
+http {
+  sendfile on;
+  tcp_nopush on;
+  types_hash_max_size 2048;
+
+  include /etc/nginx/mime.types;
+  default_type application/octet-stream;
+
+  server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    server_name ;
+
+    location / {
+      return 200 "Hello from \n";
+    }
+  }
+}
+</code></pre></div></div>
+
+<h3 id="install-nginxyml-템플릿-적용-추가">install-nginx.yml (템플릿 적용 추가)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- name: Install nginx and apply custom config
+  hosts: targets
+  become: yes
+  vars_files:
+    - /vagrant/playbooks/vars.yml
+  tasks:
+    - name: Install nginx
+      apt:
+        name: ""
+        state: present
+        update_cache: yes
+      notify: Restart nginx
+
+    - name: Deploy nginx config file from template
+      template:
+        src: /vagrant/playbooks/templates/nginx.conf.j2
+        dest: /etc/nginx/nginx.conf
+      notify: Restart nginx
+
+    - name: Ensure nginx is enabled and running
+      service:
+        name: ""
+        state: started
+        enabled: yes
+
+  handlers:
+    - name: Restart nginx
+      service:
+        name: ""
+        state: restarted
+</code></pre></div></div>
+
+<h3 id="-실행-명령어-2">▶ 실행 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /vagrant/playbooks
+
+ansible-playbook /vagrant/playbooks/install-nginx.yml
+</code></pre></div></div>
+
+<h3 id="확인-방법">확인 방법</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible targets -m command -a "curl http://localhost"
+</code></pre></div></div>
+
+<p>→ 출력 결과 예시: <code class="language-plaintext highlighter-rouge">Hello from node1</code>, <code class="language-plaintext highlighter-rouge">Hello from node2</code></p>
+
+<blockquote>
+  <p>템플릿의 inventory_hostname 변수는 Ansible이 자동으로 제공하는 호스트 이름입니다.</p>
+
+</blockquote>
+
 <hr />
 
-<h2 id="1-3-ansible이-해결하는-문제"><strong>1-3. Ansible이 해결하는 문제</strong></h2>
+<hr />
+
+<h2 id="4-role-구조로-nginx-구성-자동화">4. Role 구조로 Nginx 구성 자동화</h2>
+
+<h3 id="role이란">Role이란?</h3>
+
+<p>Ansible에서 <strong>Role</strong>은 플레이북을 역할 기반으로 분리하고 재사용할 수 있도록 구성한 <strong>디렉토리 구조</strong>입니다.</p>
+
+<ul>
+  <li>작업을 <code class="language-plaintext highlighter-rouge">tasks</code>, 변수는 <code class="language-plaintext highlighter-rouge">vars</code>, 템플릿은 <code class="language-plaintext highlighter-rouge">templates</code> 폴더 등으로 구분</li>
+  <li>유지보수와 협업에 유리하며, 여러 프로젝트에서 재사용 가능</li>
+  <li><code class="language-plaintext highlighter-rouge">ansible-galaxy init</code> 명령으로 쉽게 생성 가능</li>
+</ul>
+
+<h3 id="디렉토리-구조-예시-2">디렉토리 구조 예시</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-lab/
+├── roles/
+│   └── nginx/
+│       ├── tasks/
+│       │   └── main.yml
+│       ├── templates/
+│       │   └── nginx.conf.j2
+│       ├── vars/
+│       │   └── main.yml
+</code></pre></div></div>
+
+<h3 id="-role-생성-명령어">▶ Role 생성 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /vagrant/playbooks
+ansible-galaxy init roles/nginx
+</code></pre></div></div>
+
+<h2 id="ansible-galaxy-명령어"><code class="language-plaintext highlighter-rouge">ansible-galaxy</code> 명령어</h2>
 
 <table>
   <thead>
     <tr>
-      <th><strong>업무 영역</strong></th>
-      <th><strong>적용 내용</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>서버 초기 세팅</strong></td>
-      <td>사용자 계정 생성, 패키지 설치, Timezone, 방화벽 설정 등</td>
-    </tr>
-    <tr>
-      <td><strong>애플리케이션 배포</strong></td>
-      <td>Git에서 코드 받아오기, 빌드, 배포, 서비스 재시작 등 전체 배포 프로세스 자동화</td>
-    </tr>
-    <tr>
-      <td><strong>보안 정책 적용</strong></td>
-      <td>패스워드 복잡성, 방화벽, 특정 포트 차단 등 정책을 모든 서버에 일관되게 적용</td>
-    </tr>
-    <tr>
-      <td><strong>로그 수집기 배포</strong></td>
-      <td>Filebeat, Fluentd 등 로그 수집기 설치와 설정 자동화</td>
-    </tr>
-    <tr>
-      <td><strong>다수 서버 대상 작업</strong></td>
-      <td>수십~수천 대 서버에 동시에 설정 변경, 업데이트, 점검</td>
-    </tr>
-    <tr>
-      <td><strong>클라우드 자원 생성</strong></td>
-      <td>AWS/GCP 인스턴스, VPC, 보안 그룹 생성과 설정 자동화</td>
-    </tr>
-    <tr>
-      <td><strong>Kubernetes 초기화</strong></td>
-      <td>kubeadm으로 마스터/워커 클러스터 구성 자동화</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
-
-<h2 id="1-4-ansible의-장점"><strong>1-4. Ansible의 장점</strong></h2>
-
-<table>
-  <thead>
-    <tr>
-      <th><strong>장점</strong></th>
-      <th><strong>설명</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>에이전트리스 구조</strong></td>
-      <td>대상 서버에 별도 소프트웨어 설치 없이 SSH만 있으면 동작. 유지 관리가 단순하고 효율적.</td>
-    </tr>
-    <tr>
-      <td><strong>간단한 문법 (YAML)</strong></td>
-      <td>사람이 읽고 쓰기 쉬운 YAML 문법 사용 → 코드 작성과 유지보수가 쉬움.</td>
-    </tr>
-    <tr>
-      <td><strong>멱등성 보장</strong></td>
-      <td>같은 작업을 여러 번 실행해도 결과가 동일 → 실수로 중복 실행해도 시스템에 변화 없음.</td>
-    </tr>
-    <tr>
-      <td><strong>빠른 도입 가능</strong></td>
-      <td>복잡한 설정 없이도 금방 실무에 적용 가능 → 작은 팀에서도 쉽게 시작 가능.</td>
-    </tr>
-    <tr>
-      <td><strong>모듈 기반 구조</strong></td>
-      <td>다양한 작업을 위한 모듈이 내장되어 있어 확장성 뛰어남 (ex. docker, aws, service 등).</td>
-    </tr>
-    <tr>
-      <td><strong>커뮤니티와 생태계</strong></td>
-      <td>문서화가 잘 되어 있고, 예제와 플러그인이 풍부하며 Red Hat의 공식 지원도 있음.</td>
-    </tr>
-    <tr>
-      <td><strong>멀티 OS 지원</strong></td>
-      <td>리눅스뿐 아니라 윈도우 서버 관리도 가능 (WinRM 지원)</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
-
-<h2 id="1-5-ansible의-단점"><strong>1-5. Ansible의 단점</strong></h2>
-
-<table>
-  <thead>
-    <tr>
-      <th><strong>단점</strong></th>
-      <th><strong>설명</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>속도 문제</strong></td>
-      <td>SSH 방식은 순차적(Push 방식) 실행이기 때문에 <strong>수백 대 이상의 서버 작업은 느릴 수 있음</strong>.</td>
-    </tr>
-    <tr>
-      <td><strong>복잡한 로직 구현 한계</strong></td>
-      <td>조건문, 반복문 등의 복잡한 흐름을 표현하기 어려움. (Jinja2 템플릿과 변수로 극복 가능하지만 한계 존재)</td>
-    </tr>
-    <tr>
-      <td><strong>에러 로깅 및 디버깅 약함</strong></td>
-      <td>에러 발생 시 메시지가 단순하며, 복잡한 작업 디버깅에 어려움이 있음.</td>
-    </tr>
-    <tr>
-      <td><strong>GUI 부족</strong></td>
-      <td>기본적으로 CLI 기반이며, GUI(AWX, Ansible Tower)는 별도 설치와 관리 필요.</td>
-    </tr>
-    <tr>
-      <td><strong>대규모 분산 처리 비효율적</strong></td>
-      <td>수많은 노드를 동시에 처리하는 경우 Puppet/Chef 같은 Pull 방식 도구가 더 적합할 수 있음.</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
-
-<h2 id="1-6-다른-도구와-비교"><strong>1-6. 다른 도구와 비교</strong></h2>
-
-<table>
-  <thead>
-    <tr>
-      <th><strong>항목</strong></th>
-      <th><strong>Ansible</strong></th>
-      <th><strong>Chef / Puppet</strong></th>
-      <th><strong>Terraform</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>설치 방식</td>
-      <td>에이전트 없음</td>
-      <td>에이전트 필요</td>
-      <td>에이전트 없음</td>
-    </tr>
-    <tr>
-      <td>실행 방식</td>
-      <td>Push 방식 (SSH)</td>
-      <td>Pull 방식</td>
-      <td>선언적 실행 (IaC)</td>
-    </tr>
-    <tr>
-      <td>구성 목적</td>
-      <td>설정 및 운영 자동화</td>
-      <td>설정 및 운영 자동화</td>
-      <td>인프라 프로비저닝 중심</td>
-    </tr>
-    <tr>
-      <td>문법</td>
-      <td>YAML</td>
-      <td>Ruby DSL</td>
-      <td>HCL</td>
-    </tr>
-    <tr>
-      <td>학습 곡선</td>
-      <td>쉬움</td>
-      <td>다소 어려움</td>
-      <td>보통</td>
-    </tr>
-    <tr>
-      <td>적합한 환경</td>
-      <td>중소규모, 빠른 시작</td>
-      <td>대규모 엔터프라이즈</td>
-      <td>멀티클라우드/클라우드 중심</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
-
-<h2 id="1-7-ansible의-개념-구성요소">1-7. Ansible의 개념 구성요소</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>요소</th>
+      <th>기능</th>
+      <th>명령 예시</th>
       <th>설명</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Inventory (인벤토리)</strong></td>
-      <td>관리 대상 노드의 목록 및 그룹을 정의 IP 또는 도메인 기반, 정적/동적 인벤토리 구성 가능</td>
+      <td><strong>Role 생성</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">ansible-galaxy init roles/nginx</code></td>
+      <td>로컬에서 사용할 역할 구조 생성</td>
     </tr>
     <tr>
-      <td><strong>Playbooks (플레이북)</strong></td>
-      <td>여러 Task를 순서대로 저장한 YAML 파일 반복 작업을 코드화하여 재사용 가능</td>
+      <td><strong>Role 설치</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">ansible-galaxy install geerlingguy.nginx</code></td>
+      <td>Ansible Galaxy에서 Role 다운로드</td>
     </tr>
     <tr>
-      <td><strong>Modules (모듈)</strong></td>
-      <td>Ansible의 기능 단위 코드 블록 예: <code class="language-plaintext highlighter-rouge">ping</code>, <code class="language-plaintext highlighter-rouge">yum</code>, <code class="language-plaintext highlighter-rouge">copy</code>, <code class="language-plaintext highlighter-rouge">service</code> 등 수많은 모듈 제공 JSON을 반환할 수 있는 언어로 컨스텀 모듈 작성 가능</td>
+      <td><strong>Role 목록 확인</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">ansible-galaxy list</code></td>
+      <td>설치된 Role 확인</td>
     </tr>
     <tr>
-      <td><strong>Control Node (제어 노드)</strong></td>
-      <td>Ansible이 설치된 시스템 <code class="language-plaintext highlighter-rouge">/usr/bin/ansible</code>, <code class="language-plaintext highlighter-rouge">/usr/bin/ansible-playbook</code> 실행 가능 Python이 설치되어 있다면 대부분의 리눅스/유니스 계열에서 사용 가능 Windows는 제어 노드로 사용 불가</td>
-    </tr>
-    <tr>
-      <td><strong>Managed Nodes (관리 노드)</strong></td>
-      <td>Ansible이 제어하는 대상 서버 또는 네트워크 장비 변수의 에이전트나 Ansible 설치 불필요</td>
-    </tr>
-    <tr>
-      <td><strong>Tasks (작업 단위)</strong></td>
-      <td>모듈을 호출하여 실행하는 단일 명령 Playbook 또는 ad-hoc 명령으로 실행 가능</td>
+      <td><strong>Role 제거</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">ansible-galaxy remove &lt;role_name&gt;</code></td>
+      <td>Role 삭제</td>
     </tr>
   </tbody>
-</table>]]></content><author><name>Start Bootstrap</name></author><category term="ansible" /><summary type="html"><![CDATA[1. Ansible이란]]></summary></entry><entry><title type="html">Vagrant를 이용한 환경구축</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/Vagrant%EB%A5%BC_%EC%9D%B4%EC%9A%A9%ED%95%9C_%ED%99%98%EA%B2%BD%EA%B5%AC%EC%B6%95.html" rel="alternate" type="text/html" title="Vagrant를 이용한 환경구축" /><published>2025-06-21T22:00:00+09:00</published><updated>2025-06-21T22:00:00+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/Vagrant%EB%A5%BC_%EC%9D%B4%EC%9A%A9%ED%95%9C_%ED%99%98%EA%B2%BD%EA%B5%AC%EC%B6%95</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/Vagrant%EB%A5%BC_%EC%9D%B4%EC%9A%A9%ED%95%9C_%ED%99%98%EA%B2%BD%EA%B5%AC%EC%B6%95.html"><![CDATA[<h2 id="vagrant란">Vagrant란?</h2>
+</table>
+
+<h3 id="rolesnginxvarsmainyml">roles/nginx/vars/main.yml</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nginx_package: nginx
+nginx_service: nginx
+</code></pre></div></div>
+
+<h3 id="rolesnginxtemplatesnginxconfj2">roles/nginx/templates/nginx.conf.j2</h3>
+
+<p>(앞서 사용한 Jinja2 템플릿 그대로 사용)</p>
+
+<h3 id="rolesnginxtasksmainyml">roles/nginx/tasks/main.yml</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- name: Install nginx
+  apt:
+    name: ""
+    state: present
+    update_cache: yes
+  notify: Restart nginx
+
+- name: Deploy nginx config file from template
+  template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+  notify: Restart nginx
+
+- name: Ensure nginx is enabled and running
+  service:
+    name: ""
+    state: started
+    enabled: yes
+</code></pre></div></div>
+
+<h3 id="rolesnginxhandlersmainyml">roles/nginx/handlers/main.yml</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- name: Restart nginx
+  service:
+    name: ""
+    state: restarted
+</code></pre></div></div>
+
+<h3 id="playbooksnginx-roleyml">playbooks/nginx-role.yml</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- name: Configure nginx using role
+  hosts: targets
+  become: yes
+  roles:
+    - nginx
+</code></pre></div></div>
+
+<h3 id="-실행-명령어-3">▶ 실행 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook /vagrant/playbooks/nginx-role.yml
+</code></pre></div></div>
+
+<h3 id="결과-확인-1">결과 확인</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible targets -m command -a "curl http://localhost"
+</code></pre></div></div>
+
+<p>→ 출력 결과: <code class="language-plaintext highlighter-rouge">Hello from node1</code>, <code class="language-plaintext highlighter-rouge">Hello from node2</code></p>]]></content><author><name>Start Bootstrap</name></author><category term="ansible" /><summary type="html"><![CDATA[1. 플레이북으로 Nginx 설치 자동화]]></summary></entry><entry><title type="html">Config Server, Actuator, 내결함성</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/msa/2025/06/21/Config_Server_Actuator_%EB%82%B4%EA%B2%B0%ED%95%A8%EC%84%B1.html" rel="alternate" type="text/html" title="Config Server, Actuator, 내결함성" /><published>2025-06-21T22:00:00+09:00</published><updated>2025-06-21T22:00:00+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/msa/2025/06/21/Config_Server_Actuator_%EB%82%B4%EA%B2%B0%ED%95%A8%EC%84%B1</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/msa/2025/06/21/Config_Server_Actuator_%EB%82%B4%EA%B2%B0%ED%95%A8%EC%84%B1.html"><![CDATA[<ul>
+  <li>
+    <p>좋은 MSA 구조의 Application을 개발하려면?</p>
+
+    <h1 id="좋은-msa-구조의-application을-개발하려면">좋은 MSA 구조의 Application을 개발하려면?</h1>
+
+    <aside> 💡
+    
+좋은 MSA 구조의 애플리케이션 개발은 REST API 설계, 게이트웨이 설정, 구성 외부화, 모니터링, 내결함성 패턴, 로깅 및 분산 추적, CI/CD 등 다양한 영역의 모범 사례와 도구를 종합적으로 활용하는 것이 핵심이다. 각 항목은 독립적이면서도 상호 보완적인 역할을 수행하며, 전체 시스템의 유연성과 확장성을 보장한다. 이를 통해 안정적이고 확장 가능한 서비스 환경을 구축할 수 있다.
+    
+</aside>
+
+    <h2 id="1-rest-api-설계">1. REST API 설계</h2>
+
+    <ul>
+      <li>
+        <p><strong>표준화된 통신 방식</strong></p>
+
+        <p>REST API는 마이크로서비스 간 통신의 표준화된 인터페이스를 제공한다. API 명세를 문서화하기 위해 Swagger 등의 도구를 활용하면, 협업 및 유지보수가 용이해진다.</p>
+      </li>
+      <li>
+        <p><strong>자원 중심 설계</strong></p>
+
+        <p>URI 설계와 HTTP 메서드(GET, POST, PUT, DELETE 등)를 적절하게 활용하여 자원 중심의 설계를 구현한다. 클라이언트와 서버 간의 명확한 역할 분리가 이루어져야 한다.</p>
+      </li>
+      <li>
+        <p><strong>버전 관리</strong></p>
+
+        <p>API의 변경에 따른 호환성을 유지하기 위해 버전 관리 전략을 수립한다. 예를 들어, URI에 버전 정보를 포함하는 방식(versioning)을 도입할 수 있다.</p>
+      </li>
+    </ul>
+
+    <h2 id="2-gateway-설정">2. Gateway 설정</h2>
+
+    <ul>
+      <li>
+        <p><strong>보안 및 추상화</strong></p>
+
+        <p>외부에 내부 인스턴스를 직접 노출하지 않고, API 게이트웨이를 통해 요청을 라우팅한다. 이를 통해 보안성을 강화하고, 내부 서비스 구조를 추상화한다.</p>
+      </li>
+      <li>
+        <p><strong>로드 밸런싱 및 인증</strong></p>
+
+        <p>API 게이트웨이는 로드 밸런싱, 인증/인가, 요청 라우팅 등의 기능을 제공한다. Spring Cloud Gateway, Netflix Zuul 등 다양한 도구를 활용할 수 있다.</p>
+      </li>
+      <li>
+        <p><strong>스케일 아웃</strong></p>
+
+        <p>게이트웨이를 통한 분산 처리와 요청 관리로 내부 서비스의 스케일 아웃을 효과적으로 지원할 수 있다.</p>
+      </li>
+    </ul>
+
+    <h2 id="3-구성-외부화">3. 구성 외부화</h2>
+
+    <ul>
+      <li>
+        <p><strong>Spring Cloud Config Server</strong></p>
+
+        <p>Spring 기반 애플리케이션의 환경별 구성 정보를 중앙에서 관리하기 위한 대표적인 도구이다. 구성 외부화를 통해 애플리케이션 재배포 없이도 설정을 변경할 수 있다.</p>
+      </li>
+      <li>
+        <p><strong>추가 대안 기술</strong></p>
+
+        <ul>
+          <li><strong>Consul:</strong> 서비스 디스커버리와 분산 키-값 저장소 기능을 함께 제공하여, 구성 관리와 헬스 체크를 동시에 지원한다.</li>
+          <li><strong>Kubernetes ConfigMaps 및 Secrets:</strong> 컨테이너 환경에서 애플리케이션 설정을 네이티브 방식으로 관리할 수 있으며, 환경 변수와 설정 파일 등을 외부화할 때 유용하다.</li>
+          <li><strong>클라우드 기반 구성 관리 서비스</strong>
+            <ul>
+              <li>AWS Systems Manager Parameter Store, AWS AppConfig와 같은 서비스는 클라우드 환경에서 안전하게 구성 데이터를 저장하고 동적으로 반영할 수 있도록 지원한다.</li>
+              <li>HashiCorp Vault는 주로 비밀 관리에 초점을 두지만, 동적 구성 관리 기능도 제공하여 보안에 민감한 환경에서 활용된다.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2 id="4-모니터링">4. 모니터링</h2>
+
+    <ul>
+      <li>
+        <p><strong>데이터 수집</strong></p>
+
+        <p>Spring Actuator를 활용하여 애플리케이션의 상태(health check, 메트릭 등)를 실시간으로 노출한다. Prometheus는 시간에 따른 메트릭 데이터를 수집하며, 서버의 CPU 사용률, 메모리, 네트워크 트래픽 등 다양한 지표를 모니터링한다.</p>
+      </li>
+      <li>
+        <p><strong>데이터 통합 및 시각화</strong></p>
+
+        <p>Prometheus로 수집한 데이터를 Grafana를 통해 대시보드, 차트, 그래프 형태로 시각화하여 한눈에 시스템 상태를 파악할 수 있게 한다. 이는 장애 발생 시 빠른 대응과 성능 분석에 중요한 역할을 한다.</p>
+      </li>
+      <li>
+        <p><strong>경고 시스템</strong></p>
+
+        <p>수집된 데이터를 기반으로 임계치 초과나 오류 발생 시 자동 알림을 제공하는 경고 시스템을 도입하여, 빠른 문제 인식과 해결을 지원한다.</p>
+      </li>
+    </ul>
+
+    <h2 id="5-내결함성-resilience-패턴">5. 내결함성 (Resilience) 패턴</h2>
+
+    <ul>
+      <li>
+        <p><strong>Circuit Breaker</strong></p>
+
+        <p>Netflix Hystrix 또는 최신 대안인 Resilience4j를 활용하여, 서비스 간 호출에서 장애가 발생할 경우 자동으로 회로를 차단하여 장애 전파를 방지한다. 이로써 한 서비스의 장애가 전체 시스템에 영향을 미치는 것을 예방할 수 있다.</p>
+      </li>
+      <li>
+        <p><strong>Fallback Mechanism</strong></p>
+
+        <p>서비스 장애 시 대체 로직을 수행하여 기본 응답이나 캐시된 데이터를 제공함으로써, 시스템의 연속성을 보장한다. 이를 통해 일부 서비스 장애가 발생하더라도 전체 사용자 경험에 미치는 영향을 최소화할 수 있다.</p>
+      </li>
+    </ul>
+
+    <h2 id="6-로깅-및-분산-추적">6. 로깅 및 분산 추적</h2>
+
+    <ul>
+      <li>
+        <p><strong>중앙 집중식 로그 관리</strong></p>
+
+        <p>로그를 중앙에서 집계하고 분석하는 시스템을 구축하여, 각 서비스에서 발생하는 로그를 통합적으로 관리한다. 이는 장애 원인 파악과 성능 모니터링에 필수적이다.</p>
+      </li>
+      <li>
+        <p><strong>컨텍스트 전파</strong></p>
+
+        <p>각 서비스에 trace-id, span-id 등을 포함하여 분산 시스템 전반의 호출 관계와 성능, 오류 상황을 추적한다. 이를 통해 전체 트랜잭션의 진행상황을 정확하게 분석할 수 있다.</p>
+      </li>
+      <li>
+        <p><strong>Zipkin</strong></p>
+
+        <ul>
+          <li>Spring Cloud 환경에서 분산 시스템 내 호출 관계와 성능을 추적하며, 문제 발생 시 원인 분석을 지원한다.</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>추가 대안 기술</strong></p>
+
+        <ul>
+          <li><strong>Jaeger:</strong> 오픈소스 분산 추적 시스템으로, 트랜잭션의 흐름, 서비스 간 의존성, 지연 시간 등을 시각화하여 분석할 수 있다.</li>
+          <li><strong>OpenTelemetry:</strong> 다양한 언어와 프레임워크에서 트레이싱 데이터를 표준화하여 수집하고, Jaeger, Zipkin, Elastic APM 등 여러 백엔드 시스템과 연동 가능하다.</li>
+          <li><strong>클라우드 기반 서비스</strong>
+            <ul>
+              <li>
+                <p><strong>AWS CloudWatch 및 AWS X-Ray</strong></p>
+
+                <p>AWS 환경에서 CloudWatch Logs와 Metrics를 사용해 로그를 중앙에서 관리하고, X-Ray를 통해 분산 추적 기능을 제공하여 서비스 간 호출 관계와 지연, 오류를 분석할 수 있다.</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2 id="7-cicd-지속적-통합-및-지속적-배포--devops-에서-학습-예정">7. CI/CD (지속적 통합 및 지속적 배포) → DevOps 에서 학습 예정</h2>
+
+    <ul>
+      <li>
+        <p><strong>자동화 파이프라인</strong></p>
+
+        <p>Jenkins, GitLab CI, CircleCI, GitHub Actions 등 다양한 도구를 활용하여 코드 빌드, 테스트, 배포 과정을 자동화한다. 이는 코드 품질을 높이고 배포 주기를 단축하는 데 기여한다.</p>
+      </li>
+      <li>
+        <p><strong>테스트와 검증</strong></p>
+
+        <p>지속적 통합(CI) 과정에서 단위 테스트, 통합 테스트, E2E 테스트 등을 수행하여 애플리케이션의 안정성을 확보한다. 지속적 배포(CD)를 통해 변경 사항을 빠르게 프로덕션에 반영한다.</p>
+      </li>
+      <li>
+        <p><strong>롤백 및 모니터링</strong></p>
+
+        <p>배포 과정에서 문제가 발생할 경우 롤백 전략을 마련하고, 배포 후 모니터링을 통해 안정성을 지속적으로 검증한다.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="4-config-server-actuator-내결함성">4. Config Server, Actuator, 내결함성</h1>
+
+<h2 id="4-1-spring-cloud-config-server">4-1. Spring Cloud Config Server</h2>
+
+<h3 id="4-1-1-msa-환경에서의-구성-관리">4-1-1. MSA 환경에서의 구성 관리</h3>
+
+<ul>
+  <li>배포 되는 실제 코드와 구성 정보를 완전히 분리한다.</li>
+  <li>여러 환경에서도 절대 변경 되지 않는 불변(immutable) 애플리케이션 이미지를 빌드한다.</li>
+  <li>서버가 시작할 때 마이크로서비스가 읽어 오는 환경 변수 또는 중앙 저장소를 통해 모든 애플리케이션 구성 정보를 주입한다.</li>
+</ul>
+
+<h3 id="4-1-2-spring-cloud-config-server">4-1-2. Spring Cloud Config Server</h3>
+
+<p>![<a href="https://pankajtechblogs.dev/spring-cloud-config-server-auto-reload-config-properties-zero-touch-63c4423beb59">https://pankajtechblogs.dev/spring-cloud-config-server-auto-reload-config-properties-zero-touch-63c4423beb59</a></p>
+
+<p>다양한 구성 관리 솔루션 중 스프링 부트와 밀접하게 통합 되어 있어 사용하기 쉬우며 깃 소스 제어 플랫폼 또는 하시코프 볼트와 바로 통합할 수 있다.](<a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/2ed584e0-2b03-4eac-8d4b-4490d601f1ba/17da7a70-6392-47cf-8043-d74e7e11be82/1_5fNSuIhy02ix4mKEdWLTrA.webp">https://prod-files-secure.s3.us-west-2.amazonaws.com/2ed584e0-2b03-4eac-8d4b-4490d601f1ba/17da7a70-6392-47cf-8043-d74e7e11be82/1_5fNSuIhy02ix4mKEdWLTrA.webp</a>)</p>
+
+<p><a href="https://pankajtechblogs.dev/spring-cloud-config-server-auto-reload-config-properties-zero-touch-63c4423beb59">https://pankajtechblogs.dev/spring-cloud-config-server-auto-reload-config-properties-zero-touch-63c4423beb59</a></p>
+
+<p>다양한 구성 관리 솔루션 중 스프링 부트와 밀접하게 통합 되어 있어 사용하기 쉬우며 깃 소스 제어 플랫폼 또는 하시코프 볼트와 바로 통합할 수 있다.</p>
+
+<h3 id="주요-기능">주요 기능</h3>
+
+<aside> 💡
+
+-   중앙 집중식 구성 관리: 여러 환경과 애플리케이션에 대한 구성을 한 곳에서 관리할 수 있다.
+-   동적 구성 업데이트: 런타임 중에 구성을 변경하고 클라이언트에 즉시 반영할 수 있다.
+-   버전 관리: Git 등의 버전 관리 시스템과 통합하여 구성 변경 이력을 추적할 수 있다.
+-   보안: 중요한 구성 정보를 암호화하여 저장하고 전송할 수 있다. </aside>
+
+<h3 id="4-1-4-설정-방법">4-1-4. 설정 방법</h3>
+
+<h3 id="spring-cloud-config-server측-설정">Spring Cloud Config Server측 설정</h3>
+
+<p>Spring Colud Config Server dependency를 추가한다.</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">implementation</span> <span class="s1">'org.springframework.cloud:spring-cloud-config-server'</span>
+
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">@EnableConfigServer</code>는 Spring Cloud Config Server를 활성화하는 애노테이션이다. 이 애노테이션을 사용하면 Spring Boot 애플리케이션이 구성 서버로 동작하게 된다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@SpringBootApplication</span>
+<span class="nd">@EnableConfigServer</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConfigServerApplication</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="nc">ConfigServerApplication</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">application.yml</code> 파일에 spring.cloud.config.server.git.uri 설정에 읽어올 설정파일의 경로를 지정한다.</p>
+
+<ul>
+  <li>Local Repository인 경우 Local Repository의 경로가 기입 되면 된다.</li>
+  <li>Github Remote Repository인 경우 Github Repository의 주소가 기입 되면 된다.
+    <ul>
+      <li>public한 경우 주소만 기입해도 된다.</li>
+      <li>private한 경우 username, password가 같이 기입 되어야 한다.</li>
+      <li>username, password 노출을 피하고 싶을 경우 SSH key 생성 후 github에 공개키, config server에 개인키를 추가하여 설정하는 것도 가능하다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
+  <span class="na">application</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">config-server</span>
+  <span class="na">cloud</span><span class="pi">:</span>
+    <span class="na">config</span><span class="pi">:</span>
+      <span class="na">server</span><span class="pi">:</span>
+        <span class="na">git</span><span class="pi">:</span>
+          <span class="na">uri</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">설정파일이 담긴 깃 레포지토리 경로</span><span class="pi">]</span>
+
+</code></pre></div></div>
+
+<h3 id="service-instance측-설정">Service Instance측 설정</h3>
+
+<p>bootstrap.yml 사용을 위한 dependency를 추가한다.</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">implementation</span> <span class="s1">'org.springframework.cloud:spring-cloud-starter-config'</span>
+<span class="n">implementation</span> <span class="s1">'org.springframework.cloud:spring-cloud-starter-bootstrap'</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li><a href="http://bootstrap.properties">bootstrap.properties</a> or bootstrap.yml은 스프링 클라우드의 특정 파일 타입으로 <a href="http://application.properties">application.properties</a> or application.yml 파일을 사용하는 컴포넌트보다 ApplicationContext로 먼저 로드 된다.</li>
+  <li>스프링 애플리케이션 이름, <strong>스프링 클라우드 구성 서버 위치</strong>, 암호화/복호화 정보 등을 지정한다.</li>
+  <li>bootstrap.yml 을 작성한다.</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
+  <span class="na">cloud</span><span class="pi">:</span>
+    <span class="na">config</span><span class="pi">:</span>
+      <span class="na">uri</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">스프링 클라우드 컨피그 서버 주소</span><span class="pi">]</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">읽어올 파일</span><span class="pi">]</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>application.yml 에서 설정파일이 분리 된 내용을 제거하고 bootstrap.yml 파일을 읽어올 수 있도록 import 한다.</li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
+  <span class="na">config</span><span class="pi">:</span>
+    <span class="na">import</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">classpath:/bootstrap.yml</span>
+
+</code></pre></div></div>
+
+<h2 id="4-2-spring-actuator">4-2. Spring Actuator</h2>
+
+<h3 id="4-2-1-spring-actuator란">4-2-1. Spring Actuator란?</h3>
+
+<aside> 💡
+
+Spring Actuator는 Spring Boot 애플리케이션의 운영 환경에서 모니터링 및 관리를 위한 기능을 제공하는 라이브러리이다.
+
+</aside>
+
+<ul>
+  <li>애플리케이션 상태, 메트릭, 환경 설정 등의 정보를 실시간으로 확인할 수 있다.</li>
+  <li>HTTP 엔드포인트나 JMX를 통해 애플리케이션의 내부 상태를 모니터링하고 관리할 수 있다.</li>
+  <li>애플리케이션의 건강 상태 체크, 로그 레벨 변경, 스레드 덤프 확인 등 다양한 운영 기능을 제공한다.</li>
+  <li>필요에 따라 사용자 정의 엔드포인트를 추가하여 기능을 확장할 수 있다.</li>
+</ul>
+
+<h3 id="4-2-2-설정-방법">4-2-2. 설정 방법</h3>
+
+<p>actuator 사용을 위한 dependency를 추가한다.</p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">implementation</span> <span class="s1">'org.springframework.boot:spring-boot-starter-actuator'</span>
+
+</code></pre></div></div>
+
+<p>액추에이터의 모든 엔드포인트의 경로에는 /actuator가 앞에 붙는다.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">### 기본 경로 수정</span>
+<span class="na">management</span><span class="pi">:</span>
+  <span class="na">endpoints</span><span class="pi">:</span>
+    <span class="na">web</span><span class="pi">:</span>
+      <span class="na">base-path</span><span class="pi">:</span> <span class="s">/management</span>
+
+</code></pre></div></div>
+
+<p>대부분의 액추에이터 엔드포인트는 민감한 정보를 제공하므로 보안 처리가 되어야 한다. 스프링 시큐리티를 사용해서 액추에이터를 보안 처리할 수 있다. 그러나 액추에이터 자체로는 보안 처리가 되어 있지 않으므로 대부분의 엔드포인트가 기본적으로 비활성화되어 있다.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">### 엔드포인트의 노출 여부 제어</span>
+<span class="na">management</span><span class="pi">:</span>
+  <span class="na">endpoints</span><span class="pi">:</span>
+    <span class="na">web</span><span class="pi">:</span>
+      <span class="na">exposure</span><span class="pi">:</span>
+        <span class="na">include</span><span class="pi">:</span> <span class="s">health,info,beans,conditions</span> 
+        <span class="na">exclude</span><span class="pi">:</span> <span class="s">threaddump, heapdump</span>
+
+</code></pre></div></div>
+
+<h3 id="4-2-3-actuator-endpoint-종류">4-2-3. Actuator Endpoint 종류</h3>
+
+<p>엔드포인트의 종류는 굉장히 많으므로 모든 종류는 공식 문서를 통해서 확인하도록 한다. 또한 기능에 따라 dependency 추가 및 bean 등록이 필요 할 수 있으니 확인 후 활용한다.</p>
+
+<p><a href="https://docs.spring.io/spring-boot/reference/actuator/endpoints.html#actuator.endpoints">Endpoints :: Spring Boot</a></p>
+
+<p>몇 가지 대표적인 엔드포인트는 다음과 같다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>엔드포인트</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/health</code></td>
+      <td>애플리케이션의 헬스 체크</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/metrics</code></td>
+      <td>애플리케이션의 메트릭 정보</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/info</code></td>
+      <td>애플리케이션 메타데이터</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/env</code></td>
+      <td>환경 변수 및 설정</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/loggers</code></td>
+      <td>로그 레벨 관리</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/refresh</code></td>
+      <td>애플리케이션의 환경 설정 리프레시</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/threaddump</code></td>
+      <td>스레드 덤프 정보</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/beans</code></td>
+      <td>Spring Bean 정보</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/actuator/httpexchanges</code></td>
+      <td>HTTP 교환 정보</td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li>
+    <p><strong>GET /actuator/health</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UP"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>GET /actuator/metrics</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"names"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"jvm.memory.used"</span><span class="p">,</span><span class="w"> </span><span class="s2">"jvm.gc.pause"</span><span class="p">,</span><span class="w"> </span><span class="err">...</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+    
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>GET /actuator/info</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"app"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MyApp"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+    
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>GET /actuator/env</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"activeProfiles"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="nl">"propertySources"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+    
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>GET /actuator/loggers</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"levels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ROOT"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INFO"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"com.example"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEBUG"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+    
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>GET /actuator/threaddump</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"threads"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"main"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RUNNABLE"</span><span class="p">,</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+    
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>GET /actuator/beans</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"contexts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"application"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"beanDefinitionCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+    
+</span></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>GET /actuator/httpexchanges</strong></p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"exchanges"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-09-26T12:00:00Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/api/example"</span><span class="p">,</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+    
+    
+</span></code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="4-3-내결함성-resilience-패턴">4-3. 내결함성 (Resilience) 패턴</h2>
+
+<aside> 💡
+
+내결함성 패턴은 한 서비스의 장애가 전체 시스템에 영향을 미치지 않도록 분리하고, 장애 상황에서도 서비스의 연속성을 보장하기 위해 핵심적으로 적용된다.
+
+</aside>
+
+<h3 id="4-3-1-circuit-breaker와-fallback-메커니즘">4-3-1. Circuit Breaker와 Fallback 메커니즘</h3>
+
+<ul>
+  <li><strong>핵심 개념</strong>
+    <ul>
+      <li><strong>Circuit Breaker:</strong> 시스템 내 특정 서비스 호출 시 장애가 발생하면 일정 기간 동안 호출을 차단하여 장애 전파를 막는 패턴이다. Netflix Hystrix, Resilience4j 등이 대표적인 구현체이다.</li>
+      <li><strong>Fallback Mechanism:</strong> 장애 발생 시 대체 로직이나 기본 응답, 캐시된 데이터를 제공하여 사용자에게 최소한의 서비스를 유지해 준다.</li>
+    </ul>
+  </li>
+  <li><strong>주요 이점</strong>
+    <ul>
+      <li>서비스 장애에 따른 전체 시스템 영향 최소화</li>
+      <li>빠른 장애 탐지 및 자동 복구</li>
+      <li>안정적인 사용자 경험 제공</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="4-3-2-gateway에서-서비스-장애-시-내결함성-처리">4-3-2. Gateway에서 서비스 장애 시 내결함성 처리</h3>
+
+<p>API Gateway (예: Spring Cloud Gateway)를 통해 외부 클라이언트로부터 들어오는 요청을 내부 서비스(예: 사용자 서비스)로 라우팅할 때, 사용자 서비스에 장애가 발생하면 미리 정의된 fallback URI로 요청을 전달하는 방식이다.</p>
+
+<ul>
+  <li><strong>구성 요소 및 동작 원리</strong>
+    <ul>
+      <li><strong>Gateway Route 설정</strong>
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">lb://SWCAMP-USER-SERVICE</code>를 대상으로 라우팅하며, 로드밸런싱을 수행</li>
+          <li>요청 경로를 재작성(RewritePath)하여 내부 API 주소와 맞추고, Circuit Breaker 필터를 적용</li>
+          <li>Circuit Breaker 이름(<code class="language-plaintext highlighter-rouge">userServiceCB</code>)가 설정되어 있고, 장애 발생 시 <code class="language-plaintext highlighter-rouge">fallbackUri: forward:/fallback/user</code>로 포워딩되어 대체 응답을 제공</li>
+        </ul>
+      </li>
+      <li><strong>Fallback Controller</strong>
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">/fallback/user</code> 엔드포인트를 구현한 컨트롤러가 정의되어 있으며, 사용자에게 장애 상황에 대한 메시지를 반환하여 서비스 불능 상태를 최소화</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="4-3-3-order-service에서-호출하는-user-service-장애시-내결함성-처리">4-3-3. Order Service에서 호출하는 User Service 장애시 내결함성 처리</h3>
+
+<p>Order Service 내에서 사용자 서비스(예: 사용자 등급 조회)를 호출할 때 Resilience4j의 Circuit Breaker를 적용하여, user service 호출에 장애가 발생하면 fallback 메서드가 실행되도록 처리한다.</p>
+
+<ul>
+  <li><strong>구성 요소 및 동작 원리</strong>
+    <ul>
+      <li><strong>@CircuitBreaker 애노테이션</strong>
+        <ul>
+          <li>OrderService 클래스의 <code class="language-plaintext highlighter-rouge">createOrder</code> 메서드에 적용되어 user service 호출 시 장애가 감지되면 지정된 fallback 메서드 <code class="language-plaintext highlighter-rouge">fallbackGetUserGrade</code>가 호출</li>
+          <li>fallback 메서드는 장애 상황에서도 주문 생성 로직을 진행하도록 처리하거나, 기본 할인 없이 주문을 완료하는 등의 대체 로직을 포함</li>
+        </ul>
+      </li>
+      <li><strong>실제 대체 동작</strong>
+        <ul>
+          <li>사용자 등급 정보를 가져오지 못할 경우, 장애 감지를 로그로 남기고 기본적인 주문 생성 프로세스를 실행하여 애플리케이션의 연속성을 유지</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>Start Bootstrap</name></author><category term="msa" /><summary type="html"><![CDATA[좋은 MSA 구조의 Application을 개발하려면? 좋은 MSA 구조의 Application을 개발하려면? 💡 좋은 MSA 구조의 애플리케이션 개발은 REST API 설계, 게이트웨이 설정, 구성 외부화, 모니터링, 내결함성 패턴, 로깅 및 분산 추적, CI/CD 등 다양한 영역의 모범 사례와 도구를 종합적으로 활용하는 것이 핵심이다. 각 항목은 독립적이면서도 상호 보완적인 역할을 수행하며, 전체 시스템의 유연성과 확장성을 보장한다. 이를 통해 안정적이고 확장 가능한 서비스 환경을 구축할 수 있다. 1. REST API 설계 표준화된 통신 방식 REST API는 마이크로서비스 간 통신의 표준화된 인터페이스를 제공한다. API 명세를 문서화하기 위해 Swagger 등의 도구를 활용하면, 협업 및 유지보수가 용이해진다. 자원 중심 설계 URI 설계와 HTTP 메서드(GET, POST, PUT, DELETE 등)를 적절하게 활용하여 자원 중심의 설계를 구현한다. 클라이언트와 서버 간의 명확한 역할 분리가 이루어져야 한다. 버전 관리 API의 변경에 따른 호환성을 유지하기 위해 버전 관리 전략을 수립한다. 예를 들어, URI에 버전 정보를 포함하는 방식(versioning)을 도입할 수 있다. 2. Gateway 설정 보안 및 추상화 외부에 내부 인스턴스를 직접 노출하지 않고, API 게이트웨이를 통해 요청을 라우팅한다. 이를 통해 보안성을 강화하고, 내부 서비스 구조를 추상화한다. 로드 밸런싱 및 인증 API 게이트웨이는 로드 밸런싱, 인증/인가, 요청 라우팅 등의 기능을 제공한다. Spring Cloud Gateway, Netflix Zuul 등 다양한 도구를 활용할 수 있다. 스케일 아웃 게이트웨이를 통한 분산 처리와 요청 관리로 내부 서비스의 스케일 아웃을 효과적으로 지원할 수 있다. 3. 구성 외부화 Spring Cloud Config Server Spring 기반 애플리케이션의 환경별 구성 정보를 중앙에서 관리하기 위한 대표적인 도구이다. 구성 외부화를 통해 애플리케이션 재배포 없이도 설정을 변경할 수 있다. 추가 대안 기술 Consul: 서비스 디스커버리와 분산 키-값 저장소 기능을 함께 제공하여, 구성 관리와 헬스 체크를 동시에 지원한다. Kubernetes ConfigMaps 및 Secrets: 컨테이너 환경에서 애플리케이션 설정을 네이티브 방식으로 관리할 수 있으며, 환경 변수와 설정 파일 등을 외부화할 때 유용하다. 클라우드 기반 구성 관리 서비스 AWS Systems Manager Parameter Store, AWS AppConfig와 같은 서비스는 클라우드 환경에서 안전하게 구성 데이터를 저장하고 동적으로 반영할 수 있도록 지원한다. HashiCorp Vault는 주로 비밀 관리에 초점을 두지만, 동적 구성 관리 기능도 제공하여 보안에 민감한 환경에서 활용된다. 4. 모니터링 데이터 수집 Spring Actuator를 활용하여 애플리케이션의 상태(health check, 메트릭 등)를 실시간으로 노출한다. Prometheus는 시간에 따른 메트릭 데이터를 수집하며, 서버의 CPU 사용률, 메모리, 네트워크 트래픽 등 다양한 지표를 모니터링한다. 데이터 통합 및 시각화 Prometheus로 수집한 데이터를 Grafana를 통해 대시보드, 차트, 그래프 형태로 시각화하여 한눈에 시스템 상태를 파악할 수 있게 한다. 이는 장애 발생 시 빠른 대응과 성능 분석에 중요한 역할을 한다. 경고 시스템 수집된 데이터를 기반으로 임계치 초과나 오류 발생 시 자동 알림을 제공하는 경고 시스템을 도입하여, 빠른 문제 인식과 해결을 지원한다. 5. 내결함성 (Resilience) 패턴 Circuit Breaker Netflix Hystrix 또는 최신 대안인 Resilience4j를 활용하여, 서비스 간 호출에서 장애가 발생할 경우 자동으로 회로를 차단하여 장애 전파를 방지한다. 이로써 한 서비스의 장애가 전체 시스템에 영향을 미치는 것을 예방할 수 있다. Fallback Mechanism 서비스 장애 시 대체 로직을 수행하여 기본 응답이나 캐시된 데이터를 제공함으로써, 시스템의 연속성을 보장한다. 이를 통해 일부 서비스 장애가 발생하더라도 전체 사용자 경험에 미치는 영향을 최소화할 수 있다. 6. 로깅 및 분산 추적 중앙 집중식 로그 관리 로그를 중앙에서 집계하고 분석하는 시스템을 구축하여, 각 서비스에서 발생하는 로그를 통합적으로 관리한다. 이는 장애 원인 파악과 성능 모니터링에 필수적이다. 컨텍스트 전파 각 서비스에 trace-id, span-id 등을 포함하여 분산 시스템 전반의 호출 관계와 성능, 오류 상황을 추적한다. 이를 통해 전체 트랜잭션의 진행상황을 정확하게 분석할 수 있다. Zipkin Spring Cloud 환경에서 분산 시스템 내 호출 관계와 성능을 추적하며, 문제 발생 시 원인 분석을 지원한다. 추가 대안 기술 Jaeger: 오픈소스 분산 추적 시스템으로, 트랜잭션의 흐름, 서비스 간 의존성, 지연 시간 등을 시각화하여 분석할 수 있다. OpenTelemetry: 다양한 언어와 프레임워크에서 트레이싱 데이터를 표준화하여 수집하고, Jaeger, Zipkin, Elastic APM 등 여러 백엔드 시스템과 연동 가능하다. 클라우드 기반 서비스 AWS CloudWatch 및 AWS X-Ray AWS 환경에서 CloudWatch Logs와 Metrics를 사용해 로그를 중앙에서 관리하고, X-Ray를 통해 분산 추적 기능을 제공하여 서비스 간 호출 관계와 지연, 오류를 분석할 수 있다. 7. CI/CD (지속적 통합 및 지속적 배포) → DevOps 에서 학습 예정 자동화 파이프라인 Jenkins, GitLab CI, CircleCI, GitHub Actions 등 다양한 도구를 활용하여 코드 빌드, 테스트, 배포 과정을 자동화한다. 이는 코드 품질을 높이고 배포 주기를 단축하는 데 기여한다. 테스트와 검증 지속적 통합(CI) 과정에서 단위 테스트, 통합 테스트, E2E 테스트 등을 수행하여 애플리케이션의 안정성을 확보한다. 지속적 배포(CD)를 통해 변경 사항을 빠르게 프로덕션에 반영한다. 롤백 및 모니터링 배포 과정에서 문제가 발생할 경우 롤백 전략을 마련하고, 배포 후 모니터링을 통해 안정성을 지속적으로 검증한다.]]></summary></entry><entry><title type="html">MSA</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/msa/2025/06/21/MSA.html" rel="alternate" type="text/html" title="MSA" /><published>2025-06-21T22:00:00+09:00</published><updated>2025-06-21T22:00:00+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/msa/2025/06/21/MSA</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/msa/2025/06/21/MSA.html"><![CDATA[<h1 id="1-msamicroservice-architecture">1. MSA(Microservice Architecture)</h1>
+
+<aside>
+💡 소프트웨어 개발 방식 중 하나로, 큰 애플리케이션을 독립적으로 배포, 운영할 수 있는 작은 서비스들로 나누어 개발하는 접근 방식이다. 각 서비스는 고유한 기능을 담당하며, 서로 다른 서비스들과 통신하면서 전체 시스템을 구성한다. MSA의 주요 장점은 **확장성, 유지보수 용이성, 독립적인 배포 가능성** 등이 있다. 각 서비스는 **독립적**이기 때문에, 한 서비스가 업데이트 되거나 오류가 발생해도 전체 시스템에 영향을 미치지 않는다.
+
+</aside>
+
+<h2 id="1-1-msa-vs-monolithic">1-1. MSA vs Monolithic</h2>
+
+<h3 id="1-1-1-아키텍처-구조"><strong>1-1-1. 아키텍처 구조</strong></h3>
+
+<ul>
+  <li><strong>모놀리식 아키텍처</strong>
+    <ul>
+      <li>모든 기능과 모듈이 하나의 코드베이스에 통합된 구조</li>
+      <li>사용자 인터페이스, 비즈니스 로직, 데이터 액세스 로직이 모두 하나의 애플리케이션으로 구성</li>
+    </ul>
+  </li>
+  <li><strong>마이크로서비스 아키텍처</strong>
+    <ul>
+      <li>각 기능이 독립된 서비스로 나뉘어 있으며, 이들 서비스는 서로 API를 통해 통신</li>
+      <li>각각의 서비스가 독립적으로 배포되고 확장될 수 있도록 함</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="1-1-2-개발-및-배포"><strong>1-1-2. 개발 및 배포</strong></h3>
+
+<ul>
+  <li><strong>모놀리식 아키텍처</strong>
+    <ul>
+      <li>애플리케이션의 어느 한 부분에 변경이 발생하면 전체 시스템을 다시 빌드하고 배포해야 함</li>
+      <li>배포 주기가 길어지고, 코드 변경으로 인한 오류가 전체 시스템에 영향을 미칠 수 있음</li>
+    </ul>
+  </li>
+  <li><strong>마이크로서비스 아키텍처</strong>
+    <ul>
+      <li>특정 서비스에 대한 변경만 수행하면 되므로 배포가 더 빠르고 빈번해질 수 있음</li>
+      <li>팀이 독립적으로 개발 및 배포할 수 있어 민첩성이 향상됨</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="1-1-3-기술-스택과-유연성"><strong>1-1-3. 기술 스택과 유연성</strong></h3>
+
+<ul>
+  <li><strong>모놀리식 아키텍처</strong>
+    <ul>
+      <li>하나의 기술 스택에 국한되는 경우가 많음</li>
+      <li>기술 선택의 유연성을 제한하고, 새로운 기술 도입 시 전체 애플리케이션에 영향을 줄 수 있음</li>
+    </ul>
+  </li>
+  <li><strong>마이크로서비스 아키텍처</strong>
+    <ul>
+      <li>각 서비스가 독립적으로 개발되므로, 팀이 필요에 따라 적합한 기술 스택을 선택할 수 있음</li>
+      <li>최신 기술을 신속하게 도입할 수 있는 장점이 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="1-1-4-확장성과-성능"><strong>1-1-4. 확장성과 성능</strong></h3>
+
+<ul>
+  <li><strong>모놀리식 아키텍처</strong>
+    <ul>
+      <li>전체 애플리케이션을 확장해야 하므로 자원 낭비가 발생할 수 있음</li>
+      <li>특정 기능에 대한 수요가 증가할 경우 전체 시스템의 자원을 모두 늘려야 하는 비효율성이 존재</li>
+    </ul>
+  </li>
+  <li><strong>마이크로서비스 아키텍처</strong>
+    <ul>
+      <li>필요한 서비스만 개별적으로 확장할 수 있어 자원 활용을 극대화할 수 있음</li>
+      <li>트래픽이 높은 서비스에 매우 유리함</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="1-1-5-장애-격리-및-회복성"><strong>1-1-5. 장애 격리 및 회복성</strong></h3>
+
+<ul>
+  <li><strong>모놀리식 아키텍처</strong>
+    <ul>
+      <li>하나의 컴포넌트에 장애가 발생할 경우 전체 애플리케이션이 영향을 받을 수 있음</li>
+      <li>시스템의 신뢰성을 저하시키는 요인이 될 수 있음</li>
+    </ul>
+  </li>
+  <li><strong>마이크로서비스 아키텍처</strong>
+    <ul>
+      <li>서비스 간의 의존성이 분리되어 있기 때문에 한 서비스의 장애가 전체 시스템에 미치는 영향을 최소화할 수 있음</li>
+      <li>각 서비스는 독립적으로 회복할 수 있어 전체 시스템의 가용성을 높일 수 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="1-1-6-관리와-모니터링"><strong>1-1-6. 관리와 모니터링</strong></h3>
+
+<ul>
+  <li><strong>모놀리식 아키텍처</strong>
+    <ul>
+      <li>단일 시스템에서 모든 로그와 성능 데이터를 관리하기 때문에 모니터링이 비교적 간단함</li>
+    </ul>
+  </li>
+  <li><strong>마이크로서비스 아키텍처</strong>
+    <ul>
+      <li>여러 개의 독립적인 서비스로 구성되어 있어 서비스 간의 상태와 성능을 모니터링하는 데 더 많은 노력이 필요함</li>
+      <li>통합된 모니터링 도구와 관리 시스템이 필수적이며, 이러한 시스템은 복잡성을 증가시킬 수 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<aside>
+💡
+
+**MSA가 항상 정답은 아니다.** MSA는 분산 시스템의 복잡성을 증가시키고, 서비스 간의 통신 및 데이터 관리에 어려움을 초래할 수 있다. 따라서 작은 팀이나 초기 단계의 프로젝트에서는 모놀리식 아키텍처가 더 효율적일 수 있다. 초기 단계에서는 기능이 제한적이고 팀 규모도 작기 때문에, 모든 구성 요소를 단일 애플리케이션으로 통합하여 개발하는 것이 효율적이다.
+
+MSA를 도입하기 위해서는 팀 간의 협업과 서비스 관리를 위한 인프라가 필요하며, 이는 초기 투자 비용을 증가시킬 수 있다. 하지만 모놀리식 아키텍처는 간단한 구조로 인해 팀원 간의 협업이 용이하고 초기 투자 비용을 줄이는 데 기여한다. 또한, 개발 속도를 높일 수 있고 유지보수가 비교적 간단하다. 새로운 기능을 추가하거나 변경할 때, 전체 시스템을 재배포하는 과정이 단순해지는 장점도 있다.
+
+따라서, **초기 제품이나 프로토타입을 개발하는 과정에서는 모놀리식 아키텍처가 적합할 수 있으며, 이후 애플리케이션이 성장하고 요구사항이 복잡해지면 MSA로 전환하는 방법을 고려할 수 있다.** 이는 기술 선택과 개발 전략을 점진적으로 조정함으로써, 변화하는 비즈니스 환경에 유연하게 대응할 수 있도록 한다.
+
+</aside>]]></content><author><name>Start Bootstrap</name></author><category term="msa" /><summary type="html"><![CDATA[1. MSA(Microservice Architecture)]]></summary></entry><entry><title type="html">Service Instance 간의 통신</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/msa/2025/06/21/Service_Instance_%EA%B0%84%EC%9D%98_%ED%86%B5%EC%8B%A0.html" rel="alternate" type="text/html" title="Service Instance 간의 통신" /><published>2025-06-21T22:00:00+09:00</published><updated>2025-06-21T22:00:00+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/msa/2025/06/21/Service_Instance_%EA%B0%84%EC%9D%98_%ED%86%B5%EC%8B%A0</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/msa/2025/06/21/Service_Instance_%EA%B0%84%EC%9D%98_%ED%86%B5%EC%8B%A0.html"><![CDATA[<ul>
+  <li>
+    <p>MSA 구조에서의 인증 로직 구현</p>
+
+    <h1 id="msa-구조에서의-인증-로직-구현">MSA 구조에서의 인증 로직 구현</h1>
+
+    <aside> 💡
+    
+MSA 구조에서는 개별 서비스들이 독립적으로 운영되며, 각 서비스가 자체적으로 인증 및 인가 로직을 처리할 수 있다. 그러나 외부 요청은 보통 API Gateway를 통해 들어오게 되며, 이를 활용한 중앙 집중식 인증 방식과 내부 서비스 간의 신뢰 체계 구성이 중요하다. 인증 로직을 구현할 때 고려해야 할 주요 사항은 JWT 토큰 검증 방식이다.
+    
+</aside>
+
+    <h2 id="1-재검증-방식">1. 재검증 방식</h2>
+
+    <p>각 모듈에서 클라이언트가 전달한 JWT 토큰 전체를 재검증하고 SecurityContext를 구성하는 방식이다. 이 방식은 다음과 같은 특징이 있다.</p>
+
+    <ul>
+      <li><strong>방어 심층(Defense in Depth) 전략:</strong> 각 서비스가 독자적으로 JWT 토큰을 검증함으로써, 만약 API Gateway를 우회하여 직접 접근하는 요청이 발생할 경우에도 추가적인 보안 검증이 이루어진다. 이로써 서비스 간의 보안 취약점을 줄일 수 있다.</li>
+      <li><strong>중복 코드 발생:</strong> 서비스마다 동일한 JWT 토큰 검증 로직을 구현하게 되므로, 코드 중복이 발생할 수 있다. 이 경우 공통 라이브러리로 분리하여 관리할 수 있으나, 각 서비스가 독립적으로 해당 로직을 가져야 한다.</li>
+      <li><strong>성능 부하:</strong> 각 요청마다 모든 서비스에서 JWT 토큰 전체를 재검증할 경우, 불필요한 부하가 발생할 가능성이 있다. 특히 트래픽이 많은 서비스에서는 토큰 재검증이 성능에 영향을 줄 수 있다.</li>
+      <li><strong>보안의 완전성:</strong> JWT 토큰이 만료되었거나 변조된 경우 즉시 감지할 수 있으므로, 보안상의 완전성을 보장할 수 있다.</li>
+    </ul>
+
+    <p>즉, 완전 재검증 방식은 MSA 구조에서 “Defense in Depth”를 구현하는 데 유리하다. 다만, 각 서비스에 동일한 검증 로직이 중복되어 들어가는 단점과 이로 인한 시스템 부하를 고려해야 한다.</p>
+
+    <h2 id="2-신뢰-기반-방식-헤더-정보-활용">2. 신뢰 기반 방식: 헤더 정보 활용</h2>
+
+    <p>API Gateway에서 JWT 토큰의 기본 유효성 검증을 수행한 후, 토큰의 핵심 정보(예, 사용자 ID 및 사용자 역할)를 추출하여 HTTP 헤더(예, <code class="language-plaintext highlighter-rouge">X-User-Id</code>, <code class="language-plaintext highlighter-rouge">X-User-Role</code>)로 각 내부 서비스로 전달하는 방식이다. 이 방식의 특징은 다음과 같다.</p>
+
+    <ul>
+      <li><strong>코드 중복 감소:</strong> API Gateway에서 한 번 검증된 정보를 각 서비스에 전달하므로, 개별 서비스에서 JWT 토큰 전체를 재검증할 필요가 없다. 이로써 코드 중복을 줄이고, 각 서비스의 구현이 간소화된다.</li>
+      <li><strong>일관된 보안 모델 유지:</strong> 모든 내부 서비스가 동일한 헤더 기반의 인증 정보를 활용하여 SecurityContext를 구성하므로, 보안 모델이 일관되게 유지된다. 각 서비스는 Gateway가 전달한 정보만을 신뢰하고 인가 로직을 실행하게 된다.</li>
+      <li><strong>성능 향상:</strong> 매번 모든 서비스에서 JWT 토큰 전체를 재검증하지 않아도 되므로, 시스템 부하가 감소하고 성능이 향상된다.</li>
+      <li><strong>보안 취약점 고려:</strong> API Gateway의 검증 로직에 문제가 발생하거나, Gateway 외부로부터의 접근이 허용되는 경우 보안 취약점이 발생할 수 있다. 따라서 Gateway의 보안이 가장 중요하며, 내부 서비스는 기본적으로 Pre-Authentication 방식(예, 헤더 정보를 기반으로 SecurityContext를 구성하는 필터)을 적용하여 최소한의 보안을 유지하는 것이 바람직하다.</li>
+    </ul>
+
+    <p>신뢰 기반 방식은 MSA 구조에서 성능 최적화와 코드 관리의 효율성을 높이는 데 유리하다. 단, 이 방식은 API Gateway가 모든 외부 요청에 대해 올바르게 JWT 검증을 수행한다는 전제 하에 작동하므로, Gateway의 보안 강화 및 모니터링에 신경을 써야 한다.</p>
+
+    <h2 id="3-msa-환경에서-인증-및-인가-구현-위치">3. MSA 환경에서 인증 및 인가 구현 위치</h2>
+
+    <h3 id="api-gateway">API Gateway</h3>
+
+    <ul>
+      <li>
+        <p><strong>인증(Authentication) 집중 처리:</strong></p>
+
+        <p>API Gateway는 모든 외부 요청의 진입점이므로, JWT 토큰의 유효성 검증과 사용자 정보(예, 사용자 ID, 역할)를 추출하는 전역 필터(GlobalFilter)를 통해 인증 처리를 수행한다.</p>
+
+        <p>Gateway는 JWT 토큰이 유효한지를 확인하고, 검증된 정보를 HTTP 헤더에 추가하여 내부 서비스에 전달한다.</p>
+      </li>
+      <li>
+        <p><strong>보안 로직의 중앙 집중화:</strong></p>
+
+        <p>모든 외부 요청은 Gateway에서 먼저 처리되므로, 보안 정책을 중앙에서 일관되게 적용할 수 있다.</p>
+      </li>
+    </ul>
+
+    <h3 id="내부-서비스-user-order-기타-서비스">내부 서비스 (User, Order, 기타 서비스)</h3>
+
+    <ul>
+      <li>
+        <p><strong>인가(Authorization) 처리 및 Pre-Authentication:</strong></p>
+
+        <p>각 내부 서비스는 API Gateway가 전달한 인증 정보를 기반으로 SecurityContext를 구성한다.</p>
+
+        <p>예를 들어, HeaderAuthenticationFilter와 같은 필터를 사용하여 <code class="language-plaintext highlighter-rouge">X-User-Id</code> 및 <code class="language-plaintext highlighter-rouge">X-User-Role</code> 헤더 값을 읽고, PreAuthenticatedAuthenticationToken을 생성하여 Spring Security Context에 설정한다.</p>
+      </li>
+      <li>
+        <p><strong>추가 인가 정책 적용:</strong></p>
+
+        <p>서비스별로 세부 리소스에 대한 접근 제어가 필요할 경우, 메소드 보안(@PreAuthorize, @PostAuthorize) 등을 통해 추가 인가 정책을 적용한다.</p>
+      </li>
+    </ul>
+
+    <h2 id="4-정리">4. 정리</h2>
+
+    <p>MSA 구조에서 인증 로직을 구현하는 방법은 두 가지 방식인 완전 재검증 방식과 신뢰 기반 방식(헤더 정보 활용)으로 나뉜다.</p>
+
+    <ul>
+      <li><strong>완전 재검증 방식</strong>은 각 서비스에서 JWT 토큰 전체를 재검증하여 보안의 완전성을 보장하지만, 코드 중복과 성능 부하가 발생할 수 있다.</li>
+      <li><strong>신뢰 기반 방식</strong>은 API Gateway에서 JWT 토큰을 검증한 후 핵심 정보를 헤더에 담아 각 내부 서비스에서 이를 활용하는 방법으로, 코드 중복을 줄이고 일관된 보안 모델을 유지할 수 있으며, 성능면에서도 유리하다.</li>
+    </ul>
+
+    <p>따라서 MSA 구조에서는 <strong>인증(Authentication)은 API Gateway에서 집중 처리</strong>하고, 내부 서비스에서는 Gateway가 전달한 인증 정보를 <strong>신뢰하여 Pre-Authentication 방식으로 SecurityContext를 구성</strong>하는 것이 바람직하다. 이를 통해 각 서비스는 Spring Security의 인가(Authorization) 기능을 효과적으로 활용할 수 있으며, 시스템 전체의 보안과 성능을 모두 만족시키는 구현이 가능하다.</p>
+  </li>
+  <li>
+    <p>User Service의 Spring Security 예제에서 변경 된 부분 체크</p>
+
+    <h1 id="user-service의-spring-security-에서-변경-된-부분-체크">User Service의 Spring Security 에서 변경 된 부분 체크</h1>
+
+    <h3 id="eureka-client-설정">Eureka Client 설정</h3>
+
+    <ul>
+      <li>build.gradle &gt; dependencies &gt; eureka client 추가</li>
+      <li>application.yml &gt; eureka 관련 설정 추가</li>
+    </ul>
+
+    <h3 id="인증--인가-설정">인증 / 인가 설정</h3>
+
+    <ul>
+      <li>JwtTokenProvider
+        <ul>
+          <li>createToken, refreshToken : claim에 userId 추가</li>
+          <li>AuthService의 createToken, refreshToken 호출부 수정</li>
+        </ul>
+      </li>
+      <li>SecurityConfig
+        <ul>
+          <li>filterChain : JwtAuthenticationFilter 삭제 → HeaderAuthenticationFilter 추가</li>
+          <li>api gateway에서 토큰 확인 후 userId와 role을 request header에 담아서 전송하도록 수정하므로 전달 받은 값 기준으로 SecurityContextHolder를 채워서 기능별 인증, 인가 확인이 일어나도록 함</li>
+        </ul>
+      </li>
+      <li>CumtomUserDetailsService → 삭제</li>
+      <li>UserQueryController &gt; getUserDetail
+        <ul>
+          <li>@AuthenticationPrincipal String userId 로 변경</li>
+          <li>UserQueryService &gt; getUserDetail 매개변수 변경</li>
+          <li>UserMapper &gt; findUserById 추가, findUserByUsername 삭제</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3 id="호출-url-변경">호출 URL 변경</h3>
+
+    <ul>
+      <li>SecurityConfig
+        <ul>
+          <li>filterChain : authorizeHttpRequest 설정에서 /api/v1 삭제</li>
+        </ul>
+      </li>
+      <li>XXXController
+        <ul>
+          <li>@RequestMapping : /api/v1 삭제</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3 id="order-service에서-호출할-추가-된-코드">Order Service에서 호출할 추가 된 코드</h3>
+
+    <ul>
+      <li>UserQueryController &gt; getUserGrade</li>
+      <li>UserQueryService &gt; getUserGrade</li>
+      <li>UserMapper(interface) &gt; findUserById</li>
+      <li>UserMapper.xml &gt; findUserById</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="3-service-instance-간의-통신">3. Service Instance 간의 통신</h1>
+
+<h2 id="3-1-스프링-discovery-client로-서비스-인스턴스-검색">3-1. 스프링 Discovery Client로 서비스 인스턴스 검색</h2>
+
+<h3 id="3-1-1-스프링-discovery-client란">3-1-1. 스프링 Discovery Client란?</h3>
+
+<aside> 💡
+
+스프링 Discovery Client는 로드 밸런서(Spring Cloud Load Balancer)와 그 안에 등록된 서비스에 대해 가장 낮은 수준으로 접근할 수 있다. 즉, Discovery Client를 사용하면 스프링 클라우드 로드 밸런서 클라이언트에 등록된 모든 서비스와 해당 URL을 쿼리할 수 있다.
+
+</aside>
+
+<h3 id="3-1-2-예제-코드">3-1-2. 예제 코드</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">OrderDiscoveryClient</span> <span class="o">{</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">private</span> <span class="nc">DiscoveryClient</span> <span class="n">discoveryClient</span><span class="o">;</span> 
+
+    <span class="kd">public</span> <span class="nc">Order</span> <span class="nf">getOrder</span><span class="o">(</span><span class="nc">String</span> <span class="n">orderId</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">RestTemplate</span> <span class="n">restTemplate</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RestTemplate</span><span class="o">();</span>
+        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">ServiceInstance</span><span class="o">&gt;</span> <span class="n">instances</span> <span class="o">=</span> 
+            <span class="n">discoveryClient</span><span class="o">.</span><span class="na">getInstances</span><span class="o">(</span><span class="s">"order-service"</span><span class="o">);</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">instances</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="nc">String</span> <span class="n">serviceUri</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+            <span class="s">"%s/v1/order/%s"</span><span class="o">,</span> <span class="n">instances</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">getUri</span><span class="o">().</span><span class="na">toString</span><span class="o">(),</span>
+            <span class="n">orderId</span><span class="o">);</span> 
+    
+        <span class="nc">ResponseEntity</span><span class="o">&lt;</span><span class="nc">Order</span><span class="o">&gt;</span> <span class="n">restExchange</span> <span class="o">=</span> 
+            <span class="n">restTemplate</span><span class="o">.</span><span class="na">exchange</span><span class="o">(</span>
+                <span class="n">serviceUri</span><span class="o">,</span>
+                <span class="nc">HttpMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">,</span>
+                <span class="kc">null</span><span class="o">,</span> <span class="nc">Order</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">orderId</span><span class="o">);</span>
+
+        <span class="k">return</span> <span class="n">restExchange</span><span class="o">.</span><span class="na">getBody</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">DiscoveryClient</code> : 스프링 클라우드 로드 밸런서와 상호 작용한다. 유레카에 등록된 서비스의 모든 인스턴스를 검색하려면 getInstances() 메서드를 사용하고, ServiceInstance 객체 리스트를 얻어 오기 위해 찾으려는 서비스 키를 전달한다. ServiceInstance 클래스는 호스트 이름, 포트, URI 같은 서비스의 인스턴스 정보를 보관한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">RestTemplate</code>으로 Order 서비스를 호출하고 데이터를 조회할 수 있다.</li>
+</ul>
+
+<h3 id="3-1-3-resttemplate-이란">3-1-3. RestTemplate 이란?</h3>
+
+<aside> 💡
+
+RestTemplate은 스프링 프레임워크에서 제공하는 HTTP 클라이언트 라이브러리로, RESTful 웹 서비스를 호출하는 데 사용되는 동기식 클라이언트이다. HTTP 메서드(GET, POST, PUT, DELETE 등)를 쉽게 사용할 수 있는 메서드를 제공하며 URI 템플릿 변수와 매개변수를 지원하여 동적 URL을 쉽게 구성할 수 있다. 요청/응답에 대한 객체 변환을 자동으로 처리하며 커스텀 헤더 관리, 에러 핸들링 등 다양한 기능을 제공한다.
+
+</aside>
+
+<h3 id="3-1-4-단점">3-1-4. 단점</h3>
+
+<aside> 💡
+
+Discovery Client를 직접 호출하면 서비스 리스트를 얻게 되지만, 호출할 서비스 인스턴스를 선정할 책임은 사용자에게 있다. 즉, **스프링 클라우드 클라이언트 측 로드 밸런서를 이용하지 못한다.**
+
+또한 코드에서 서비스를 호출하는 데 사용될 URL을 생성해야 한다. 즉, 서비스 메소드 내에서 **너무 많은 일을 한다.** 코드를 적게 작성하면 디버그할 코드가 줄어든다.
+
+</aside>
+
+<h2 id="3-2-로드-밸런서를-지원하는-스프링-rest-템플릿으로-서비스-호출">3-2. 로드 밸런서를 지원하는 스프링 REST 템플릿으로 서비스 호출</h2>
+
+<h3 id="3-2-1-예제-코드">3-2-1. 예제 코드</h3>
+
+<p>로드 밸런서를 지원하는 RestTemplate 클래스를 사용하려면 스프링 클라우드의 <code class="language-plaintext highlighter-rouge">@LoadBalanced</code> 애너테이션으로 RestTemplate 빈(bean)을 정의해야 한다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@SpringBootApplication</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserApplication</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="nc">UserApplication</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@LoadBalanced</span> 
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="nc">RestTemplate</span> <span class="nf">getRestTemplate</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">RestTemplate</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">OrganizationRestTemplateClient</span> <span class="o">{</span>
+    <span class="nd">@Autowired</span>
+    <span class="nc">RestTemplate</span> <span class="n">restTemplate</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nc">Order</span> <span class="nf">getOrder</span><span class="o">(</span><span class="nc">String</span> <span class="n">orderId</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">ResponseEntity</span><span class="o">&lt;</span><span class="nc">Order</span><span class="o">&gt;</span> <span class="n">restExchange</span> <span class="o">=</span>
+            <span class="n">restTemplate</span><span class="o">.</span><span class="na">exchange</span><span class="o">(</span>
+                <span class="s">"&lt;http://order-service/v1/&gt;
+                    order/{orderId}"</span><span class="o">,</span> 
+                <span class="nc">HttpMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">,</span> <span class="kc">null</span><span class="o">,</span> 
+                <span class="nc">Organization</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">orderId</span><span class="o">);</span>
+
+        <span class="k">return</span> <span class="n">restExchange</span><span class="o">.</span><span class="na">getBody</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>스프링 클라우드 Discovery Client를 직접 사용하지 않는다.</li>
+  <li>restTemplate.exchange() 호출에 사용된 URL에서 서버 이름은 유레카에 Order 서비스를 등록할 때 사용된 Order 서비스 키의 애플리케이션 ID와 일치한다.</li>
+</ul>
+
+<h3 id="3-2-2-예제-코드">3-2-2. 예제 코드</h3>
+
+<aside> 💡
+
+로드 밸런서를 지원하는 RestTemplate 클래스는 전달된 URL을 파싱하고 서버 이름으로 전달된 것을 키로 사용하여 서비스의 인스턴스를 로드 밸런서에 쿼리한다. 실제 서비스 위치와 포트는 개발자에게 완전히 추상화된다. RestTemplate 클래스를 사용하면 스프링 클라우드 로드 밸런서는 서비스 인스턴스에 대한 모든 요청을 라운드 로빈 방식으로 부하 분산한다.
+
+</aside>
+
+<h2 id="3-3-넷플릭스-feign-클라이언트로-서비스-호출">3-3. 넷플릭스 Feign 클라이언트로 서비스 호출</h2>
+
+<h3 id="3-2-1-feign-클라이언트란">3-2-1. Feign 클라이언트란?</h3>
+
+<aside> 💡
+
+Feign 라이브러리는 REST 서비스를 호출하는 데 RestTemplate 클래스와 다른 접근 방식을 취한다. 이 방식을 사용하려면 개발자는 먼저 자바 인터페이스를 정의한 후 스프링 클라우드 로드 밸런서가 호출할 유레카 기반 서비스를 매핑하기 위해 스프링 클라우드 애너테이션들을 추가해야 한다. 인터페이스를 정의하는 것 외에 서비스를 추가하려고 부가적으로 작성해야 할 코드는 없다.
+
+</aside>
+
+<h3 id="3-2-1-예제-코드-1">3-2-1. 예제 코드</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@FeignClient</span><span class="o">(</span><span class="n">name</span><span class="o">=</span><span class="s">"order-service"</span><span class="o">,</span> <span class="n">url</span><span class="o">=</span><span class="s">"localhost:8000"</span><span class="o">)</span> 
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">OrganizationFeignClient</span> <span class="o">{</span>
+
+    <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">method</span><span class="o">=</span><span class="nc">RequestMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">,</span> <span class="n">value</span><span class="o">=</span><span class="s">"/v1/orders/{orderId}"</span><span class="o">)</span>
+    <span class="nc">Order</span> <span class="nf">getOrder</span><span class="o">(</span><span class="nd">@PathVariable</span><span class="o">(</span><span class="s">"organizationId"</span><span class="o">)</span> <span class="nc">String</span> <span class="n">orderId</span><span class="o">);</span>
+    
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>getOrder() 메서드를 정의하는 방법은 스프링 Controller 클래스에서 엔드포인트를 노출하는 방식과 똑같다.
+    <ul>
+      <li>주문 서비스를 호출할 때 HTTP 동사와 엔드포인트를 노출하도록 매핑하는 @RequestMapping 애너테이션을 getOrder() 메서드에 정의한다.</li>
+      <li>URL에 전달된 order ID를 @PathVariable 애너테이션을 사용하여 getOrder() 메서드의 orderId 매개변수에 매핑한다.</li>
+      <li>주문 서비스의 호출 반환값은 getOrder() 메서드의 반환값으로 정의된 Order 클래스에 자동으로 매핑된다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="3-2-3-에러-핸들링">3-2-3. 에러 핸들링</h3>
+
+<aside> 💡
+
+표준 스프링 RestTemplate 클래스를 사용할 때 모든 서비스 호출에 대한 HTTP 상태 코드(status code)는 ResponseEntity 클래스의 getStatus() 메서드로 반환된다. 하지만 Feign 클라이언트를 사용하면 호출된 서비스에서 반환한 모든 HTTP 4xx – 5xx 상태 코드가 FeignException에 매핑된다. FeignException에는 특정 에러 메시지에 대해 파싱할 수 있는 JSON 내용이 포함되어 있다.
+
+Feign은 사용자가 정의한 Exception 클래스에 에러를 재매핑하는 에러 디코더(decoder) 클래스를 작성할 수 있는 기능을 제공한다. 이 디코더를 작성하는 작업은 Feign 깃허브([**](https://github.com/Netflix/feign/wiki/Custom-error-handling)[https://github.com/Netflix/feign/wiki/Custom-error-handling**](https://github.com/Netflix/feign/wiki/Custom-error-handling**)) 등에서 예를 찾을 수 있다.
+
+</aside>]]></content><author><name>Start Bootstrap</name></author><category term="msa" /><summary type="html"><![CDATA[MSA 구조에서의 인증 로직 구현 MSA 구조에서의 인증 로직 구현 💡 MSA 구조에서는 개별 서비스들이 독립적으로 운영되며, 각 서비스가 자체적으로 인증 및 인가 로직을 처리할 수 있다. 그러나 외부 요청은 보통 API Gateway를 통해 들어오게 되며, 이를 활용한 중앙 집중식 인증 방식과 내부 서비스 간의 신뢰 체계 구성이 중요하다. 인증 로직을 구현할 때 고려해야 할 주요 사항은 JWT 토큰 검증 방식이다. 1. 재검증 방식 각 모듈에서 클라이언트가 전달한 JWT 토큰 전체를 재검증하고 SecurityContext를 구성하는 방식이다. 이 방식은 다음과 같은 특징이 있다. 방어 심층(Defense in Depth) 전략: 각 서비스가 독자적으로 JWT 토큰을 검증함으로써, 만약 API Gateway를 우회하여 직접 접근하는 요청이 발생할 경우에도 추가적인 보안 검증이 이루어진다. 이로써 서비스 간의 보안 취약점을 줄일 수 있다. 중복 코드 발생: 서비스마다 동일한 JWT 토큰 검증 로직을 구현하게 되므로, 코드 중복이 발생할 수 있다. 이 경우 공통 라이브러리로 분리하여 관리할 수 있으나, 각 서비스가 독립적으로 해당 로직을 가져야 한다. 성능 부하: 각 요청마다 모든 서비스에서 JWT 토큰 전체를 재검증할 경우, 불필요한 부하가 발생할 가능성이 있다. 특히 트래픽이 많은 서비스에서는 토큰 재검증이 성능에 영향을 줄 수 있다. 보안의 완전성: JWT 토큰이 만료되었거나 변조된 경우 즉시 감지할 수 있으므로, 보안상의 완전성을 보장할 수 있다. 즉, 완전 재검증 방식은 MSA 구조에서 “Defense in Depth”를 구현하는 데 유리하다. 다만, 각 서비스에 동일한 검증 로직이 중복되어 들어가는 단점과 이로 인한 시스템 부하를 고려해야 한다. 2. 신뢰 기반 방식: 헤더 정보 활용 API Gateway에서 JWT 토큰의 기본 유효성 검증을 수행한 후, 토큰의 핵심 정보(예, 사용자 ID 및 사용자 역할)를 추출하여 HTTP 헤더(예, X-User-Id, X-User-Role)로 각 내부 서비스로 전달하는 방식이다. 이 방식의 특징은 다음과 같다. 코드 중복 감소: API Gateway에서 한 번 검증된 정보를 각 서비스에 전달하므로, 개별 서비스에서 JWT 토큰 전체를 재검증할 필요가 없다. 이로써 코드 중복을 줄이고, 각 서비스의 구현이 간소화된다. 일관된 보안 모델 유지: 모든 내부 서비스가 동일한 헤더 기반의 인증 정보를 활용하여 SecurityContext를 구성하므로, 보안 모델이 일관되게 유지된다. 각 서비스는 Gateway가 전달한 정보만을 신뢰하고 인가 로직을 실행하게 된다. 성능 향상: 매번 모든 서비스에서 JWT 토큰 전체를 재검증하지 않아도 되므로, 시스템 부하가 감소하고 성능이 향상된다. 보안 취약점 고려: API Gateway의 검증 로직에 문제가 발생하거나, Gateway 외부로부터의 접근이 허용되는 경우 보안 취약점이 발생할 수 있다. 따라서 Gateway의 보안이 가장 중요하며, 내부 서비스는 기본적으로 Pre-Authentication 방식(예, 헤더 정보를 기반으로 SecurityContext를 구성하는 필터)을 적용하여 최소한의 보안을 유지하는 것이 바람직하다. 신뢰 기반 방식은 MSA 구조에서 성능 최적화와 코드 관리의 효율성을 높이는 데 유리하다. 단, 이 방식은 API Gateway가 모든 외부 요청에 대해 올바르게 JWT 검증을 수행한다는 전제 하에 작동하므로, Gateway의 보안 강화 및 모니터링에 신경을 써야 한다. 3. MSA 환경에서 인증 및 인가 구현 위치 API Gateway 인증(Authentication) 집중 처리: API Gateway는 모든 외부 요청의 진입점이므로, JWT 토큰의 유효성 검증과 사용자 정보(예, 사용자 ID, 역할)를 추출하는 전역 필터(GlobalFilter)를 통해 인증 처리를 수행한다. Gateway는 JWT 토큰이 유효한지를 확인하고, 검증된 정보를 HTTP 헤더에 추가하여 내부 서비스에 전달한다. 보안 로직의 중앙 집중화: 모든 외부 요청은 Gateway에서 먼저 처리되므로, 보안 정책을 중앙에서 일관되게 적용할 수 있다. 내부 서비스 (User, Order, 기타 서비스) 인가(Authorization) 처리 및 Pre-Authentication: 각 내부 서비스는 API Gateway가 전달한 인증 정보를 기반으로 SecurityContext를 구성한다. 예를 들어, HeaderAuthenticationFilter와 같은 필터를 사용하여 X-User-Id 및 X-User-Role 헤더 값을 읽고, PreAuthenticatedAuthenticationToken을 생성하여 Spring Security Context에 설정한다. 추가 인가 정책 적용: 서비스별로 세부 리소스에 대한 접근 제어가 필요할 경우, 메소드 보안(@PreAuthorize, @PostAuthorize) 등을 통해 추가 인가 정책을 적용한다. 4. 정리 MSA 구조에서 인증 로직을 구현하는 방법은 두 가지 방식인 완전 재검증 방식과 신뢰 기반 방식(헤더 정보 활용)으로 나뉜다. 완전 재검증 방식은 각 서비스에서 JWT 토큰 전체를 재검증하여 보안의 완전성을 보장하지만, 코드 중복과 성능 부하가 발생할 수 있다. 신뢰 기반 방식은 API Gateway에서 JWT 토큰을 검증한 후 핵심 정보를 헤더에 담아 각 내부 서비스에서 이를 활용하는 방법으로, 코드 중복을 줄이고 일관된 보안 모델을 유지할 수 있으며, 성능면에서도 유리하다. 따라서 MSA 구조에서는 인증(Authentication)은 API Gateway에서 집중 처리하고, 내부 서비스에서는 Gateway가 전달한 인증 정보를 신뢰하여 Pre-Authentication 방식으로 SecurityContext를 구성하는 것이 바람직하다. 이를 통해 각 서비스는 Spring Security의 인가(Authorization) 기능을 효과적으로 활용할 수 있으며, 시스템 전체의 보안과 성능을 모두 만족시키는 구현이 가능하다. User Service의 Spring Security 예제에서 변경 된 부분 체크 User Service의 Spring Security 에서 변경 된 부분 체크 Eureka Client 설정 build.gradle &gt; dependencies &gt; eureka client 추가 application.yml &gt; eureka 관련 설정 추가 인증 / 인가 설정 JwtTokenProvider createToken, refreshToken : claim에 userId 추가 AuthService의 createToken, refreshToken 호출부 수정 SecurityConfig filterChain : JwtAuthenticationFilter 삭제 → HeaderAuthenticationFilter 추가 api gateway에서 토큰 확인 후 userId와 role을 request header에 담아서 전송하도록 수정하므로 전달 받은 값 기준으로 SecurityContextHolder를 채워서 기능별 인증, 인가 확인이 일어나도록 함 CumtomUserDetailsService → 삭제 UserQueryController &gt; getUserDetail @AuthenticationPrincipal String userId 로 변경 UserQueryService &gt; getUserDetail 매개변수 변경 UserMapper &gt; findUserById 추가, findUserByUsername 삭제 호출 URL 변경 SecurityConfig filterChain : authorizeHttpRequest 설정에서 /api/v1 삭제 XXXController @RequestMapping : /api/v1 삭제 Order Service에서 호출할 추가 된 코드 UserQueryController &gt; getUserGrade UserQueryService &gt; getUserGrade UserMapper(interface) &gt; findUserById UserMapper.xml &gt; findUserById]]></summary></entry><entry><title type="html">Vagrant를 이용한 환경구축</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/Vagrant%EB%A5%BC_%EC%9D%B4%EC%9A%A9%ED%95%9C_%ED%99%98%EA%B2%BD%EA%B5%AC%EC%B6%95.html" rel="alternate" type="text/html" title="Vagrant를 이용한 환경구축" /><published>2025-06-21T22:00:00+09:00</published><updated>2025-06-21T22:00:00+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/Vagrant%EB%A5%BC_%EC%9D%B4%EC%9A%A9%ED%95%9C_%ED%99%98%EA%B2%BD%EA%B5%AC%EC%B6%95</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/Vagrant%EB%A5%BC_%EC%9D%B4%EC%9A%A9%ED%95%9C_%ED%99%98%EA%B2%BD%EA%B5%AC%EC%B6%95.html"><![CDATA[<h2 id="vagrant란">Vagrant란?</h2>
 
 <p><strong>Vagrant</strong>는 개발 환경을 코드로 정의하고 손쉽게 복제할 수 있도록 도와주는 <strong>가상 머신 자동화 관리 도구</strong>입니다. VirtualBox, VMware, Hyper-V 같은 가상화 소프트웨어 위에 작동하며, 가상 머신의 생성, 설정, 부팅, 폐기를 한 줄의 명령어로 제어할 수 있게 해줍니다.</p>
 
@@ -1097,579 +2042,547 @@ ansible-playbook mysql-role.yml
 
 <h3 id="spring-boot-예시">Spring Boot 예시:</h3>
 
-<p><code class="language-plaintext highlighter-rouge">application.yml</code></p>]]></content><author><name>Start Bootstrap</name></author><category term="ansible" /><summary type="html"><![CDATA[MySQL 설치 및 접속 테스트 실습 가이드]]></summary></entry><entry><title type="html">플레이북</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/playbook.html" rel="alternate" type="text/html" title="플레이북" /><published>2025-06-21T22:00:00+09:00</published><updated>2025-06-21T22:00:00+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/playbook</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/playbook.html"><![CDATA[<h2 id="1-플레이북으로-nginx-설치-자동화">1. 플레이북으로 Nginx 설치 자동화</h2>
+<p><code class="language-plaintext highlighter-rouge">application.yml</code></p>]]></content><author><name>Start Bootstrap</name></author><category term="ansible" /><summary type="html"><![CDATA[MySQL 설치 및 접속 테스트 실습 가이드]]></summary></entry><entry><title type="html">Spring Cloud</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/msa/2025/06/21/Spring_Cloud.html" rel="alternate" type="text/html" title="Spring Cloud" /><published>2025-06-21T22:00:00+09:00</published><updated>2025-06-21T22:00:00+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/msa/2025/06/21/Spring_Cloud</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/msa/2025/06/21/Spring_Cloud.html"><![CDATA[<h1 id="2-spring-cloud">2. Spring Cloud</h1>
 
-<h3 id="플레이북이란">플레이북이란?</h3>
+<p>💡마이크로서비스 아키텍처를 구축하고 운영하는 데 필요한 다양한 기능을 제공하는 Spring Framework의 확장 모음이다. Spring Cloud는 여러 개별 서비스가 서로 원활하게 통신하고 관리될 수 있도록 돕는 도구와 패턴을 제공한다.</p>
+
+<h2 id="2-1-eureka">2-1. Eureka</h2>
+
+<p>💡Netflix가 개발한 서비스 등록 및 발견 서버로 각 서비스는 Eureka 서버에 자신의 정보를 등록하고, 다른 서비스는 이를 통해 필요한 서비스를 찾아 호출할 수 있다. 클라이언트 측 로드 밸런싱과 장애 감지 기능을 제공한다.</p>
+
+<h3 id="2-1-1-클라이언트-요청과-api-gateway">2-1-1. 클라이언트 요청과 API Gateway</h3>
 
 <ul>
-  <li>*플레이북(playbook)<strong>은 Ansible에서 복잡한 작업을 반복 가능하고 읽기 쉬운 **YAML 파일 형태로 정의</strong>한 자동화 스크립트입니다. Ad-hoc 명령은 단발성 작업에 적합하지만, <strong>여러 작업을 순차적으로 실행하거나 버전 관리하고자 할 때는 플레이북이 필요</strong>합니다.</li>
+  <li>클라이언트(Client)가 서비스를 호출할 때, 직접 개별 서비스에 접근하지 않고 API Gateway를 통해 요청을 보낸다.</li>
+  <li>API Gateway는 마이크로서비스 아키텍처에서 단일 진입점(Single Entry Point) 역할을 한다.</li>
+  <li>클라이언트는 각기 다른 마이크로 서비스에 직접 접근하지 않고, 통합된 인터페이스를 통해 서비스를 요청할 수 있다.</li>
+  <li>API Gateway는 요청을 라우팅하고, 각기 다른 서비스로 분배하는 역할을 하며, 인증, 권한 부여, 로깅 등의 공통적인 기능도 수행할 수 있다.</li>
 </ul>
 
-<h3 id="목적">목적</h3>
+<h3 id="2-1-2-service-discovery">2-1-2. Service Discovery</h3>
 
 <ul>
-  <li>반복 가능한 작업 자동화 (예: 여러 서버에 Nginx 설치)</li>
-  <li>역할과 태스크를 분리하여 명확하게 구성</li>
+  <li>Eureka는 Service Discovery를 담당하는 구성 요소로, 마이크로서비스가 동적으로 변화할 수 있는 환경에서 서비스들의 위치를 추적하고 관리한다.</li>
+  <li>Eureka Server: 각 서비스 인스턴스들이 자신의 상태와 위치를 등록하는 중앙 관리 시스템이다.</li>
+  <li>Eureka Client: Service Instance A, B, C는 Eureka Client로 동작한다. 각 인스턴스는 시작 시 Eureka 서버에 자신을 등록하고, 주기적으로 상태를 Health Check하며, 그 결과를 서버에 업데이트 한다. 이를 통해 Eureka 서버는 현재 실행 중인 서비스의 위치와 상태를 실시간으로 파악한다.</li>
+  <li>새로운 서비스 인스턴스가 생성되거나 기존 인스턴스가 종료되면, Eureka 서버는 이러한 변화를 실시간으로 반영하여, API Gateway와 Load Balancer가 올바른 서비스로 요청을 전달할 수 있게 돕는다.</li>
 </ul>
 
-<h3 id="디렉토리-구성-예시">디렉토리 구성 예시</h3>
+<h3 id="2-1-3-load-balancer">2-1-3. Load Balancer</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-lab/
-├── playbooks/
-│   └── install-nginx.yml
-</code></pre></div></div>
+<ul>
+  <li>로드 밸런서(Load Balancer)는 서비스 간의 트래픽 분산을 담당한다.</li>
+  <li>클라이언트가 API Gateway를 통해 요청을 보내면, 그 요청은 서비스 인스턴스 중 하나로 전달되어야 한다. 이때, 로드 밸런서가 Eureka 서버에서 받은 서비스 인스턴스 정보를 바탕으로, 요청을 적절한 인스턴스로 분배한다.</li>
+  <li>로드 밸런서는 각 인스턴스의 상태(Health Status)를 주기적으로 체크하여, 문제가 있는 인스턴스에는 트래픽을 보내지 않도록 하여 시스템의 안정성을 높인다.</li>
+  <li>또한, 부하가 특정 인스턴스에 치우치지 않도록 부하 분산 기능을 수행하여 전체 시스템의 성능을 최적화한다.</li>
+</ul>
 
-<h3 id="install-nginxyml">install-nginx.yml</h3>
+<h3 id="2-1-4-service-instances">2-1-4. Service Instances</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-- name: Install and Start Nginx on all target servers
-  hosts: targets
-  become: yes
-  tasks:
-    - name: Install nginx
-      apt:
-        name: nginx
-        state: present
-        update_cache: yes
+<ul>
+  <li>서비스 인스턴스 A, B, C는 각기 다른 포트에서 구동되고 있으며, 실제 비즈니스 로직을 수행하는 역할을 한다.</li>
+  <li>각 인스턴스는 고유의 포트 번호로 구동되며, 클라이언트의 요청에 따라 API Gateway와 Load Balancer를 통해 서비스 된다.</li>
+  <li>마이크로서비스 환경에서는 이런 인스턴스들이 필요에 따라 확장되거나 축소될 수 있다. 예를 들어, 트래픽이 증가하면 더 많은 인스턴스를 추가하여 처리 능력을 높일 수 있다.</li>
+</ul>
 
-    - name: Ensure nginx is running
-      service:
-        name: nginx
-        state: started
-        enabled: yes
-</code></pre></div></div>
+<h3 id="2-1-5-전체적인-흐름">2-1-5. 전체적인 흐름</h3>
 
-<h3 id="-실행-명령어">▶ 실행 명령어</h3>
+<ul>
+  <li>클라이언트가 특정 서비스를 요청하면, 요청은 API Gateway로 전달된다.</li>
+  <li>API Gateway는 요청된 서비스의 이름을 기반으로 Eureka 서버에서 해당 서비스의 인스턴스 정보를 조회한다.</li>
+  <li>조회된 정보는 로드 밸런서에 전달되고, 로드 밸런서는 각 서비스의 상태를 확인한 후, 적절한 서비스 인스턴스로 요청을 전달한다.</li>
+  <li>서비스 인스턴스는 요청을 처리하고 그 결과를 API Gateway를 통해 클라이언트에게 반환한다.</li>
+</ul>]]></content><author><name>Start Bootstrap</name></author><category term="msa" /><summary type="html"><![CDATA[2. Spring Cloud]]></summary></entry><entry><title type="html">Ansible이란</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/ansible_is.html" rel="alternate" type="text/html" title="Ansible이란" /><published>2025-06-21T22:00:00+09:00</published><updated>2025-06-21T22:00:00+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/ansible_is</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/ansible_is.html"><![CDATA[<h1 id="1-ansible이란">1. Ansible이란</h1>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd .. 
-cd .. 
-cd vagrant/
+<h2 id="1-1-ansible-개념"><strong>1-1. Ansible 개념</strong></h2>
 
-ansible-playbook playbooks/install-nginx.yml
-</code></pre></div></div>
-
-<h3 id="결과-확인">결과 확인</h3>
-
-<ol>
+<ul>
   <li>
-    <p><strong>nginx가 설치되었는지 확인</strong>:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ansible targets <span class="nt">-m</span> <span class="nb">command</span> <span class="nt">-a</span> <span class="s2">"nginx -v"</span>
-    
-</code></pre></div>    </div>
-
-    <p>→ 각 노드에 nginx 버전 출력되면 설치 완료.</p>
+    <p>Ansible은 <strong>자동화 도구</strong>로 인프라 환경 설정, 앱 배포, 서버 관리 등을 코드로 작성하고 자동 실행합니다.</p>
   </li>
   <li>
-    <p><strong>nginx가 실행 중인지 확인</strong>:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ansible targets <span class="nt">-m</span> service <span class="nt">-a</span> <span class="s2">"name=nginx state=started"</span>
-    
-</code></pre></div>    </div>
+    <p>시스템 구성, 소프트웨어 배포, 지속적 배포(CD), 다운타임없는 업데이트와 같은 고급 IT작업을 자동화하고 조정(오케스트레이션)할 수 있도록 설계되었다.</p>
   </li>
   <li>
-    <p><strong>웹 서버 응답 확인</strong>:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ansible targets <span class="nt">-m</span> <span class="nb">command</span> <span class="nt">-a</span> <span class="s2">"curl -I http://localhost"</span>
-    
-</code></pre></div>    </div>
+    <p><strong>자동화 범위</strong>:</p>
   </li>
-</ol>
-
-<p><strong>예상 결과:</strong> HTTP 200 OK 또는 403 Forbidden 등 웹 서버 응답 헤더 출력</p>
+  <li>
+    <p>서버 설정 자동화 (ex. 사용자, 패키지, 방화벽 설정)</p>
+  </li>
+  <li>
+    <p>애플리케이션 배포 (ex. Git pull → 빌드 → 서비스 재시작)</p>
+  </li>
+  <li>
+    <p>보안 정책 적용 (ex. SSH 포트 제한, 암호 정책 설정)</p>
+  </li>
+  <li>
+    <p>클라우드 리소스 생성 (ex. AWS EC2 인스턴스 생성)</p>
+  </li>
+</ul>
 
 <hr />
 
-<h2 id="2-변수와-핸들러를-활용한-플레이북-개선">2. 변수와 핸들러를 활용한 플레이북 개선</h2>
-
-<h3 id="목표">목표</h3>
-
-<ul>
-  <li>Nginx 설치 및 설정 변경 시 자동으로 서비스 재시작</li>
-  <li>반복되는 값을 변수로 분리하여 가독성과 유지 보수성 향상</li>
-</ul>
-
-<h3 id="디렉토리-구조-예시">디렉토리 구조 예시</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-lab/
-├── playbooks/
-│   ├── install-nginx.yml
-│   ├── vars.yml
-</code></pre></div></div>
-
-<h3 id="varsyml">vars.yml</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nginx_package: nginx
-nginx_service: nginx
-</code></pre></div></div>
-
-<h3 id="install-nginxyml-1">install-nginx.yml</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-- name: Install and manage nginx with handler
-  hosts: targets
-  become: yes
-  vars_files:
-    - /vagrant/playbooks/vars.yml
-  tasks:
-    - name: Install nginx
-      apt:
-        name: ""
-        state: present
-        update_cache: yes
-      notify: Restart nginx
-
-    - name: Ensure nginx is enabled and running
-      service:
-        name: ""
-        state: started
-        enabled: yes
-
-  handlers:
-    - name: Restart nginx
-      service:
-        name: ""
-        state: restarted
-</code></pre></div></div>
-
-<h3 id="-실행-명령어-1">▶ 실행 명령어</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook /vagrant/playbooks/install-nginx.yml
-</code></pre></div></div>
-
-<h3 id="확인">확인</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible targets -m command -a "systemctl status nginx"
-</code></pre></div></div>
-
-<blockquote>
-  <p>설정 파일이 변경되거나 nginx가 설치된 경우, handler가 작동하여 자동으로 서비스를 재시작합니다.</p>
-
-</blockquote>
-
-<hr />
-
-<hr />
-
-<h2 id="3-템플릿을-활용한-nginx-설정-배포-jinja2">3. 템플릿을 활용한 Nginx 설정 배포 (Jinja2)</h2>
-
-<h3 id="jinja2란">Jinja2란?</h3>
-
-<p>Jinja2는 Python 기반의 가장 널리 사용되는 <strong>템플릿 엔진</strong> 중 하나로, 텍스트 기반 파일에 변수, 조건문, 반복문 등을 삽입하여 <strong>동적으로 파일을 생성</strong>할 수 있도록 도와줍니다.</p>
-
-<p>Ansible은 내부적으로 Jinja2를 템플릿 엔진으로 채택하고 있으며, 다음과 같은 이유로 널리 사용됩니다:</p>
-
-<ul>
-  <li><strong>가독성이 높은 문법</strong>: `` 형식으로 직관적인 구문 제공</li>
-  <li><strong>조건문, 반복문, 필터 지원</strong>: 템플릿 내에서 if, for, length 등 다양한 표현 사용 가능</li>
-  <li><strong>YAML, HTML, conf 파일 등 다양한 형식 지원</strong></li>
-  <li><strong>Python 기반으로 Ansible과 자연스럽게 연동됨</strong></li>
-</ul>
-
-<h3 id="다른-템플릿-엔진과-비교">다른 템플릿 엔진과 비교</h3>
+<h2 id="1-2-ansible의-주요-특징"><strong>1-2. Ansible의 주요 특징</strong></h2>
 
 <table>
   <thead>
     <tr>
-      <th>템플릿 엔진</th>
-      <th>특징</th>
-      <th>비고</th>
+      <th><strong>특징</strong></th>
+      <th><strong>설명</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Jinja2</strong></td>
-      <td>Python 기반, Ansible 기본 탑재</td>
-      <td>⭐ 기본 선택</td>
+      <td><strong>에이전트리스 (Agentless)</strong></td>
+      <td>대상 서버에 별도의 에이전트 설치 없이 <strong>SSH만으로 통신</strong>함. 유지 관리가 간편하고 보안 부담이 적음.</td>
     </tr>
     <tr>
-      <td>Mustache</td>
-      <td>언어 중립적, 로직 없는 템플릿 지향</td>
-      <td>복잡한 표현 제한</td>
+      <td><strong>간단한 문법 (YAML 기반 Playbook)</strong></td>
+      <td>사람이 읽기 쉬운 YAML 형식으로 작업 정의. 패키지 설치, 설정 배포, 서비스 재시작 등을 <strong>순서대로 작성 가능</strong>.</td>
     </tr>
     <tr>
-      <td>ERB (Embedded Ruby)</td>
-      <td>Ruby 기반</td>
-      <td>Chef 등에서 사용됨</td>
+      <td><strong>멱등성 (Idempotent)</strong></td>
+      <td>같은 작업을 여러 번 실행해도 <strong>결과가 항상 동일</strong>하게 유지됨. 예: 이미 설치된 nginx는 건너뜀.</td>
     </tr>
     <tr>
-      <td>EJS (Embedded JS)</td>
-      <td>JavaScript 기반</td>
-      <td>Node.js에서 사용</td>
+      <td><strong>모듈 기반 구조</strong></td>
+      <td>수천 개의 기능이 <strong>모듈 형태로 제공</strong>됨. 예: <code class="language-plaintext highlighter-rouge">yum</code>, <code class="language-plaintext highlighter-rouge">apt</code>, <code class="language-plaintext highlighter-rouge">copy</code>, <code class="language-plaintext highlighter-rouge">service</code> 등. 사용자 정의 모듈도 가능.</td>
+    </tr>
+    <tr>
+      <td><strong>확장성</strong></td>
+      <td><strong>인벤토리 파일</strong>을 통해 서버를 그룹 단위로 관리. AWS, Azure, GCP와 같은 <strong>클라우드 환경과도 연동</strong> 가능.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
     </tr>
   </tbody>
 </table>
 
-<blockquote>
-  <p>Ansible에서는 Jinja2가 기본 내장되어 있고, 대부분의 문서, 예제, 커뮤니티가 Jinja2를 중심으로 구성되어 있으므로 별도 설치 없이 바로 사용 가능하며, 실무에서도 가장 널리 사용됩니다.</p>
-
-</blockquote>
-
-<h3 id="목표-1">목표</h3>
-
-<ul>
-  <li>Nginx의 설정 파일을 템플릿 파일로 구성하여 서버마다 유연하게 배포할 수 있도록 구성</li>
-  <li>Ansible 템플릿 엔진(Jinja2)을 사용하여 변수 기반 설정 파일 생성</li>
-</ul>
-
-<h3 id="디렉토리-구조-예시-1">디렉토리 구조 예시</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-lab/
-├── playbooks/
-│   ├── nginx-role.yml
-│   └── roles/
-│       └── nginx/
-│           ├── tasks/
-│           │   └── main.yml
-│           ├── templates/
-│           │   └── nginx.conf.j2
-│           ├── vars/
-│           │   └── main.yml
-ansible-lab/
-├── playbooks/
-│   ├── install-nginx.yml
-│   ├── vars.yml
-│   ├── templates/
-│   │   └── nginx.conf.j2
-</code></pre></div></div>
-
-<h3 id="templatesnginxconfj2">templates/nginx.conf.j2</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>user www-data;
-worker_processes auto;
-pid /run/nginx.pid;
-
-events {
-  worker_connections 768;
-}
-
-http {
-  sendfile on;
-  tcp_nopush on;
-  types_hash_max_size 2048;
-
-  include /etc/nginx/mime.types;
-  default_type application/octet-stream;
-
-  server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
-    server_name ;
-
-    location / {
-      return 200 "Hello from \n";
-    }
-  }
-}
-</code></pre></div></div>
-
-<h3 id="install-nginxyml-템플릿-적용-추가">install-nginx.yml (템플릿 적용 추가)</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-- name: Install nginx and apply custom config
-  hosts: targets
-  become: yes
-  vars_files:
-    - /vagrant/playbooks/vars.yml
-  tasks:
-    - name: Install nginx
-      apt:
-        name: ""
-        state: present
-        update_cache: yes
-      notify: Restart nginx
-
-    - name: Deploy nginx config file from template
-      template:
-        src: /vagrant/playbooks/templates/nginx.conf.j2
-        dest: /etc/nginx/nginx.conf
-      notify: Restart nginx
-
-    - name: Ensure nginx is enabled and running
-      service:
-        name: ""
-        state: started
-        enabled: yes
-
-  handlers:
-    - name: Restart nginx
-      service:
-        name: ""
-        state: restarted
-</code></pre></div></div>
-
-<h3 id="-실행-명령어-2">▶ 실행 명령어</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /vagrant/playbooks
-
-ansible-playbook /vagrant/playbooks/install-nginx.yml
-</code></pre></div></div>
-
-<h3 id="확인-방법">확인 방법</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible targets -m command -a "curl http://localhost"
-</code></pre></div></div>
-
-<p>→ 출력 결과 예시: <code class="language-plaintext highlighter-rouge">Hello from node1</code>, <code class="language-plaintext highlighter-rouge">Hello from node2</code></p>
-
-<blockquote>
-  <p>템플릿의 inventory_hostname 변수는 Ansible이 자동으로 제공하는 호스트 이름입니다.</p>
-
-</blockquote>
-
 <hr />
 
-<hr />
-
-<h2 id="4-role-구조로-nginx-구성-자동화">4. Role 구조로 Nginx 구성 자동화</h2>
-
-<h3 id="role이란">Role이란?</h3>
-
-<p>Ansible에서 <strong>Role</strong>은 플레이북을 역할 기반으로 분리하고 재사용할 수 있도록 구성한 <strong>디렉토리 구조</strong>입니다.</p>
-
-<ul>
-  <li>작업을 <code class="language-plaintext highlighter-rouge">tasks</code>, 변수는 <code class="language-plaintext highlighter-rouge">vars</code>, 템플릿은 <code class="language-plaintext highlighter-rouge">templates</code> 폴더 등으로 구분</li>
-  <li>유지보수와 협업에 유리하며, 여러 프로젝트에서 재사용 가능</li>
-  <li><code class="language-plaintext highlighter-rouge">ansible-galaxy init</code> 명령으로 쉽게 생성 가능</li>
-</ul>
-
-<h3 id="디렉토리-구조-예시-2">디렉토리 구조 예시</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-lab/
-├── roles/
-│   └── nginx/
-│       ├── tasks/
-│       │   └── main.yml
-│       ├── templates/
-│       │   └── nginx.conf.j2
-│       ├── vars/
-│       │   └── main.yml
-</code></pre></div></div>
-
-<h3 id="-role-생성-명령어">▶ Role 생성 명령어</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /vagrant/playbooks
-ansible-galaxy init roles/nginx
-</code></pre></div></div>
-
-<h2 id="ansible-galaxy-명령어"><code class="language-plaintext highlighter-rouge">ansible-galaxy</code> 명령어</h2>
+<h2 id="1-3-ansible이-해결하는-문제"><strong>1-3. Ansible이 해결하는 문제</strong></h2>
 
 <table>
   <thead>
     <tr>
-      <th>기능</th>
-      <th>명령 예시</th>
+      <th><strong>업무 영역</strong></th>
+      <th><strong>적용 내용</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>서버 초기 세팅</strong></td>
+      <td>사용자 계정 생성, 패키지 설치, Timezone, 방화벽 설정 등</td>
+    </tr>
+    <tr>
+      <td><strong>애플리케이션 배포</strong></td>
+      <td>Git에서 코드 받아오기, 빌드, 배포, 서비스 재시작 등 전체 배포 프로세스 자동화</td>
+    </tr>
+    <tr>
+      <td><strong>보안 정책 적용</strong></td>
+      <td>패스워드 복잡성, 방화벽, 특정 포트 차단 등 정책을 모든 서버에 일관되게 적용</td>
+    </tr>
+    <tr>
+      <td><strong>로그 수집기 배포</strong></td>
+      <td>Filebeat, Fluentd 등 로그 수집기 설치와 설정 자동화</td>
+    </tr>
+    <tr>
+      <td><strong>다수 서버 대상 작업</strong></td>
+      <td>수십~수천 대 서버에 동시에 설정 변경, 업데이트, 점검</td>
+    </tr>
+    <tr>
+      <td><strong>클라우드 자원 생성</strong></td>
+      <td>AWS/GCP 인스턴스, VPC, 보안 그룹 생성과 설정 자동화</td>
+    </tr>
+    <tr>
+      <td><strong>Kubernetes 초기화</strong></td>
+      <td>kubeadm으로 마스터/워커 클러스터 구성 자동화</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="1-4-ansible의-장점"><strong>1-4. Ansible의 장점</strong></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>장점</strong></th>
+      <th><strong>설명</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>에이전트리스 구조</strong></td>
+      <td>대상 서버에 별도 소프트웨어 설치 없이 SSH만 있으면 동작. 유지 관리가 단순하고 효율적.</td>
+    </tr>
+    <tr>
+      <td><strong>간단한 문법 (YAML)</strong></td>
+      <td>사람이 읽고 쓰기 쉬운 YAML 문법 사용 → 코드 작성과 유지보수가 쉬움.</td>
+    </tr>
+    <tr>
+      <td><strong>멱등성 보장</strong></td>
+      <td>같은 작업을 여러 번 실행해도 결과가 동일 → 실수로 중복 실행해도 시스템에 변화 없음.</td>
+    </tr>
+    <tr>
+      <td><strong>빠른 도입 가능</strong></td>
+      <td>복잡한 설정 없이도 금방 실무에 적용 가능 → 작은 팀에서도 쉽게 시작 가능.</td>
+    </tr>
+    <tr>
+      <td><strong>모듈 기반 구조</strong></td>
+      <td>다양한 작업을 위한 모듈이 내장되어 있어 확장성 뛰어남 (ex. docker, aws, service 등).</td>
+    </tr>
+    <tr>
+      <td><strong>커뮤니티와 생태계</strong></td>
+      <td>문서화가 잘 되어 있고, 예제와 플러그인이 풍부하며 Red Hat의 공식 지원도 있음.</td>
+    </tr>
+    <tr>
+      <td><strong>멀티 OS 지원</strong></td>
+      <td>리눅스뿐 아니라 윈도우 서버 관리도 가능 (WinRM 지원)</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="1-5-ansible의-단점"><strong>1-5. Ansible의 단점</strong></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>단점</strong></th>
+      <th><strong>설명</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>속도 문제</strong></td>
+      <td>SSH 방식은 순차적(Push 방식) 실행이기 때문에 <strong>수백 대 이상의 서버 작업은 느릴 수 있음</strong>.</td>
+    </tr>
+    <tr>
+      <td><strong>복잡한 로직 구현 한계</strong></td>
+      <td>조건문, 반복문 등의 복잡한 흐름을 표현하기 어려움. (Jinja2 템플릿과 변수로 극복 가능하지만 한계 존재)</td>
+    </tr>
+    <tr>
+      <td><strong>에러 로깅 및 디버깅 약함</strong></td>
+      <td>에러 발생 시 메시지가 단순하며, 복잡한 작업 디버깅에 어려움이 있음.</td>
+    </tr>
+    <tr>
+      <td><strong>GUI 부족</strong></td>
+      <td>기본적으로 CLI 기반이며, GUI(AWX, Ansible Tower)는 별도 설치와 관리 필요.</td>
+    </tr>
+    <tr>
+      <td><strong>대규모 분산 처리 비효율적</strong></td>
+      <td>수많은 노드를 동시에 처리하는 경우 Puppet/Chef 같은 Pull 방식 도구가 더 적합할 수 있음.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="1-6-다른-도구와-비교"><strong>1-6. 다른 도구와 비교</strong></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>항목</strong></th>
+      <th><strong>Ansible</strong></th>
+      <th><strong>Chef / Puppet</strong></th>
+      <th><strong>Terraform</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>설치 방식</td>
+      <td>에이전트 없음</td>
+      <td>에이전트 필요</td>
+      <td>에이전트 없음</td>
+    </tr>
+    <tr>
+      <td>실행 방식</td>
+      <td>Push 방식 (SSH)</td>
+      <td>Pull 방식</td>
+      <td>선언적 실행 (IaC)</td>
+    </tr>
+    <tr>
+      <td>구성 목적</td>
+      <td>설정 및 운영 자동화</td>
+      <td>설정 및 운영 자동화</td>
+      <td>인프라 프로비저닝 중심</td>
+    </tr>
+    <tr>
+      <td>문법</td>
+      <td>YAML</td>
+      <td>Ruby DSL</td>
+      <td>HCL</td>
+    </tr>
+    <tr>
+      <td>학습 곡선</td>
+      <td>쉬움</td>
+      <td>다소 어려움</td>
+      <td>보통</td>
+    </tr>
+    <tr>
+      <td>적합한 환경</td>
+      <td>중소규모, 빠른 시작</td>
+      <td>대규모 엔터프라이즈</td>
+      <td>멀티클라우드/클라우드 중심</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="1-7-ansible의-개념-구성요소">1-7. Ansible의 개념 구성요소</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>요소</th>
       <th>설명</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Role 생성</strong></td>
-      <td><code class="language-plaintext highlighter-rouge">ansible-galaxy init roles/nginx</code></td>
-      <td>로컬에서 사용할 역할 구조 생성</td>
+      <td><strong>Inventory (인벤토리)</strong></td>
+      <td>관리 대상 노드의 목록 및 그룹을 정의 IP 또는 도메인 기반, 정적/동적 인벤토리 구성 가능</td>
     </tr>
     <tr>
-      <td><strong>Role 설치</strong></td>
-      <td><code class="language-plaintext highlighter-rouge">ansible-galaxy install geerlingguy.nginx</code></td>
-      <td>Ansible Galaxy에서 Role 다운로드</td>
+      <td><strong>Playbooks (플레이북)</strong></td>
+      <td>여러 Task를 순서대로 저장한 YAML 파일 반복 작업을 코드화하여 재사용 가능</td>
     </tr>
     <tr>
-      <td><strong>Role 목록 확인</strong></td>
-      <td><code class="language-plaintext highlighter-rouge">ansible-galaxy list</code></td>
-      <td>설치된 Role 확인</td>
+      <td><strong>Modules (모듈)</strong></td>
+      <td>Ansible의 기능 단위 코드 블록 예: <code class="language-plaintext highlighter-rouge">ping</code>, <code class="language-plaintext highlighter-rouge">yum</code>, <code class="language-plaintext highlighter-rouge">copy</code>, <code class="language-plaintext highlighter-rouge">service</code> 등 수많은 모듈 제공 JSON을 반환할 수 있는 언어로 컨스텀 모듈 작성 가능</td>
     </tr>
     <tr>
-      <td><strong>Role 제거</strong></td>
-      <td><code class="language-plaintext highlighter-rouge">ansible-galaxy remove &lt;role_name&gt;</code></td>
-      <td>Role 삭제</td>
+      <td><strong>Control Node (제어 노드)</strong></td>
+      <td>Ansible이 설치된 시스템 <code class="language-plaintext highlighter-rouge">/usr/bin/ansible</code>, <code class="language-plaintext highlighter-rouge">/usr/bin/ansible-playbook</code> 실행 가능 Python이 설치되어 있다면 대부분의 리눅스/유니스 계열에서 사용 가능 Windows는 제어 노드로 사용 불가</td>
+    </tr>
+    <tr>
+      <td><strong>Managed Nodes (관리 노드)</strong></td>
+      <td>Ansible이 제어하는 대상 서버 또는 네트워크 장비 변수의 에이전트나 Ansible 설치 불필요</td>
+    </tr>
+    <tr>
+      <td><strong>Tasks (작업 단위)</strong></td>
+      <td>모듈을 호출하여 실행하는 단일 명령 Playbook 또는 ad-hoc 명령으로 실행 가능</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>Start Bootstrap</name></author><category term="ansible" /><summary type="html"><![CDATA[1. Ansible이란]]></summary></entry><entry><title type="html">테스트환경설정</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/ansible_test_setting.html" rel="alternate" type="text/html" title="테스트환경설정" /><published>2025-06-21T22:00:00+09:00</published><updated>2025-06-21T22:00:00+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/ansible_test_setting</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/ansible/2025/06/21/ansible_test_setting.html"><![CDATA[<table>
+  <thead>
+    <tr>
+      <th>역할</th>
+      <th>이름</th>
+      <th>예시 IP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>제어 노드</td>
+      <td><code class="language-plaintext highlighter-rouge">ansible-master</code></td>
+      <td>192.168.0.101</td>
+    </tr>
+    <tr>
+      <td>대상 노드</td>
+      <td><code class="language-plaintext highlighter-rouge">node1</code>, <code class="language-plaintext highlighter-rouge">node2</code></td>
+      <td>192.168.0.102, 192.168.0.103</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="rolesnginxvarsmainyml">roles/nginx/vars/main.yml</h3>
+<ul>
+  <li><strong>네트워크 어댑터</strong>: VirtualBox → 브리지 어댑터</li>
+</ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nginx_package: nginx
-nginx_service: nginx
+<hr />
+
+<h2 id="1단계-ubuntu-설치-후-기본-설정">1단계: Ubuntu 설치 후 기본 설정</h2>
+
+<p>각 VM에서 아래 명령을 수행</p>
+
+<h3 id="11-사용자-이름-확인">1.1 사용자 이름 확인</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">whoami</span>
+
+
 </code></pre></div></div>
 
-<h3 id="rolesnginxtemplatesnginxconfj2">roles/nginx/templates/nginx.conf.j2</h3>
+<p>→ 이후 Ansible의 <code class="language-plaintext highlighter-rouge">ansible_user</code>로 사용됨</p>
 
-<p>(앞서 사용한 Jinja2 템플릿 그대로 사용)</p>
+<h3 id="12-네트워크-확인을-위한-net-tools-설치">1.2 네트워크 확인을 위한 net-tools 설치</h3>
 
-<h3 id="rolesnginxtasksmainyml">roles/nginx/tasks/main.yml</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
+<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> net-tools
+ifconfig
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-- name: Install nginx
-  apt:
-    name: ""
-    state: present
-    update_cache: yes
-  notify: Restart nginx
 
-- name: Deploy nginx config file from template
-  template:
-    src: nginx.conf.j2
-    dest: /etc/nginx/nginx.conf
-  notify: Restart nginx
-
-- name: Ensure nginx is enabled and running
-  service:
-    name: ""
-    state: started
-    enabled: yes
 </code></pre></div></div>
 
-<h3 id="rolesnginxhandlersmainyml">roles/nginx/handlers/main.yml</h3>
+<p>→ IP 확인 (브리지 모드에서 자동 할당됨)</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-- name: Restart nginx
-  service:
-    name: ""
-    state: restarted
+<hr />
+
+<h2 id="2단계-ssh-서버-설정-node1-node2">2단계: SSH 서버 설정 (node1, node2)</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> openssh-server
+<span class="nb">sudo </span>dpkg-reconfigure openssh-server   <span class="c"># 호스트 키 재생성</span>
+<span class="nb">sudo </span>systemctl <span class="nb">enable </span>ssh
+<span class="nb">sudo </span>systemctl start ssh
+
+
 </code></pre></div></div>
 
-<h3 id="playbooksnginx-roleyml">playbooks/nginx-role.yml</h3>
+<p>SSH 포트 확인:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-- name: Configure nginx using role
-  hosts: targets
-  become: yes
-  roles:
-    - nginx
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>ss <span class="nt">-tnlp</span> | <span class="nb">grep</span> :22
+
+
 </code></pre></div></div>
 
-<h3 id="-실행-명령어-3">▶ 실행 명령어</h3>
+<hr />
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook /vagrant/playbooks/nginx-role.yml
+<h2 id="3단계-ansible-제어-노드에서-ssh-키-생성-및-배포">3단계: Ansible 제어 노드에서 SSH 키 생성 및 배포</h2>
+
+<h3 id="31-키-생성">3.1 키 생성</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen   <span class="c"># 계속 Enter</span>
+
 </code></pre></div></div>
 
-<h3 id="결과-확인-1">결과 확인</h3>
+<h3 id="32-키-배포">3.2 키 배포</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible targets -m command -a "curl http://localhost"
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-copy-id 사용자명@192.168.0.102  <span class="c"># node1</span>
+ssh-copy-id 사용자명@192.168.0.103  <span class="c"># node2</span>
+
+
 </code></pre></div></div>
 
-<p>→ 출력 결과: <code class="language-plaintext highlighter-rouge">Hello from node1</code>, <code class="language-plaintext highlighter-rouge">Hello from node2</code></p>]]></content><author><name>Start Bootstrap</name></author><category term="ansible" /><summary type="html"><![CDATA[1. 플레이북으로 Nginx 설치 자동화]]></summary></entry><entry><title type="html">Man must explore, and this is exploration at its greatest</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/2020/01/31/man-must-explore.html" rel="alternate" type="text/html" title="Man must explore, and this is exploration at its greatest" /><published>2020-01-31T23:45:13+09:00</published><updated>2020-01-31T23:45:13+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/2020/01/31/man-must-explore</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/2020/01/31/man-must-explore.html"><![CDATA[<p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+<p>→ 비밀번호 입력 후 키 복사 성공</p>
 
-<p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
+<hr />
 
-<p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
+<h2 id="4단계-ansible-설치-및-설정-ansible-master">4단계: Ansible 설치 및 설정 (ansible-master)</h2>
 
-<p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
+<h3 id="41-ansible-설치">4.1 Ansible 설치</h3>
 
-<p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
+<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> ansible
+ansible <span class="nt">--version</span>
 
-<h2 class="section-heading">The Final Frontier</h2>
+</code></pre></div></div>
 
-<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+<h3 id="42-인벤토리-디렉토리-수동-생성">4.2 인벤토리 디렉토리 수동 생성</h3>
 
-<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo mkdir</span> <span class="nt">-p</span> /etc/ansible
+<span class="nb">sudo touch</span> /etc/ansible/hosts
+<span class="nb">sudo chmod </span>644 /etc/ansible/hosts
 
-<blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
 
-<p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+</code></pre></div></div>
 
-<h2 class="section-heading">Reaching for the Stars</h2>
+<hr />
 
-<p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+<h2 id="5단계-인벤토리hosts-파일-작성">5단계: 인벤토리(hosts) 파일 작성</h2>
 
-<img class="img-fluid" src="https://source.unsplash.com/Mn9Fa_wQH-M/800x450" alt="Demo Image">
-<span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>vi /etc/ansible/hosts
 
-<p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
 
-<p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+</code></pre></div></div>
 
-<p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://unsplash.com/">Unsplash</a>.</p>]]></content><author><name>Start Bootstrap</name></author><summary type="html"><![CDATA[Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.]]></summary></entry><entry><title type="html">I believe every human has a finite number of heartbeats. I don’t intend to waste any of mine.</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/2020/01/31/heartbeats.html" rel="alternate" type="text/html" title="I believe every human has a finite number of heartbeats. I don’t intend to waste any of mine." /><published>2020-01-31T12:45:13+09:00</published><updated>2020-01-31T12:45:13+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/2020/01/31/heartbeats</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/2020/01/31/heartbeats.html"><![CDATA[<p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+<p>내용 예시:</p>
 
-<p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[targets]
+node1 ansible_host=192.168.0.102 ansible_user=ubuntu
+node2 ansible_host=192.168.0.103 ansible_user=ubuntu
 
-<p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
 
-<p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
+</code></pre></div></div>
 
-<p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
+<blockquote>
+  <p>※ ubuntu는 대상 서버의 사용자명 (실제 로그인 가능해야 함)</p>
+</blockquote>
 
-<h2 class="section-heading">The Final Frontier</h2>
+<hr />
 
-<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+<h2 id="6단계-연결-테스트">6단계: 연결 테스트</h2>
 
-<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible targets <span class="nt">-m</span> ping
 
-<blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
+</code></pre></div></div>
 
-<p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+<p>또는 명시적 경로 지정:</p>
 
-<h2 class="section-heading">Reaching for the Stars</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible targets <span class="nt">-i</span> /etc/ansible/hosts <span class="nt">-m</span> ping
 
-<p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+</code></pre></div></div>
 
-<img class="img-fluid" src="https://source.unsplash.com/Mn9Fa_wQH-M/800x450" alt="Demo Image">
-<span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+<p>예상 출력:</p>
 
-<p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node1 | SUCCESS =&gt; {"ping": "pong"}
+node2 | SUCCESS =&gt; {"ping": "pong"}
 
-<p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
 
-<p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://unsplash.com/">Unsplash</a>.</p>]]></content><author><name>Start Bootstrap</name></author><summary type="html"><![CDATA[Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.]]></summary></entry><entry><title type="html">Science has not yet mastered prophecy</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/2020/01/30/prophecy.html" rel="alternate" type="text/html" title="Science has not yet mastered prophecy" /><published>2020-01-30T12:45:13+09:00</published><updated>2020-01-30T12:45:13+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/2020/01/30/prophecy</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/2020/01/30/prophecy.html"><![CDATA[<p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+</code></pre></div></div>
 
-<p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
+<hr />
 
-<p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
+<h2 id="문제-해결-체크리스트">문제 해결 체크리스트</h2>
 
-<p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
+<table>
+  <thead>
+    <tr>
+      <th>문제</th>
+      <th>해결 방법</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">no inventory was parsed</code></td>
+      <td><code class="language-plaintext highlighter-rouge">/etc/ansible/hosts</code> 존재 여부 확인 또는 <code class="language-plaintext highlighter-rouge">-i</code> 옵션 사용</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">E212: Can't open file for writing</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sudo</code> 없이 파일 열었음 → <code class="language-plaintext highlighter-rouge">sudo vi /etc/ansible/hosts</code> 사용</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">sshd: no hostkeys available</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sudo dpkg-reconfigure openssh-server</code> 실행하여 호스트 키 생성</td>
+    </tr>
+    <tr>
+      <td>SSH 접속 안됨</td>
+      <td>대상 노드에 <code class="language-plaintext highlighter-rouge">openssh-server</code> 설치 및 <code class="language-plaintext highlighter-rouge">sshd</code> 실행 확인</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
+<hr />
 
-<h2 class="section-heading">The Final Frontier</h2>
+<h2 id="명령어-요약">명령어 요약</h2>
 
-<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+<hr />
 
-<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 사용자명 확인</span>
+<span class="nb">whoami</span>
 
-<blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
+<span class="c"># 네트워크 확인</span>
+ifconfig
 
-<p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+<span class="c"># SSH 시작</span>
+<span class="nb">sudo </span>systemctl start ssh
 
-<h2 class="section-heading">Reaching for the Stars</h2>
+<span class="c"># SSH 포트 확인</span>
+<span class="nb">sudo </span>ss <span class="nt">-tnlp</span> | <span class="nb">grep</span> :22
 
-<p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+<span class="c"># Ansible 설치</span>
+<span class="nb">sudo </span>apt <span class="nb">install </span>ansible
 
-<img class="img-fluid" src="https://source.unsplash.com/Mn9Fa_wQH-M/800x450" alt="Demo Image">
-<span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+<span class="c"># 키 복사</span>
+ssh-copy-id 사용자명@192.168.0.102
 
-<p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
+<span class="c"># 연결 테스트</span>
+ansible targets <span class="nt">-i</span> /etc/ansible/hosts <span class="nt">-m</span> ping
 
-<p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
 
-<p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://unsplash.com/">Unsplash</a>.</p>]]></content><author><name>Start Bootstrap</name></author><summary type="html"><![CDATA[Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.]]></summary></entry><entry><title type="html">Failure is not an option</title><link href="http://localhost:4000/startbootstrap-clean-blog-jekyll/2020/01/29/exploration.html" rel="alternate" type="text/html" title="Failure is not an option" /><published>2020-01-29T12:45:13+09:00</published><updated>2020-01-29T12:45:13+09:00</updated><id>http://localhost:4000/startbootstrap-clean-blog-jekyll/2020/01/29/exploration</id><content type="html" xml:base="http://localhost:4000/startbootstrap-clean-blog-jekyll/2020/01/29/exploration.html"><![CDATA[<p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
-
-<p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
-
-<p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
-
-<p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
-
-<p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
-
-<h2 class="section-heading">The Final Frontier</h2>
-
-<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-
-<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-
-<blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
-
-<p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
-
-<h2 class="section-heading">Reaching for the Stars</h2>
-
-<p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
-
-<img class="img-fluid" src="https://source.unsplash.com/Mn9Fa_wQH-M/800x450" alt="Demo Image">
-<span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
-
-<p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
-
-<p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
-
-<p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://unsplash.com/">Unsplash</a>.</p>]]></content><author><name>Start Bootstrap</name></author><summary type="html"><![CDATA[Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>Start Bootstrap</name></author><category term="ansible" /><summary type="html"><![CDATA[역할 이름 예시 IP 제어 노드 ansible-master 192.168.0.101 대상 노드 node1, node2 192.168.0.102, 192.168.0.103]]></summary></entry></feed>
